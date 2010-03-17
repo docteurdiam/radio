@@ -1,0 +1,658 @@
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 22:25:33) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 22:25:33) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 22:25:36) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 22:30:00) [GET]
+
+ActionController::RoutingError (No route matches "/A" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRadios (20100223204631)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "radios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "category" varchar(255), "fee" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100223204631')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("radios")[0m
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:24:08) [GET]
+
+ActionController::RoutingError (No route matches "/admin/home" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:25:14) [GET]
+Rendering admin/home
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:25:15) [GET]
+Rendering admin/home
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:25:15) [GET]
+Rendering admin/home
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:25:15) [GET]
+Rendering admin/home
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:25:31) [GET]
+
+NoMethodError (undefined method `master' for #<AdminController:0xb709dd84>):
+  
+
+Rendered rescues/_trace (63.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:25:51) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.4ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:25:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-16 23:25:53) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:25:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:25:55) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:25:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-16 23:25:55) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:25:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:25:56) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.2ms)
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:26:41) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.1ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:26:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:26:42) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:26:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:26:43) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.1ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:26:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:26:43) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.2ms)
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:26:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:26:43) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.1ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:26:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:27:12) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.1ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:27:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:27:13) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.1ms)
+Completed in 33ms (View: 31, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:27:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-16 23:27:13) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.3ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:27:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-16 23:27:14) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 40ms (View: 37, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:27:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-16 23:27:37) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:27:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-16 23:30:31) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:30:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:30:36) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100316-25188-f5todm-0>}
+
+ActionController::RoutingError (No route matches "/upload" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:39:40) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100316-25188-1uxvwu1-0>}
+
+ActionController::RoutingError (No route matches "/upload" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:40:05) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100316-25188-bns9b0-0>}
+
+ActionController::RoutingError (No route matches "/upload" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-16 23:40:07) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:40:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-16 23:40:08) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:40:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-16 23:40:09) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100316-25188-8q0a94-0>}
+
+ActionView::MissingTemplate (Missing template admin/commit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-16 23:41:28) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100316-25188-14ico8x-0>}
+Rendering template within layouts/master
+Rendering admin/commit
+Rendered shared/_menu (0.9ms)
+Completed in 46ms (View: 41, DB: 0) | 200 OK [http://192.168.0.103/admin/commit]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:41:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-16 23:42:44) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100316-25188-1laft1f-0>}
+Rendering template within layouts/master
+Rendering admin/commit
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://192.168.0.103/admin/commit]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-16 23:42:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-16 23:59:57) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100316-25188-1k8hhes-0>}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+NameError (uninitialized constant AdminController::Upload):
+  app/controllers/admin_controller.rb:13:in `commit'
+
+Rendered rescues/_trace (20.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:00:14) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-25188-1so9ocr-0>}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Rendering template within layouts/master
+Rendering admin/commit
+Rendered shared/_menu (0.1ms)
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/commit]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-17 00:00:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-17 00:00:18) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-17 00:00:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:00:21) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-25188-4mkq1z-0>}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Rendering template within layouts/master
+Rendering admin/commit
+Rendered shared/_menu (0.1ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://192.168.0.103/admin/commit]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-17 00:00:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-17 00:00:45) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.5ms)
+Completed in 30ms (View: 28, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-17 00:00:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:00:47) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-26606-96qwpw-0>}
+
+
+Processing AdminController#home (for 192.168.0.102 at 2010-03-17 00:08:13) [GET]
+Rendering template within layouts/master
+Rendering admin/home
+Rendered shared/_menu (0.4ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://192.168.0.103/admin/home]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-17 00:08:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#upload (for 192.168.0.102 at 2010-03-17 00:08:16) [GET]
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.2ms)
+Completed in 28ms (View: 24, DB: 0) | 200 OK [http://192.168.0.103/admin/upload]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-17 00:08:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:08:22) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-26687-uruosn-0>}
+
+NameError (uninitialized constant AdminController::CSV):
+  app/controllers/admin_controller.rb:25:in `parse'
+  app/controllers/admin_controller.rb:15:in `commit'
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (3.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:08:46) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-26687-1fi9vq-0>}
+
+NoMethodError (undefined method `read' for nil:NilClass):
+  /usr/lib/ruby/1.8/csv.rb:985:in `read'
+  /usr/lib/ruby/1.8/csv.rb:922:in `add_buf'
+  /usr/lib/ruby/1.8/csv.rb:893:in `initialize'
+  /usr/lib/ruby/1.8/csv.rb:975:in `initialize'
+  /usr/lib/ruby/1.8/csv.rb:620:in `new'
+  /usr/lib/ruby/1.8/csv.rb:620:in `initialize'
+  /usr/lib/ruby/1.8/csv.rb:549:in `new'
+  /usr/lib/ruby/1.8/csv.rb:549:in `create'
+  /usr/lib/ruby/1.8/csv.rb:529:in `parse'
+  app/controllers/admin_controller.rb:27:in `parse'
+  app/controllers/admin_controller.rb:17:in `commit'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:08:56) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-26687-1nqxgbz-0>}
+
+NoMethodError (undefined method `read' for nil:NilClass):
+  /usr/lib/ruby/1.8/csv.rb:985:in `read'
+  /usr/lib/ruby/1.8/csv.rb:922:in `add_buf'
+  /usr/lib/ruby/1.8/csv.rb:893:in `initialize'
+  /usr/lib/ruby/1.8/csv.rb:975:in `initialize'
+  /usr/lib/ruby/1.8/csv.rb:620:in `new'
+  /usr/lib/ruby/1.8/csv.rb:620:in `initialize'
+  /usr/lib/ruby/1.8/csv.rb:549:in `new'
+  /usr/lib/ruby/1.8/csv.rb:549:in `create'
+  /usr/lib/ruby/1.8/csv.rb:529:in `parse'
+  app/controllers/admin_controller.rb:27:in `parse'
+  app/controllers/admin_controller.rb:17:in `commit'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:09:15) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-26687-6mqb74-0>}
+  [4;36;1mRadio Create (0.3ms)[0m   [0;1mINSERT INTO "radios" ("name", "category", "fee") VALUES('Sun FM', ' northern', 4000)[0m
+
+NameError (undefined local variable or method `row_count' for #<AdminController:0xb6fc0484>):
+  app/controllers/admin_controller.rb:18:in `commit'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:09:26) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-26687-9hwqpc-0>}
+  [4;35;1mRadio Create (0.3ms)[0m   [0mINSERT INTO "radios" ("name", "category", "fee") VALUES('Sun FM', ' northern', 4000)[0m
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.1ms)
+Completed in 21ms (View: 4, DB: 0) | 200 OK [http://192.168.0.103/admin/commit]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-17 00:09:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mRadio Load (0.5ms)[0m   [0;1mSELECT * FROM "radios" [0m
+
+
+Processing AdminController#commit (for 192.168.0.102 at 2010-03-17 00:11:23) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"OtgK7lXa5aeyiABvfpfP2EU13wWqCIpA6ErHn75+03c=", "file"=>#<File:/tmp/RackMultipart20100317-26825-11zkbdf-0>}
+  [4;36;1mRadio Create (0.1ms)[0m   [0;1mINSERT INTO "radios" ("name", "category", "fee") VALUES('Sun FM', ' northern', 4000)[0m
+Rendering template within layouts/master
+Rendering admin/upload
+Rendered shared/_menu (0.4ms)
+Completed in 40ms (View: 15, DB: 0) | 200 OK [http://192.168.0.103/admin/commit]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-17 00:11:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#search (for 192.168.0.102 at 2010-03-17 00:11:29) [GET]
+  Parameters: {"id"=>"a"}
+
+NameError (undefined local variable or method `resource_controller' for RadiosController:Class):
+  app/controllers/radios_controller.rb:2
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)

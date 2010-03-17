@@ -1,0 +1,3 @@
+var Estimator = new function() {
+  
+}

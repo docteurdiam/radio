@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Radio Calculator</title>
+    <script type="text/javascript" src="javascripts/alphabetical_search.js"></script>
+    <script type="text/javascript" src="javascripts/type_search.js"></script>
+    <script type="text/javascript" src="javascripts/name_search.js"></script>
+    <script type="text/javascript" src="javascripts/estimator.js"></script>
+    <script type="text/javascript" src="javascripts/selection_display.js"></script>
+    <script type="text/javascript" src="javascripts/results_display.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="search">
+      <div>Search Stations Alphabetically</div>
+      <div class="alphabetical"></div>
+      <div class="type">
+          <li><a href="#national-and-news">National & News</a></li>
+          <li><a href="#totals-networks">Totals / Networks</a></li>
+          <li><a href="#digital-internet">Digital / Internet</a></li>
+          <li><a href="#local-and-regional">Local & Regional</a></li>
+          <li><a href="#ILR-buyouts">ILR Buyouts</a></li>
+          <li><a href="#irish-and-ROI">Irish & ROI</a></li>
+      </div>
+      <div class="name"></div>
+    </div>
+    <div class="estimate"></div>
+    <div class="selection"></div>
+    <div class="results"></div>
+  </body>
+  <script type="text/javascript">
+
+    var callback = function(data) {
+      alert(data);
+    };
+
+    var alphabetical_search = new AlphabeticalSearch(".search .alphabetical", callback);
+
+    var type_search = new TypeSearch(".search .type", callback);
+
+    var name_search = new NameSearch(".search .name", callback);
+
+    var estimator = new Estimator(".estimate");
+
+    var selection_display = new SelectionDisplay(".selection");
+
+    var results_display = new ResultsDisplay(".results");
+
+  </script>
+
+</html>
