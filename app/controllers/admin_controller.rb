@@ -25,7 +25,7 @@ class AdminController < ApplicationController
   def parse(upload)
     upload.rewind
     CSV::Reader.parse(upload) do |row|
-      Radio.create!(:name => row[0], :category => row[1], :fee => row[2])
+      Radio.create!(:name => row[0], :fee => row[1], :category => row[2])
     end
   end
 

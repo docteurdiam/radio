@@ -1,7 +1,6 @@
-var AlphabeticalSearch = function(element, callback) {
+var AlphabeticalSearch = function(element, display) {
 
     var createLetters = function(element) {
-    console.debug(element);
     for(i = 1; i <= 26; i++) {
         $("<a href='#A'>" + String.fromCharCode(64+i) + "</a>").appendTo(element);
     }
@@ -10,7 +9,10 @@ var AlphabeticalSearch = function(element, callback) {
 
   var attachEventHandlers = function(links) {
     links.click(function() {
-        callback(this.text)
+      $.getJSON("/radios/search", {type: "name", query: this.text}, function(data, textStatus) {
+        if (data.length > 0) display.add(data);
+      })
+      return false;
     });
   };
 

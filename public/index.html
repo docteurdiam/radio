@@ -12,40 +12,53 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
   </head>
   <body>
+  <div class="left" style="width: 500px; float: left">
     <div class="search">
-      <div>Search Stations Alphabetically</div>
+      <div><h2>Search Stations Alphabetically</h2></div>
       <div class="alphabetical"></div>
+      <div><h2>Or, Search by type</h2></div>
       <div class="type">
-          <li><a href="#national-and-news">National & News</a></li>
-          <li><a href="#totals-networks">Totals / Networks</a></li>
-          <li><a href="#digital-internet">Digital / Internet</a></li>
-          <li><a href="#local-and-regional">Local & Regional</a></li>
-          <li><a href="#ILR-buyouts">ILR Buyouts</a></li>
-          <li><a href="#irish-and-ROI">Irish & ROI</a></li>
+          <li><a href="#" rel="National & News">National & News</a></li>
+          <li><a href="#" rel="Totals / Networks">Totals / Networks</a></li>
+          <li><a href="#" rel="Digital / Internet">Digital / Internet</a></li>
+          <li><a href="#" rel="Local & Regional">Local & Regional</a></li>
+          <li><a href="#" rel="ILR Buyouts">ILR Buyouts</a></li>
+          <li><a href="#" rel="Irish & ROI">Irish & ROI</a></li>
       </div>
-      <div class="name"></div>
+      <div class="name" style="margin-top: 10px">
+        <input type="text"  style="font-size: 18px" value="Or, Search by name" />
+      </div>
     </div>
-    <div class="estimate"></div>
-    <div class="selection"></div>
-    <div class="results"></div>
+      <div class="results" style="margin-top: 10px">
+        <h2>Stations Alphabetically: </h2>
+        <ul></ul>
+      </div>
+  </div>
+  <div class="right">
+    <div class="estimate">
+      <h2>Your Estimate:</h2>
+      <input style="font-size: 18px" class="result" type="text" />
+      <input type="button" class="calculate" value="Re-Calculate">
+    </div>
+    <div class="selection">
+      <h2>Selected Stations</h2>
+      <ul></ul>
+    </div>
+  </div>
+
+
   </body>
   <script type="text/javascript">
 
-    var callback = function(data) {
-      alert(data);
-    };
+    var selection_display = new SelectionDisplay(".selection ul", new Estimator(".estimate", ".selection ul li input:checked"));
 
-    var alphabetical_search = new AlphabeticalSearch(".search .alphabetical", callback);
+    var results_display = new ResultsDisplay(".results ul", selection_display);
 
-    var type_search = new TypeSearch(".search .type", callback);
+    var alphabetical_search = new AlphabeticalSearch(".search .alphabetical", results_display);
 
-    var name_search = new NameSearch(".search .name", callback);
+    var type_search = new TypeSearch(".search .type", results_display);
 
-    var estimator = new Estimator(".estimate");
-
-    var selection_display = new SelectionDisplay(".selection");
-
-    var results_display = new ResultsDisplay(".results");
+    var name_search = new NameSearch(".search .name", results_display);
 
   </script>
 
