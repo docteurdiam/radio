@@ -12,7 +12,7 @@
   <component name="GemRequirementsHolder" version="2">
     <requirement>
       <requirement>
-        <dependency name="authlogic" version="2.1.2" bound="EQUAL" />
+        <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
