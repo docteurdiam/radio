@@ -6,11 +6,13 @@
   <meta http_equiv="content_type" content="text/html; charset=utf_8" />
   <meta http_equiv="content_style_type" content="text/css" />
   <link type="text/css" rel="stylesheet" href="/stylesheets/application.css">
+  <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
 <div id="canvas">
+  <p style="color: green"><%= flash[:notice] %></p>
   <%= render :partial => "shared/menu" %>
-  <%= yield :main %>
+  <%= yield %>
 </div>
 </body>
 </html>

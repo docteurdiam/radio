@@ -1,6 +1,8 @@
 require 'csv'
 
 class AdminController < ApplicationController
+  before_filter :require_user
+
 
   def home
     
@@ -11,8 +13,8 @@ class AdminController < ApplicationController
   end
 
   def commit
-    if params[:file].size.zero? then
-      flash[:error].now = 'No file was selected'
+    if !params[:file] || params[:file].size.zero? then
+      flash[:error] = 'No file was selected'
     else
       parse(params[:file])      
       flash[:status] = "Done"

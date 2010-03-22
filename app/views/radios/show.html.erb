@@ -1,0 +1,18 @@
+<p>
+  <b>Fee:</b>
+  <%=h @radio.fee %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @radio.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @radio.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_radio_path(@radio) %> |
+<%= link_to 'Back', radios_path %>

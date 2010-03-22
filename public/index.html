@@ -43,6 +43,7 @@
     <div class="selection">
       <h2>Selected Stations</h2>
       <ul></ul>
+      <input type="button" class="clear" value="Clear List" />
     </div>
   </div>
 
@@ -50,7 +51,7 @@
   </body>
   <script type="text/javascript">
 
-    var selection_display = new SelectionDisplay(".selection ul", new Estimator(".estimate", ".selection ul li input:checked"));
+    var selection_display = new SelectionDisplay(".selection", new Estimator(".estimate", ".selection ul li input:checked"));
 
     var results_display = new ResultsDisplay(".results ul", selection_display);
 

@@ -1,0 +1,24 @@
+<h1>Editing radio</h1>
+
+<% form_for(@radio) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :fee %><br />
+    <%= f.text_field :fee %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @radio %> |
+<%= link_to 'Back', radios_path %>

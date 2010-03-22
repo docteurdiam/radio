@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  fee: 1
+  name: MyString
+  category: MyString
+
+two:
+  fee: 1
+  name: MyString
+  category: MyString

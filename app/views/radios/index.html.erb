@@ -1,0 +1,26 @@
+<h1>Listing radios</h1>
+
+<table>
+  <tr>
+    <th>Fee</th>
+    <th>Name</th>
+    <th>Category</th>
+  </tr>
+
+<% @radios.each do |radio| %>
+  <tr>
+    <td><%=h radio.fee %></td>
+    <td><%=h radio.name %></td>
+    <td><%=h radio.category %></td>
+    <td><%= link_to 'Show', radio %></td>
+    <td><%= link_to 'Edit', edit_radio_path(radio) %></td>
+    <td><%= link_to 'Destroy', radio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @radios %>
+
+<br />
+
+<%= link_to 'New radio', new_radio_path %>
