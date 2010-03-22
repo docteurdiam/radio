@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="317d2616-f3c7-40f3-b517-29774ef024c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/upload.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/upload.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/master.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/master.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_menu.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_menu.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/user_sessions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/selection_display.js" afterPath="$PROJECT_DIR$/public/javascripts/selection_display.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/user_session.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/radio.rb" afterPath="$PROJECT_DIR$/app/models/radio.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/radios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/radios_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gems" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="radio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,15 +27,6 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/radios/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="36" selection-start="105" selection-end="105" vertical-scroll-proportion="-5.4545455">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/radios/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,10 +45,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="upload.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/upload.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28" selection-start="117" selection-end="117" vertical-scroll-proportion="0.13910356">
+            <state line="6" column="28" selection-start="117" selection-end="117" vertical-scroll-proportion="-1.8367347">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gems" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gems">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="13" selection-start="23" selection-end="23" vertical-scroll-proportion="0.022421524">
               <folding />
             </state>
           </provider>
@@ -148,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20100322224059_create_administrator.rb" />
         <option value="$PROJECT_DIR$/app/controllers/user_sessions_controller.rb" />
@@ -164,6 +142,7 @@
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/upload.html.erb" />
+        <option value="$PROJECT_DIR$/.gems" />
       </list>
     </option>
   </component>
@@ -713,13 +692,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/radios_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="78" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="42" selection-start="215" selection-end="215" vertical-scroll-proportion="-8.181818">
@@ -820,7 +792,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/upload.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="117" selection-end="117" vertical-scroll-proportion="0.13910356">
+        <state line="6" column="28" selection-start="117" selection-end="117" vertical-scroll-proportion="-1.8367347">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gems">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="13" selection-start="23" selection-end="23" vertical-scroll-proportion="0.022421524">
           <folding />
         </state>
       </provider>
