@@ -41,6 +41,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :radios, :collection => {:search => :get}
   map.resources :users
   map.resource :user_session
+  map.connect 'reminders/display', :controller => 'reminders', :action => 'display'
   map.connect 'admin', :controller => 'admin', :action => 'home'
   map.connect 'admin/upload', :controller => 'admin', :action => 'upload', :conditions => { :method => :get }
   map.connect 'admin/upload', :controller => 'admin', :action => 'commit', :conditions => { :method => :post }

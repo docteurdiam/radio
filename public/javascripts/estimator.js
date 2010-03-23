@@ -1,5 +1,5 @@
 var Estimator = function(element, selector) {
-  var container = $(element);       
+  var container = $(element);
   container.find(".calculate").click(function() {
     var stations = $(selector);
     var total = 0;
@@ -10,5 +10,18 @@ var Estimator = function(element, selector) {
     };
 
     container.find(".result").val(total);
+  });
+
+  container.find(".email").click(function() {
+    var lightbox = $('#lightbox');
+    if (lightbox.length == 0) lightbox = $('<div id="lightbox"></div>').appendTo("body");
+    lightbox.html('').load("/reminders", function() {
+      lightbox.dialog({
+        autoOpen: false,
+        modal: true,
+        title: 'Send yourself a reminder email'
+      });
+      lightbox.dialog('open');
+    });
   });
 }
