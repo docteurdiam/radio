@@ -1,10 +1,10 @@
 class RemindersController < ApplicationController
 
-  def display
-    debugger
+  def show
+    render :layout => false
   end
 
-  def send
+  def deliver
     radios = params[:radios]
     name = params[:name]
     email = params[:email]

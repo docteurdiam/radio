@@ -11113,3 +11113,116 @@ ActionController::RoutingError (No route matches "/stylesheets/application.css" 
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-23 09:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-23 09:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RemindersController#index (for 192.168.0.102 at 2010-03-23 09:22:55) [GET]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-23 09:22:55) [GET]
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+
+Rendered rescues/_trace (68.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-23 09:22:57) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RemindersController#display (for 192.168.0.102 at 2010-03-23 09:24:08) [GET]
+
+ActionView::MissingTemplate (Missing template reminders/display.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RemindersController#show (for 192.168.0.102 at 2010-03-23 09:25:04) [GET]
+Rendering template within layouts/master
+Rendering reminders/show
+Rendered shared/_menu (0.0ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://192.168.0.105/reminders]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-23 09:25:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RemindersController#show (for 192.168.0.102 at 2010-03-23 09:25:27) [GET]
+Rendering template within layouts/master
+Rendering reminders/show
+Rendered shared/_menu (0.5ms)
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://192.168.0.105/reminders]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-23 09:25:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RemindersController#show (for 192.168.0.102 at 2010-03-23 09:25:36) [GET]
+Rendering template within layouts/master
+Rendering reminders/show
+Rendered shared/_menu (0.3ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://192.168.0.105/reminders]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-23 09:25:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RemindersController#show (for 192.168.0.102 at 2010-03-23 09:26:11) [GET]
+Rendering reminders/show
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://192.168.0.105/reminders]
+
+
+Processing RemindersController#show (for 192.168.0.102 at 2010-03-23 09:26:37) [GET]
+Rendering reminders/show
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://192.168.0.105/reminders]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-23 09:26:43) [GET]
+  Parameters: {"type"=>"type", "query"=>"Irish & ROI"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-23 09:26:43', "last_request_at" = '2010-03-23 09:26:43' WHERE "id" = 1[0m
+  [4;36;1mRadio Load (24.8ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Irish & ROI') [0m
+Completed in 199ms (View: 131, DB: 26) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Irish+%26+ROI]
+
+
+Processing RemindersController#show (for 192.168.0.102 at 2010-03-23 09:26:48) [GET]
+Rendering reminders/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://192.168.0.105/reminders]
