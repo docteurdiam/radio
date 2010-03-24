@@ -1,0 +1,31 @@
+body {font-family: Arial, sans-serif; background: url(/images/bgnd_gradient.png) repeat-x}
+li {list-style-type: none}
+.clear {clear: both}
+h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
+
+#page {margin: 20px auto auto; width: 900px}
+
+#main {background-image: url(/images/bgnds_05.png); width: 900px}
+
+#header {background-image: url(/images/bgnds_03.png); height: 201px; width: 900px}
+#header .contents {width: 620px; float: right; padding-top: 25px}
+#header .contents .normal {font-size: 14px; line-height: 18px}
+#header .contents .small {font-size: 10px; line-height: 11px}
+
+.panel {margin-left: 20px; margin-top: 25px}
+
+.alphabetical {background-image: url(/images/bgnd_a-z.png); width: 590px; height: 27px; padding-top: 14px; padding-left: 5px}
+.alphabetical a {margin-left: 12px; font-size: 14px; font-weight: bold; color: white; text-decoration: none}
+
+.results {width: 595px}
+.results-items {background: white; height: 320px; margin-left: 1px; width: 593px; overflow: scroll; overflow-x: hidden}
+.results-items ul {min-height: 298px}
+.results-box-top {background: url(/images/fade_results_box_top.png) repeat-x; height: 11px}
+.results-box-bottom {background: url(/images/fade_results_box_bottom.png) repeat-x; height: 11px}
+.results-header {background-image: url(/images/box_top_results_main.png)}
+
+.name {margin-top: 15px; margin-left: 22px}
+.name input {font-size: 20px; font-weight: bold; width: 571px; color: #434343; padding: 8px}
+
+.type li {background-image: url(/images/butt_main_off.png); width: 191px; height: 31px; float: left; padding-top: 11px; margin-right: 10px; margin-bottom: 10px}
+.type li a {text-decoration: none; color: white; font-weight: bold; font-size: 14px; margin-left: 15px; padding-top: 15px}

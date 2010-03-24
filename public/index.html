@@ -11,46 +11,88 @@
     <script type="text/javascript" src="javascripts/results_display.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
     <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css" />
     <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="/stylesheets/application.css" />
   </head>
   <body>
-  <div class="left" style="width: 500px; float: left">
-    <div class="search">
-      <div><h2>Search Stations Alphabetically</h2></div>
-      <div class="alphabetical"></div>
-      <div><h2>Or, Search by type</h2></div>
-      <div class="type">
-          <li><a href="#" rel="National & News">National & News</a></li>
-          <li><a href="#" rel="Totals / Networks">Totals / Networks</a></li>
-          <li><a href="#" rel="Digital / Internet">Digital / Internet</a></li>
-          <li><a href="#" rel="Local & Regional">Local & Regional</a></li>
-          <li><a href="#" rel="ILR Buyouts">ILR Buyouts</a></li>
-          <li><a href="#" rel="Irish & ROI">Irish & ROI</a></li>
-      </div>
-      <div class="name" style="margin-top: 10px">
-        <input type="text"  style="font-size: 18px" value="Or, Search by name" />
-      </div>
+  <div id="page">
+    <div id="header">
+      <div class="contents">
+      <p class="normal">When a voice artist features on a radio commercial they are due a fee for the use of their voice.<br/>
+        This is called Radio Usage.</p>                                           <br/>
+      <p class="normal">Fees are based on a per artist, per script, per radio station, per three months on air.</p>
+         <br/>
+      <p class="small">The radiousage.tv calculator is based on radio equity usage, but is offered as a guide only. While we have
+      endeavored to provide accurate and up to date informationw we cannot be held responsible for any loss incurred through
+      its use.</p> <br/>
+      <p class="small">With Tags (same script with regional changes) the first script is calculated at full fee, then extra tags are
+      calculated at 50% of that fee. Please contact your voice agent to discuss further as the content of a script change
+      will determine whether it should be charged at 100% or 50%.</p>
+        </div>
     </div>
-      <div class="results" style="margin-top: 10px">
-        <h2>Stations Alphabetically: </h2>
-        <ul></ul>
+    <div id="main" style="height: 820px; margin-bottom: 20px">
+      <div class="left" style="width: 650px; float: left">
+        <div class="search">
+          <div class="panel">
+            <div><h2>Search Stations Alphabetically</h2></div>
+            <div class="alphabetical" ></div>
+          </div>
+          <div class="panel">
+            <div><h2>Or, Search by type</h2></div>
+            <div class="type">
+              <li><a href="#" rel="National & News">National & News</a></li>
+              <li><a href="#" rel="Totals / Networks">Totals / Networks</a></li>
+              <li><a href="#" rel="Digital / Internet">Digital / Internet</a></li>
+              <li><a href="#" rel="Local & Regional">Local & Regional</a></li>
+              <li><a href="#" rel="ILR Buyouts">ILR Buyouts</a></li>
+              <li><a href="#" rel="Irish & ROI">Irish & ROI</a></li>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="name">
+            <input type="text" value="Or, Search by name" />
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="results panel" style="min-height: 300px">
+          <div class="results-header">
+            <h2 style="color: #434343; margin-bottom: 0; padding: 15px">Stations Alphabetically: </h2>
+          </div>
+          <div class="results-items">
+            <div class="results-box-top"></div><ul></ul><div class="results-box-bottom"></div>
+          </div>
+          <div style="background: url(/images/box_bottom_results_main.png); height: 55px"></div>
+        </div>
       </div>
-  </div>
-  <div class="right">
-    <div class="estimate">
-      <h2>Your Estimate:</h2>
-      <input style="font-size: 18px" class="result" type="text" />
-      <input type="button" class="calculate" value="Re-Calculate">
-      <input type="button" class="email" value="Email Estimate">
-    </div>
-    <div class="selection">
-      <h2>Selected Stations</h2>
-      <ul></ul>
-      <input type="button" class="clear" value="Clear List" />
-    </div>
-  </div>
+      <div class="right" style="width: 235px; float: left">
+        <div style="padding-top: 25px">
+          <div  class="estimate">
+          <h2>Your Estimate:</h2>
+          <input style="font-size: 18px; width: 230px; height: 33px; margin-bottom: 10px" class="result" type="text" />
+            <input type="image" src="/images/butts_on_03.png" class="calculate" value="Re-Calculate">
+            <input type="image" style="float: right" src="/images/butts_over_10.png"  class="email" value="Email Estimate">
+          </div>
+        </div>
+        <div style="padding-top: 25px">
+          <div class="selection">
+            <div style="width: 215px; background-image: url(/images/box_top_quote.png); height: 25px; padding: 10px">
+              <h2 style="color: #434343">Selected Stations:</h2></div>
+            <div style="min-height: 200px; width: 234px; margin-left: 1px; background-color: white"><ul></ul></div>
+            <div style="background-image: url(/images/box_bottom_quote.png); text-align: right; width: 235px; height: 56px; margin-right: 13px">
+              <input type="image" style="margin-top: 20px; margin-right: 10px" src="/images/butts_on_13.png" class="clear" value="Clear List" />
+            </div>
+          </div>
+        </div>
 
+
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    </div>
   </body>
+
   <script type="text/javascript">
 
     var selection_display = new SelectionDisplay(".selection", new Estimator(".estimate", ".selection ul li input:checked"));
@@ -62,8 +104,9 @@
     var type_search = new TypeSearch(".search .type", results_display);
 
     var name_search = new NameSearch(".search .name", results_display);
-
    
   </script>
+
+
 
 </html>
