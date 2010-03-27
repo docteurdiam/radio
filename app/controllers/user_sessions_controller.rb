@@ -11,7 +11,7 @@ class UserSessionsController < ApplicationController
     if @user_session.save
       redirect_to "/admin/home"
     else
-      render :action => :new
+      render :action => :new, :layout => "backend"
     end
   end
 
