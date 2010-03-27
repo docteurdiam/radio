@@ -3,9 +3,14 @@ require 'csv'
 class AdminController < ApplicationController
   before_filter :require_user
 
+  def logout
+    
+  end
 
   def home
-    
+    @radio_count = Radio.count(:all)
+    @user_count = User.count(:all)
+    render 'home', :layout => "master"
   end
 
   def upload

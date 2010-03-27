@@ -12,7 +12,9 @@
 <body class="admin">
 <div id="canvas">
 
-  <%= render :partial => "shared/menu" %>
+  <div class="menu" style="background-image: url(/images/bgnds_05.png); height: 25px">
+  <h1 style="font-weight: bold; color: white; margin-left: 20px; font-size: 16px">Radio Calculator Admin</h1>
+  </div>
     <div class="page">
         <p style="color: green"><%= flash[:notice] %></p>
   <%= yield %>

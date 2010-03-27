@@ -1,12 +1,11 @@
 
-
-<div style="padding-top: 20px">
-  <%= flash[:error] %>
-  <%= flash[:status] %>
+<h1>Upload Radios</h1>
   <br/>
   <% form_tag '/admin/upload', :multipart => true do %>
     <label for="file">File to Upload: </label> <%= file_field_tag "file" %>
     <%= submit_tag "Upload" %>
   <% end %>
-</div>
+
+  <p style="color: red"><%= flash[:error] %></p>
+  <p style="color: green"><%= flash[:status] %></p>
 

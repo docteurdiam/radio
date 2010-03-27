@@ -44,6 +44,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'reminders', :controller => 'reminders', :action => 'deliver', :conditions => { :method => :post }
   map.connect 'reminders', :controller => 'reminders', :action => 'show', :conditions => { :method => :get }
   map.connect 'admin', :controller => 'admin', :action => 'home'
+  map.connect 'admin/logout', :controller => 'user_sessions', :action => 'destroy', :conditions => { :method => :get }
   map.connect 'admin/upload', :controller => 'admin', :action => 'upload', :conditions => { :method => :get }
   map.connect 'admin/upload', :controller => 'admin', :action => 'commit', :conditions => { :method => :post }
   map.connect ':controller/:action'
