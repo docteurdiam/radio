@@ -1,8 +1,6 @@
 class RadiosController < ApplicationController
-  before_filter :require_user
+  before_filter :require_user, :except => [:search]
 
-  # GET /radios
-  # GET /radios.xml
   def index
     @radios = @books = Radio.paginate(:page => params[:page], :per_page => 20)
     respond_to do |format|
@@ -11,19 +9,14 @@ class RadiosController < ApplicationController
     end
   end
 
-  # GET /radios/1
-  # GET /radios/1.xml
   def show
     @radio = Radio.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @radio }
     end
   end
 
-  # GET /radios/new
-  # GET /radios/new.xml
   def new
     @radio = Radio.new
 
@@ -33,13 +26,10 @@ class RadiosController < ApplicationController
     end
   end
 
-  # GET /radios/1/edit
   def edit
     @radio = Radio.find(params[:id])
   end
 
-  # POST /radios
-  # POST /radios.xml
   def create
     @radio = Radio.new(params[:radio])
 
@@ -55,8 +45,6 @@ class RadiosController < ApplicationController
     end
   end
 
-  # PUT /radios/1
-  # PUT /radios/1.xml
   def update
     @radio = Radio.find(params[:id])
 
@@ -72,8 +60,6 @@ class RadiosController < ApplicationController
     end
   end
 
-  # DELETE /radios/1
-  # DELETE /radios/1.xml
   def destroy
     @radio = Radio.find(params[:id])
     @radio.destroy
@@ -84,7 +70,7 @@ class RadiosController < ApplicationController
     end
   end
 
-    def search
+  def search
     query = params[:query]
     type = params[:type]
     radios = execute_search(type, query)

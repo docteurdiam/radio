@@ -1,7 +1,7 @@
 class EmailSender < ActionMailer::Base
   def reminder_notification(name, email, radios)
     recipients  "#{name} <#{email}>"
-    from        "Radios"
+    from        "olivier.kouame@gmail.com"
     subject     "Your reminder from radios"
     sent_on     Time.now
   end

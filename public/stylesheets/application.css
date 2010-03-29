@@ -16,7 +16,9 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 
 .alphabetical {background-image: url(/images/bgnd_a-z.png); width: 590px; height: 27px; padding-top: 14px; padding-left: 5px}
 .alphabetical a {margin-left: 12px; font-size: 14px; font-weight: bold; color: white; text-decoration: none}
-.alphabetical a:hover {color: #a6c631}
+.alphabetical a:hover {color: #dddddd}
+.alphabetical a.selected {color: #a6c631}
+.alphabetical a {text-shadow: 0 1px 0 #000000}
 
 .results {width: 595px}
 .results-items {background: white; height: 320px; margin-left: 1px; width: 593px; overflow: scroll; overflow-x: hidden}
@@ -26,23 +28,24 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .results-header {background-image: url(/images/box_top_results_main.png)}
 
 .name {margin-top: 15px; margin-left: 22px}
-.name input {font-size: 20px; font-weight: bold; width: 571px; color: #434343; padding: 8px}
+.name input {font-size: 20px; font-weight: bold; width: 471px; color: #434343; padding: 8px}
+.name .submit {width: 105px; height: 45px; position: relative; top: 2px}
 
 .type {margin-left: -13px}
-.type li {width: 191px; height: 31px; float: left; padding-top: 11px; margin-right: 10px; margin-bottom: 10px}
-.type li a {width: 181px; padding-left: 10px; height: 26px; text-decoration: none; color: white; font-weight: bold; font-size: 14px; margin-left: 15px; padding-top: 15px; background-image: url(/images/butt_main_off.png);}
-.type li a:hover {background-image: url(/images/butt_main_on.png)}
+.type li {width: 191px; height: 31px; float: left; padding-top: 10px; margin-right: 10px; margin-bottom: 10px}
+.type li a {width: 181px; padding-left: 10px; height: 28px; text-decoration: none; color: white; font-weight: bold; font-size: 14px; margin-left: 15px; padding-top: 13px; background-image: url(/images/butt_main_off.png);}
+.type li a.selected {background-image: url(/images/butt_main_on.png)}
+.type li a:hover {color: #eaeaea}
+.type li a {text-shadow: 0 1px 0 #000000}
 
 .selection a { height: 24px; float: right; width: 92px; margin-top: 20px; margin-right: 10px; background-image: url(/images/butts_on_13.png)}
 .selection a:hover {background-image: url(/images/butts_over_13.png)}
 
 a.button {display: block}
 
-.estimate a.calculate {background-image: url("/images/butts_on_03.png")}
-.estimate a.calculate:hover {background-image: url("/images/butts_over_03.png")}    
-.estimate a.email {background-image: url("/images/butts_on_10.png"); margin-left: 11px}
-.estimate a.email:hover {background-image: url("/images/butts_over_10.png");}
-.estimate a {float: left; width: 112px; height: 24px}
+.selection a.email {background-image: url("/images/butts_on_10.png"); margin-left: 11px}
+.selection a.email:hover {background-image: url("/images/butts_over_10.png");}
+.selection a.email {float: left; width: 112px; height: 24px}
 
 .menu a {font-weight: bold; margin-left: 20px; color: white; text-decoration: none; background-color: transparent}
 .menu a:hover {color: #a6c631}
@@ -57,3 +60,5 @@ a.button {display: block}
 
 .errorExplanation {margin-top: 20px}
 #errorExplanation li {list-style-type: none ! important}
+
+.ui-widget-content {font-size: 12px}

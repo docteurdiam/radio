@@ -1,6 +1,6 @@
 var AlphabeticalSearch = function(element, display) {
 
-    var createLetters = function(element) {
+  var createLetters = function(element) {
     for(i = 1; i <= 26; i++) {
         $("<a href='#A'>" + String.fromCharCode(64+i) + "</a>").appendTo(element);
     }
@@ -9,6 +9,8 @@ var AlphabeticalSearch = function(element, display) {
 
   var attachEventHandlers = function(links) {
     links.click(function() {
+      $(document).trigger("search-initiated");
+      $(this).addClass("selected")
       $.getJSON("/radios/search", {type: "name", query: this.text}, function(data, textStatus) {
         if (data.length > 0) display.add(data);
       })
@@ -17,5 +19,9 @@ var AlphabeticalSearch = function(element, display) {
   };
 
   attachEventHandlers(createLetters($(element)))
+
+  $(document).bind("search-initiated", function() {
+    $(element).find("a").removeClass("selected");
+  });
 };
 

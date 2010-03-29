@@ -1,11 +1,16 @@
 var NameSearch = function(element, display) {
   var initialClick = true;
-  $(element).find("input").focus(function() {
+  $(element).find("input.partial").focus(function() {
     if (initialClick) {
       $(this).val("");
       initialClick = false;
     }
   });
+
+  $(element).find("input").focus(function() {
+    $(document).trigger("search-initiated");
+  });
+  
   $(element).find("input").keyup(function() {
     val = $(this).val();
     if (val.length > 0) {
@@ -14,6 +19,10 @@ var NameSearch = function(element, display) {
       })
     }
     return false;
+  });
+
+  $(document).bind("search-initiated", function() {
+    if (!initialClick) $(element).find("input.partial").val("");
   });
 }
 

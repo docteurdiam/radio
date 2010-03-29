@@ -1,13 +1,36 @@
-<label>Your name: </label><input type="text" name="name" />
-<label>Your email: </label><input type="text" name="email" />
-<input type="button" value="send" />
+<div class="email-first">
+  <label>Your name: </label><input type="text" class="data" name="name-to-send" id="name-to-send" />
+  <label>Your email: </label><input type="text" name="email-to-send" class="data" id="email-to-send" />
+  <input type="button" value="send" class="action" />
+  <input type="hidden" id="radios-to-send" name="radios-to-send" value="<%= @radios %>" />
+</div>
+
+<div class="email-second" style="display: none; line-height: 20px; margin-top: 10px">
+  <p>Your email has been sent. Please close this window to continue.</p>
+</div>
 
 <script type="text/javascript">
 
   $(document).ready(function() {
-    $("#lightbox input").click(function() {
-      alert("hello");
+    $("#lightbox .action").click(function() {
+      $.post("/reminders/send", {
+        radios: $("#radios-to-send").val(),
+        name: $("#name-to-send").val(),
+        email: $("#email-to-send").val()
+      }, function(data) {
+        debugger;
+        $(".email-first").hide();
+        $(".email-second").show();
+      })
     });       
   });
 
 </script>
+
+
+<style>
+label {width: 150px; display: block; float: left; margin-bottom: 5px; margin-top: 10px}
+.action {display: block; margin-top: 10px; float: right}
+.data {width: 270px}
+
+</style>
