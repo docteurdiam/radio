@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="317d2616-f3c7-40f3-b517-29774ef024c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/results_display.js" afterPath="$PROJECT_DIR$/public/javascripts/results_display.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/selection_display.js" afterPath="$PROJECT_DIR$/public/javascripts/selection_display.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reminders/show.html.erb" afterPath="$PROJECT_DIR$/app/views/reminders/show.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/plugins/gmail_smtp/lib/smtp_tls.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/application.css" afterPath="$PROJECT_DIR$/public/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/alphabetical_search.js" afterPath="$PROJECT_DIR$/public/javascripts/alphabetical_search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/reminders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/reminders_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/estimator.js" afterPath="$PROJECT_DIR$/public/javascripts/estimator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/name_search.js" afterPath="$PROJECT_DIR$/public/javascripts/name_search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/type_search.js" afterPath="$PROJECT_DIR$/public/javascripts/type_search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/email_sender.rb" afterPath="$PROJECT_DIR$/app/models/email_sender.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/radios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/radios_controller.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/plugins/gmail_smtp/init.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/plugins/gmail_smtp/lib/actionmailer_gmail.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -70,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="email_sender.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="email_sender.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/email_sender.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="41" selection-start="166" selection-end="166" vertical-scroll-proportion="0.06465517">
+            <state line="3" column="41" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,16 +84,16 @@
       <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="32" selection-start="2366" selection-end="2366" vertical-scroll-proportion="0.0">
+            <state line="44" column="0" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="development.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="49" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
+            <state line="15" column="49" selection-start="745" selection-end="745" vertical-scroll-proportion="0.32327586">
               <folding />
             </state>
           </provider>
@@ -138,9 +122,9 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/reminders/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/reminders_controller.rb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/models/email_sender.rb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
       </list>
     </option>
   </component>
@@ -791,20 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="32" selection-start="2366" selection-end="2366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="49" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/reminders_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="40" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
@@ -814,7 +784,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/email_sender.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="41" selection-start="166" selection-end="166" vertical-scroll-proportion="0.06465517">
+        <state line="3" column="41" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="49" selection-start="745" selection-end="745" vertical-scroll-proportion="0.32327586">
           <folding />
         </state>
       </provider>
