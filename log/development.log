@@ -16481,3 +16481,20 @@ ArgumentError (wrong number of arguments (3 for 2)):
 Rendered rescues/_trace (78.6ms)
 Rendered rescues/_request_and_response (2.5ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-30 00:39:21) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (271.0ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1518ms (View: 1119, DB: 271) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RemindersController#show (for 192.168.0.102 at 2010-03-30 00:39:28) [POST]
+  Parameters: {"radios"=>["1", "3", "4", "5"]}
+Rendering reminders/show
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://192.168.0.105/reminders]
+
+
+Processing RemindersController#deliver (for 192.168.0.102 at 2010-03-30 00:39:38) [POST]
+  Parameters: {"name"=>"John Smith", "radios"=>"1,3,4,5", "email"=>"olivier.kouame@gmail.com"}
+  [4;35;1mRadio Load (0.6ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."id" IN (1,3,4,5)) [0m
