@@ -10,10 +10,10 @@ var AlphabeticalSearch = function(element, display) {
   var attachEventHandlers = function(links) {
     links.click(function() {
       $(document).trigger("search-initiated");
-      $(this).addClass("selected")
-      $.getJSON("/radios/search", {type: "name", query: this.text}, function(data, textStatus) {
+      $(this).addClass("selected");
+      $.getJSON("/radios/search", {type: "name", query: $(this).text()}, function(data, textStatus) {
         if (data.length > 0) display.add(data);
-      })
+      });
       return false;
     });
   };

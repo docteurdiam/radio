@@ -16908,3 +16908,421 @@ Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:17:27) [G
   Parameters: {"type"=>"type", "query"=>"Digital / Internet"}
   [4;36;1mRadio Load (21.1ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Digital / Internet') ORDER BY name[0m
 Completed in 161ms (View: 125, DB: 21) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Digital+%2F+Internet]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 22:22:31) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 22:23:13) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:24:38) [GET]
+  Parameters: {"type"=>"type", "query"=>"National & News"}
+  [4;35;1mRadio Load (10.3ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'National & News') ORDER BY name[0m
+Completed in 55ms (View: 36, DB: 10) | 200 OK [http://192.168.0.105/radios/search?type=type&query=National+%26+News]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:24:46) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (54.9ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:24:55) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (27.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:24:59) [GET]
+  Parameters: {"type"=>"type", "query"=>"National & News"}
+  [4;36;1mRadio Load (9.2ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'National & News') ORDER BY name[0m
+Completed in 49ms (View: 30, DB: 9) | 200 OK [http://192.168.0.105/radios/search?type=type&query=National+%26+News]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:06) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (223.4ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') ORDER BY name[0m
+Completed in 1093ms (View: 791, DB: 223) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:13) [GET]
+  Parameters: {"type"=>"type", "query"=>"ILR Buyouts"}
+  [4;36;1mRadio Load (1.8ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'ILR Buyouts') ORDER BY name[0m
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://192.168.0.105/radios/search?type=type&query=ILR+Buyouts]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:23) [GET]
+  Parameters: {"type"=>"type", "query"=>"Irish & ROI"}
+  [4;35;1mRadio Load (19.5ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Irish & ROI') ORDER BY name[0m
+Completed in 101ms (View: 69, DB: 20) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Irish+%26+ROI]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:25) [GET]
+  Parameters: {"type"=>"type", "query"=>"Digital / Internet"}
+  [4;36;1mRadio Load (26.4ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Digital / Internet') ORDER BY name[0m
+Completed in 161ms (View: 119, DB: 26) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Digital+%2F+Internet]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:27) [GET]
+  Parameters: {"type"=>"type", "query"=>"Totals / Networks"}
+  [4;35;1mRadio Load (12.6ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Totals / Networks') ORDER BY name[0m
+Completed in 56ms (View: 31, DB: 13) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Totals+%2F+Networks]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:28) [GET]
+  Parameters: {"type"=>"type", "query"=>"National & News"}
+  [4;36;1mRadio Load (12.0ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'National & News') ORDER BY name[0m
+Completed in 51ms (View: 32, DB: 12) | 200 OK [http://192.168.0.105/radios/search?type=type&query=National+%26+News]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:30) [GET]
+  Parameters: {"type"=>"type", "query"=>"Totals / Networks"}
+  [4;35;1mRadio Load (21.0ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Totals / Networks') ORDER BY name[0m
+Completed in 70ms (View: 26, DB: 21) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Totals+%2F+Networks]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:32) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:37) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (25.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:25:40) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (40.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:26:11) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (27.2ms)
+Rendered rescues/_request_and_response (33.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:26:23) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (26.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:26:27) [GET]
+  Parameters: {"type"=>"name", "query"=>"L"}
+  [4;36;1mRadio Load (9.8ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'L%') ORDER BY name[0m
+Completed in 42ms (View: 24, DB: 10) | 200 OK [http://192.168.0.105/radios/search?type=name&query=L]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:26:48) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (26.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:26:51) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (30.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:26:58) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (64.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:27:02) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (24.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:27:04) [GET]
+  Parameters: {"type"=>"name", "query"=>"T"}
+  [4;35;1mRadio Load (41.1ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'T%') ORDER BY name[0m
+Completed in 171ms (View: 103, DB: 41) | 200 OK [http://192.168.0.105/radios/search?type=name&query=T]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:27:17) [GET]
+  Parameters: {"type"=>"type", "query"=>"Totals / Networks"}
+  [4;36;1mRadio Load (10.2ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Totals / Networks') ORDER BY name[0m
+Completed in 86ms (View: 65, DB: 10) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Totals+%2F+Networks]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:27:19) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (26.2ms)
+Rendered rescues/_request_and_response (0.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:27:25) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:27:38) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (77.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:27:53) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (26.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:27:56) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (58.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:05) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:12) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:15) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:16) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:17) [GET]
+  Parameters: {"type"=>"name"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/radios_controller.rb:85:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (27.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:30) [GET]
+  Parameters: {"type"=>"name", "query"=>""}
+  [4;35;1mRadio Load (273.5ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE '%') ORDER BY name[0m
+Completed in 1361ms (View: 988, DB: 274) | 200 OK [http://192.168.0.105/radios/search?type=name&query=]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:37) [GET]
+  Parameters: {"type"=>"name", "query"=>""}
+  [4;36;1mRadio Load (298.1ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE '%') ORDER BY name[0m
+Completed in 1395ms (View: 1000, DB: 298) | 200 OK [http://192.168.0.105/radios/search?type=name&query=]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:44) [GET]
+  Parameters: {"type"=>"name", "query"=>""}
+  [4;35;1mRadio Load (242.4ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE '%') ORDER BY name[0m
+Completed in 1400ms (View: 1061, DB: 242) | 200 OK [http://192.168.0.105/radios/search?type=name&query=]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:57) [GET]
+  Parameters: {"type"=>"name", "query"=>"Q"}
+  [4;36;1mRadio Load (13.0ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'Q%') ORDER BY name[0m
+Completed in 47ms (View: 20, DB: 13) | 200 OK [http://192.168.0.105/radios/search?type=name&query=Q]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:28:58) [GET]
+  Parameters: {"type"=>"name", "query"=>"W"}
+  [4;35;1mRadio Load (6.8ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'W%') ORDER BY name[0m
+Completed in 36ms (View: 21, DB: 7) | 200 OK [http://192.168.0.105/radios/search?type=name&query=W]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:29:01) [GET]
+  Parameters: {"type"=>"name", "query"=>"H"}
+  [4;36;1mRadio Load (28.2ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'H%') ORDER BY name[0m
+Completed in 115ms (View: 71, DB: 28) | 200 OK [http://192.168.0.105/radios/search?type=name&query=H]

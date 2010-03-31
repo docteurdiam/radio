@@ -14,11 +14,11 @@ var ResultsDisplay = function(element, selection) {
       var current_prefix = radio.name ? radio.name.substring(0, 1) : "";
       if (current_prefix != prefix && !(isNumeric(prefix) && isNumeric(current_prefix))) {
         prefix = current_prefix;
-        var display = isNumeric(prefix) ? "0-9" : prefix
+        var display = isNumeric(prefix) ? "0-9" : prefix;
         $('<li class="prefix">' + display + '</li>').appendTo(this.element);
       }
-      var class = i % 2 == 0 ? "normal" : "striped";
-      $('<li class="' + class + '"><input type="checkbox" id="radio-' + radio.id + '" value="' + radio.fee + '" /><label>' + radio.name + '</label><br/></li>').appendTo(this.element);
+      var view = i % 2 == 0 ? "normal" : "striped";
+      $('<li class="' + view + '"><input type="checkbox" id="radio-' + radio.id + '" value="' + radio.fee + '" /><label>' + radio.name + '</label><br/></li>').appendTo(this.element);
     }
   };
 
