@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Account registered!"
-      redirect_back_or_default users_path
+      redirect_to users_path
     else
       render :action => :new
     end
@@ -38,4 +38,5 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
+  
 end
