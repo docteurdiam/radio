@@ -7,6 +7,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/application.css" afterPath="$PROJECT_DIR$/public/stylesheets/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/radios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/radios_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/estimator.js" afterPath="$PROJECT_DIR$/public/javascripts/estimator.js" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="radio.iws" />
@@ -39,28 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reminders_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/reminders_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="44" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="email_sender.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/email_sender.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="results_display.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="results_display.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/results_display.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="50" selection-start="242" selection-end="242" vertical-scroll-proportion="0.19823788">
+            <state line="19" column="37" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -69,16 +52,25 @@
       <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="81" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0">
+            <state line="24" column="30" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="87" selection-start="4048" selection-end="4048" vertical-scroll-proportion="-15.363636">
+            <state line="70" column="78" selection-start="4631" selection-end="4631" vertical-scroll-proportion="0.49013656">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estimator.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/estimator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="16" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -104,7 +96,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/controllers/user_sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/public/javascripts/estimator.js" />
         <option value="$PROJECT_DIR$/public/javascripts/alphabetical_search.js" />
         <option value="$PROJECT_DIR$/public/javascripts/name_search.js" />
         <option value="$PROJECT_DIR$/public/javascripts/type_search.js" />
@@ -115,10 +106,11 @@
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/app/controllers/reminders_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/email_sender.rb" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/app/controllers/radios_controller.rb" />
         <option value="$PROJECT_DIR$/public/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/public/javascripts/results_display.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/estimator.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -706,13 +698,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/estimator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
@@ -783,13 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="87" selection-start="4048" selection-end="4048" vertical-scroll-proportion="-15.363636">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/radios_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="58" selection-start="2159" selection-end="2159" vertical-scroll-proportion="0.0">
@@ -799,14 +777,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="81" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0">
+        <state line="24" column="30" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/results_display.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="50" selection-start="242" selection-end="242" vertical-scroll-proportion="0.19823788">
+        <state line="19" column="37" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/estimator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="78" selection-start="4631" selection-end="4631" vertical-scroll-proportion="0.49013656">
           <folding />
         </state>
       </provider>

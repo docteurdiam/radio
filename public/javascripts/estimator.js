@@ -7,6 +7,6 @@ var Estimator = function(element, selector) {
       var fee = parseInt(stations.eq(i).val());
       total = total + parseInt(fee);
     };
-    container.find(".result").val(total);
+    container.find(".result").val("£" + total);
   });
 }

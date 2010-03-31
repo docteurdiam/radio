@@ -21,8 +21,8 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .alphabetical a {text-shadow: 0 1px 0 #000000}
 
 .results {width: 595px}
-.results-items {background: white; height: 320px; margin-left: 1px; width: 593px; overflow: scroll; overflow-x: hidden}
-.results-items ul {min-height: 298px}
+.results-items {background: white; height: 320px; margin-left: 1px; width: 593px}
+.results-items ul {height: 298px;  overflow: scroll; overflow-x: hidden}
 .results-items ul li {line-height: 180%; padding-left: 30px}
 .results-items ul li.prefix {font-weight: bold; font-size: 120%; padding-left: 47px}
 .results-items ul li.striped {background-color: #eeeeee}

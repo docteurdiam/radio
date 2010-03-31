@@ -16776,3 +16776,135 @@ Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:09:27) [G
   Parameters: {"type"=>"type", "query"=>"Digital / Internet"}
   [4;36;1mRadio Load (25.6ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Digital / Internet') ORDER BY name[0m
 Completed in 110ms (View: 72, DB: 26) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Digital+%2F+Internet]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:11:06) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (240.0ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') ORDER BY name[0m
+Completed in 1151ms (View: 814, DB: 240) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:11:24) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (195.1ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') ORDER BY name[0m
+Completed in 1089ms (View: 805, DB: 195) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:12:07) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (184.7ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') ORDER BY name[0m
+Completed in 1113ms (View: 791, DB: 185) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:00) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (185.8ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') ORDER BY name[0m
+Completed in 1096ms (View: 828, DB: 186) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:14) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (199.2ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') ORDER BY name[0m
+Completed in 1144ms (View: 856, DB: 199) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:40) [GET]
+  Parameters: {"type"=>"name", "query"=>"J"}
+  [4;36;1mRadio Load (4.3ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'J%') ORDER BY name[0m
+Completed in 19ms (View: 11, DB: 4) | 200 OK [http://192.168.0.105/radios/search?type=name&query=J]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:43) [GET]
+  Parameters: {"type"=>"name", "query"=>"T"}
+  [4;35;1mRadio Load (16.2ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'T%') ORDER BY name[0m
+Completed in 139ms (View: 112, DB: 16) | 200 OK [http://192.168.0.105/radios/search?type=name&query=T]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:45) [GET]
+  Parameters: {"type"=>"name", "query"=>"c"}
+  [4;36;1mRadio Load (54.0ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'c%') ORDER BY name[0m
+Completed in 175ms (View: 98, DB: 54) | 200 OK [http://192.168.0.105/radios/search?type=name&query=c]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:45) [GET]
+  Parameters: {"type"=>"name", "query"=>"ca"}
+  [4;35;1mRadio Load (3.7ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'ca%') ORDER BY name[0m
+Completed in 15ms (View: 8, DB: 4) | 200 OK [http://192.168.0.105/radios/search?type=name&query=ca]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:45) [GET]
+  Parameters: {"type"=>"name", "query"=>"car"}
+  [4;36;1mRadio Load (1.6ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'car%') ORDER BY name[0m
+Completed in 6ms (View: 0, DB: 2) | 200 OK [http://192.168.0.105/radios/search?type=name&query=car]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:46) [GET]
+  Parameters: {"type"=>"name", "query"=>"cara"}
+  [4;35;1mRadio Load (2.9ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'cara%') ORDER BY name[0m
+Completed in 12ms (View: 1, DB: 3) | 200 OK [http://192.168.0.105/radios/search?type=name&query=cara]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:47) [GET]
+  Parameters: {"type"=>"name", "query"=>"car"}
+  [4;36;1mRadio Load (2.5ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'car%') ORDER BY name[0m
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://192.168.0.105/radios/search?type=name&query=car]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:47) [GET]
+  Parameters: {"type"=>"name", "query"=>"ca"}
+  [4;35;1mRadio Load (5.1ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'ca%') ORDER BY name[0m
+Completed in 100ms (View: 11, DB: 5) | 200 OK [http://192.168.0.105/radios/search?type=name&query=ca]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:50) [GET]
+  Parameters: {"type"=>"name", "query"=>"c"}
+  [4;36;1mRadio Load (25.9ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'c%') ORDER BY name[0m
+Completed in 136ms (View: 90, DB: 26) | 200 OK [http://192.168.0.105/radios/search?type=name&query=c]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:53) [GET]
+  Parameters: {"type"=>"name", "query"=>" "}
+  [4;35;1mRadio Load (5.4ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE ' %') ORDER BY name[0m
+Completed in 18ms (View: 1, DB: 5) | 200 OK [http://192.168.0.105/radios/search?type=name&query=+]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:55) [GET]
+  Parameters: {"type"=>"name", "query"=>"c"}
+  [4;36;1mRadio Load (29.0ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'c%') ORDER BY name[0m
+Completed in 173ms (View: 128, DB: 29) | 200 OK [http://192.168.0.105/radios/search?type=name&query=c]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:56) [GET]
+  Parameters: {"type"=>"name", "query"=>"ca"}
+  [4;35;1mRadio Load (6.1ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'ca%') ORDER BY name[0m
+Completed in 18ms (View: 7, DB: 6) | 200 OK [http://192.168.0.105/radios/search?type=name&query=ca]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:13:56) [GET]
+  Parameters: {"type"=>"name", "query"=>"car"}
+  [4;36;1mRadio Load (3.7ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'car%') ORDER BY name[0m
+Completed in 11ms (View: 0, DB: 4) | 200 OK [http://192.168.0.105/radios/search?type=name&query=car]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:14:53) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (179.4ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') ORDER BY name[0m
+Completed in 1044ms (View: 752, DB: 179) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:16:31) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (182.5ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') ORDER BY name[0m
+Completed in 1054ms (View: 787, DB: 183) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:17:27) [GET]
+  Parameters: {"type"=>"type", "query"=>"Totals / Networks"}
+  [4;35;1mRadio Load (7.7ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Totals / Networks') ORDER BY name[0m
+Completed in 46ms (View: 29, DB: 8) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Totals+%2F+Networks]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 22:17:27) [GET]
+  Parameters: {"type"=>"type", "query"=>"Digital / Internet"}
+  [4;36;1mRadio Load (21.1ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Digital / Internet') ORDER BY name[0m
+Completed in 161ms (View: 125, DB: 21) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Digital+%2F+Internet]

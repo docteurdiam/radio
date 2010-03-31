@@ -17,7 +17,7 @@ var ResultsDisplay = function(element, selection) {
         var display = isNumeric(prefix) ? "0-9" : prefix
         $('<li class="prefix">' + display + '</li>').appendTo(this.element);
       }
-      var class = i % 2 == 0 ? "striped" : "normal";
+      var class = i % 2 == 0 ? "normal" : "striped";
       $('<li class="' + class + '"><input type="checkbox" id="radio-' + radio.id + '" value="' + radio.fee + '" /><label>' + radio.name + '</label><br/></li>').appendTo(this.element);
     }
   };
