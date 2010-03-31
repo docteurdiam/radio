@@ -5,7 +5,8 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 
 #page {margin: 20px auto auto; width: 900px}
 
-#main {background-image: url(/images/bgnds_05.png); width: 900px}
+#main {background-image: url(/images/bgnds_05.png); width: 900px; height: 820px; margin-bottom: 20px}
+.left {width: 640px; float: left}
 
 #header {background-image: url(/images/bgnds_03.png); height: 201px; width: 900px}
 #header .contents {width: 620px; float: right; padding-top: 25px}
@@ -20,7 +21,7 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .alphabetical a.selected {color: #a6c631}
 .alphabetical a {text-shadow: 0 1px 0 #000000}
 
-.results {width: 595px}
+.results {width: 595px; min-height: 300px}
 .results-items {background: white; height: 320px; margin-left: 1px; width: 593px}
 .results-items ul {height: 298px;  overflow: scroll; overflow-x: hidden}
 .results-items ul li {line-height: 180%; padding-left: 30px}
@@ -30,6 +31,7 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .results-box-top {background: url(/images/fade_results_box_top.png) repeat-x; height: 11px}
 .results-box-bottom {background: url(/images/fade_results_box_bottom.png) repeat-x; height: 11px}
 .results-header {background-image: url(/images/box_top_results_main.png)}
+.results-header h2 {color: #434343; margin-bottom: 0; padding: 15px; margin-left: 10px}
 
 .name {margin-top: 15px; margin-left: 22px}
 .name input {font-size: 20px; font-weight: bold; width: 471px; color: #434343; padding: 8px}
@@ -44,13 +46,19 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 
 a.button {display: block}
 
-.selection a { height: 24px; float: right; width: 92px; margin-top: 20px; margin-right: 10px; background-image: url(/images/butts_on_13.png)}
+.selection a { height: 24px; float: right; width: 92px; margin-top: 7px; margin-right: 10px; background-image: url(/images/butts_on_13.png)}
 .selection a:hover {background-image: url(/images/butts_over_13.png)}
 .selection a.email {background-image: url("/images/butts_on_10.png"); margin-left: 11px}
 .selection a.email:hover {background-image: url("/images/butts_over_10.png");}
 .selection a.email {float: left; width: 112px; height: 24px}
 .selection ul li {line-height: 180%; padding-left: 5px}
 .selection ul label {font-size: 80%}
+.selection ul {overflow: scroll; overflow-x: hidden; min-height: 510px; width: 223px; background-color: white}
+.selection h2 {color: #434343; margin-bottom: 0; width: 203px; background-color: white; height: 25px; padding: 5px 10px 10px;}
+.selection {margin-left: 5px}
+
+.estimate {margin-left: 10px}
+.estimate h2 {margin-bottom: 10px}
 
 .menu a {font-weight: bold; margin-left: 20px; color: white; text-decoration: none; background-color: transparent}
 .menu a:hover {color: #a6c631}
@@ -67,3 +75,5 @@ a.button {display: block}
 #errorExplanation li {list-style-type: none ! important}
 
 .ui-widget-content {font-size: 12px}
+
+#right-wrapper {margin: 25px auto auto}
