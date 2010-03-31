@@ -6,7 +6,8 @@ var ResultsDisplay = function(element, selection) {
     this.element.empty();
     for(var i = 0; i < radios.length; i++) {
       var radio = radios[i].radio;
-      $('<li><input type="checkbox" id="radio-' + radio.id + '" value="' + radio.fee + '" /><label>' + radio.name + '</label><br/></li>').appendTo(this.element);
+      var class = i % 2 == 0 ? "striped" : "normal";
+      $('<li class="' + class + '"><input type="checkbox" id="radio-' + radio.id + '" value="' + radio.fee + '" /><label>' + radio.name + '</label><br/></li>').appendTo(this.element);
     }
   };
 

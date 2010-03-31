@@ -23,6 +23,9 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .results {width: 595px}
 .results-items {background: white; height: 320px; margin-left: 1px; width: 593px; overflow: scroll; overflow-x: hidden}
 .results-items ul {min-height: 298px}
+.results-items ul li {line-height: 180%; padding-left: 30px}
+.results-items ul li.striped {background-color: #eeeeee}
+.results-items ul label {font-size: 80%}
 .results-box-top {background: url(/images/fade_results_box_top.png) repeat-x; height: 11px}
 .results-box-bottom {background: url(/images/fade_results_box_bottom.png) repeat-x; height: 11px}
 .results-header {background-image: url(/images/box_top_results_main.png)}
@@ -38,14 +41,15 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .type li a:hover {color: #eaeaea}
 .type li a {text-shadow: 0 1px 0 #000000}
 
-.selection a { height: 24px; float: right; width: 92px; margin-top: 20px; margin-right: 10px; background-image: url(/images/butts_on_13.png)}
-.selection a:hover {background-image: url(/images/butts_over_13.png)}
-
 a.button {display: block}
 
+.selection a { height: 24px; float: right; width: 92px; margin-top: 20px; margin-right: 10px; background-image: url(/images/butts_on_13.png)}
+.selection a:hover {background-image: url(/images/butts_over_13.png)}
 .selection a.email {background-image: url("/images/butts_on_10.png"); margin-left: 11px}
 .selection a.email:hover {background-image: url("/images/butts_over_10.png");}
 .selection a.email {float: left; width: 112px; height: 24px}
+.selection ul li {line-height: 180%; padding-left: 5px}
+.selection ul label {font-size: 80%}
 
 .menu a {font-weight: bold; margin-left: 20px; color: white; text-decoration: none; background-color: transparent}
 .menu a:hover {color: #a6c631}

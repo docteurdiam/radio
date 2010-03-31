@@ -16498,3 +16498,173 @@ Completed in 13ms (View: 9, DB: 0) | 200 OK [http://192.168.0.105/reminders]
 Processing RemindersController#deliver (for 192.168.0.102 at 2010-03-30 00:39:38) [POST]
   Parameters: {"name"=>"John Smith", "radios"=>"1,3,4,5", "email"=>"olivier.kouame@gmail.com"}
   [4;35;1mRadio Load (0.6ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."id" IN (1,3,4,5)) [0m
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 21:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 21:13:23) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:13:25) [GET]
+  Parameters: {"type"=>"type", "query"=>"Irish & ROI"}
+  [4;36;1mRadio Load (18.8ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Irish & ROI') [0m
+Completed in 98ms (View: 64, DB: 19) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Irish+%26+ROI]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 21:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:14:36) [GET]
+  Parameters: {"type"=>"type", "query"=>"ILR Buyouts"}
+  [4;35;1mRadio Load (0.9ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'ILR Buyouts') [0m
+Completed in 9ms (View: 0, DB: 1) | 200 OK [http://192.168.0.105/radios/search?type=type&query=ILR+Buyouts]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:14:36) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (169.5ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1076ms (View: 794, DB: 170) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:15:01) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (175.4ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1086ms (View: 784, DB: 175) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:15:14) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (170.9ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1069ms (View: 819, DB: 171) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:15:34) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (230.8ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1136ms (View: 818, DB: 231) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:15:53) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (176.5ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1093ms (View: 837, DB: 177) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:16:16) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (227.5ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1130ms (View: 820, DB: 227) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:16:28) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (168.6ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1076ms (View: 781, DB: 169) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:18:45) [GET]
+  Parameters: {"type"=>"name", "query"=>"R"}
+  [4;35;1mRadio Load (21.3ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'R%') [0m
+Completed in 122ms (View: 92, DB: 21) | 200 OK [http://192.168.0.105/radios/search?type=name&query=R]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:18:50) [GET]
+  Parameters: {"type"=>"name", "query"=>"E"}
+  [4;36;1mRadio Load (3.1ms)[0m   [0;1mSELECT * FROM "radios" WHERE (name LIKE 'E%') [0m
+Completed in 20ms (View: 10, DB: 3) | 200 OK [http://192.168.0.105/radios/search?type=name&query=E]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:31:10) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (170.7ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1033ms (View: 785, DB: 171) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:32:10) [GET]
+  Parameters: {"type"=>"type", "query"=>"National & News"}
+  [4;36;1mRadio Load (10.9ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'National & News') [0m
+Completed in 52ms (View: 34, DB: 11) | 200 OK [http://192.168.0.105/radios/search?type=type&query=National+%26+News]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:32:45) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (166.5ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1033ms (View: 785, DB: 166) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:33:17) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (170.2ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1121ms (View: 821, DB: 170) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:33:47) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (170.5ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1073ms (View: 824, DB: 171) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:35:06) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (225.1ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1127ms (View: 827, DB: 225) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 21:35:57) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 21:35:57) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 21:36:00) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 192.168.0.102 at 2010-03-31 21:36:26) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:36:28) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;35;1mRadio Load (228.1ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1088ms (View: 778, DB: 228) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-03-31 21:37:22) [GET]
+  Parameters: {"type"=>"type", "query"=>"Local & Regional"}
+  [4;36;1mRadio Load (174.6ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Local & Regional') [0m
+Completed in 1087ms (View: 832, DB: 175) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Local+%26+Regional]
