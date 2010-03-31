@@ -82,9 +82,9 @@ class RadiosController < ApplicationController
   def execute_search(type, query)
     case type
       when "name"
-        Radio.find(:all, :conditions => ['name LIKE ?', query + "%"])
+        Radio.find(:all, :conditions => ['name LIKE ?', query + "%"], :order => "name")
       when "type"
-        Radio.find_all_by_category(query)
+        Radio.find_all_by_category(query, :order => "name")
     end
   end
 
