@@ -2,9 +2,16 @@ var SelectionDisplay = function(element) {
 
   var list = $(element).find("ul");
 
-  $(element).find(".clear").click(function() {
+  $(element).find(".clear-all").click(function() {
     list.empty();
     $(document).trigger("selection-change");
+    return false;
+  });
+
+  $(element).find(".select-all").click(function() {
+    list.find("input").attr("checked", "true");
+    $(document).trigger("selection-change");
+    return false;
   });
 
   this.add = function(fee, text, id) {
@@ -40,6 +47,7 @@ var SelectionDisplay = function(element) {
       });
       lightbox.dialog('open');
     });
+    return false;
   });
 
 }

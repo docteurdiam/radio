@@ -13,7 +13,8 @@
   </p>
   <p>
     <%= f.label :category %><br />
-    <%= f.text_field :category %>
+    <%= select_tag "radio[category]", options_for_select(
+            [ "Local & Regional", "National & News", "Digital / Internet", "Irish & ROI", "Totals / Networks", "ILR Buyouts"], @radio.category) %>
   </p>
   <p>
     <%= f.submit 'Update' %>

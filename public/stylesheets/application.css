@@ -22,6 +22,7 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .alphabetical a {text-shadow: 0 1px 0 #000000}
 
 .results {width: 595px; min-height: 300px}
+.results .button { height: 24px; float: right; margin-right: 10px; margin-top: 15px}
 .results-items {background: white; height: 320px; margin-left: 1px; width: 593px}
 .results-items ul {height: 298px;  overflow: scroll; overflow-x: hidden}
 .results-items ul li {line-height: 180%; padding-left: 30px}
@@ -45,17 +46,20 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .type li a {text-shadow: 0 1px 0 #000000}
 
 a.button {display: block}
+a.clear-all {background-image: url(/images/results_box_main_bottom_butts_05.png); width: 103px;}
+a.clear-all:hover {background-image: url(/images/results_box_main_bottom_butts_over_05.png)}
+a.select-all:hover {background-image: url(/images/results_box_main_bottom_butts_over_03.png)}
+a.select-all {background-image: url(/images/results_box_main_bottom_butts_03.png); width: 103px}
 
-.selection a { height: 24px; float: right; width: 92px; margin-top: 7px; margin-right: 10px; background-image: url(/images/butts_on_13.png)}
-.selection a:hover {background-image: url(/images/butts_over_13.png)}
-.selection a.email {background-image: url("/images/butts_on_10.png"); margin-left: 11px}
-.selection a.email:hover {background-image: url("/images/butts_over_10.png");}
-.selection a.email {float: left; width: 112px; height: 24px}
+.selection a.button { height: 24px; float: left; margin-top: 7px}
+.selection a.email {background-image: url(/images/email_quote_on_08.png); width: 224px}
+.selection a.email:hover {background-image: url("/images/butt_email_quote_over_08.png");}
 .selection ul li {line-height: 180%; padding-left: 5px}
 .selection ul label {font-size: 80%}
-.selection ul {overflow: scroll; overflow-x: hidden; min-height: 510px; width: 223px; background-color: white}
+.selection ul {overflow: scroll; overflow-x: hidden; height: 495px; width: 223px; background-color: white}
 .selection h2 {color: #434343; margin-bottom: 0; width: 203px; background-color: white; height: 25px; padding: 5px 10px 10px;}
 .selection {margin-left: 5px}
+.selection .select-all {background-image: url(/images/results_box_main_bottom_butts_03.png); width: 103px; position: relative; left: 16px}
 
 .estimate {margin-left: 10px}
 .estimate h2 {margin-bottom: 10px}

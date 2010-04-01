@@ -1,2 +1,14 @@
-Please find your radio list attached!
+<h3>Hi <%= @name %>, thanks for making use of the Radio Usage Calculator!</h3>
+
+<p>The total fee for the stations you selected is: £<%= @total %>.</p>
+
+<p>Below is the list of stations you have selected:</p>
+
+<ul>
+<% @radios.each do |radio| %>
+  <li><%= radio.name %> @ <%= radio.fee %></li>
+<% end %>
+</ul>
+
+<p>For more information, please contact us directly.</p>
 

@@ -61,7 +61,9 @@
           </div>
           <div class="results-items">
             <div class="results-box-top"></div><ul></ul><div class="results-box-bottom"></div>
+
           </div>
+          <a class="button clear-all" href="#"></a><a class="select-all button" href="#"></a>
           <div style="background: url(/images/box_bottom_results_main.png); height: 55px"></div>
         </div>
       </div>
@@ -81,14 +83,17 @@
             <h2>Selected Stations:</h2>
             <ul></ul>
             <div style="text-align: right; width: 210px; margin-right: 13px">
-                            <a class="button" style="float: left" href="#"></a><a style="float: left" class="button" href="#"></a>
+              <a class="button clear-all" style="float: left" href="#"></a><a class="select-all button" href="#"></a>
               <a href="#" class="email button"></a>
-
               <div class="clear"></div>
             </div>
+
           </div>
+
           </div>
+
         </div>
+            <img src="/images/bgnd_secondary_results_box_06.png" alt="visuals" />
       </div>
       <div class="clear"></div>
       </div>
@@ -101,7 +106,7 @@
 
     var selection_display = new SelectionDisplay(".selection", new Estimator(".estimate", ".selection ul li input:checked"));
 
-    var results_display = new ResultsDisplay(".results ul", selection_display);
+    var results_display = new ResultsDisplay(".results", selection_display);
 
     var alphabetical_search = new AlphabeticalSearch(".search .alphabetical", results_display);
 

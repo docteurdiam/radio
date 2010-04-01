@@ -4,5 +4,6 @@ class EmailSender < ActionMailer::Base
     from        "olivier.kouame@gmail.com"
     subject     "Your reminder from radios"
     sent_on     Time.now
+    body        :name => name, :radios => radios, :total => total
   end
 end
