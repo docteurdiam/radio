@@ -77,6 +77,18 @@ class RadiosController < ApplicationController
     render :json => radios
   end
 
+#  def calculate
+#    radios =  Radio.find(params[:radios].split(","))
+#    total = 0
+#    radios.each do |radio|
+#      partner = Partnership.check(radio)
+#      if partner && (radios.contains? partner)
+#        total = total + radio.partnership.fee / 2
+#        next
+#      end
+#    end
+#  end
+
   private
 
   def execute_search(type, query)

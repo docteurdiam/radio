@@ -18417,3 +18417,46 @@ Errno::ECONNREFUSED (Connection refused - connect(2)):
 Rendered rescues/_trace (78.7ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-04-01 02:11:49) [GET]
+  Parameters: {"type"=>"name", "query"=>"V"}
+  [4;36;1mRadio Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "ILIKE": syntax error: SELECT * FROM "radios" WHERE (name ILIKE 'V%') ORDER BY name[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "ILIKE": syntax error: SELECT * FROM "radios" WHERE (name ILIKE 'V%')  ORDER BY name):
+  app/controllers/radios_controller.rb:97:in `execute_search'
+  app/controllers/radios_controller.rb:76:in `search'
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (3.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-04-01 02:12:07) [GET]
+  Parameters: {"type"=>"name", "query"=>"T"}
+  [4;35;1mRadio Load (28.4ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'T%') ORDER BY name[0m
+Completed in 164ms (View: 118, DB: 28) | 200 OK [http://192.168.0.105/radios/search?type=name&query=T]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-04-01 02:12:31) [GET]
+  Parameters: {"type"=>"type", "query"=>"Digital / Internet"}
+  [4;36;1mRadio Load (30.7ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Digital / Internet') ORDER BY name[0m
+Completed in 162ms (View: 110, DB: 31) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Digital+%2F+Internet]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-04-01 02:12:39) [GET]
+  Parameters: {"type"=>"type", "query"=>"National & News"}
+  [4;35;1mRadio Load (31.2ms)[0m   [0mSELECT * FROM "radios" WHERE ("radios"."category" = 'National & News') ORDER BY name[0m
+Completed in 111ms (View: 53, DB: 31) | 200 OK [http://192.168.0.105/radios/search?type=type&query=National+%26+News]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-04-01 02:12:41) [GET]
+  Parameters: {"type"=>"type", "query"=>"Irish & ROI"}
+  [4;36;1mRadio Load (26.0ms)[0m   [0;1mSELECT * FROM "radios" WHERE ("radios"."category" = 'Irish & ROI') ORDER BY name[0m
+Completed in 140ms (View: 97, DB: 26) | 200 OK [http://192.168.0.105/radios/search?type=type&query=Irish+%26+ROI]
+
+
+Processing RadiosController#search (for 192.168.0.102 at 2010-04-01 02:12:44) [GET]
+  Parameters: {"type"=>"name", "query"=>"P"}
+  [4;35;1mRadio Load (14.1ms)[0m   [0mSELECT * FROM "radios" WHERE (name LIKE 'P%') ORDER BY name[0m
+Completed in 72ms (View: 47, DB: 14) | 200 OK [http://192.168.0.105/radios/search?type=name&query=P]

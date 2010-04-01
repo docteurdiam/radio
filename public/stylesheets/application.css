@@ -28,7 +28,7 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .results-items ul li {line-height: 180%; padding-left: 30px}
 .results-items ul li.prefix {font-weight: bold; font-size: 120%; padding-left: 47px}
 .results-items ul li.striped {background-color: #eeeeee}
-.results-items ul label {font-size: 80%}
+.results-items ul label {font-size: 80%; display: inline ! important; margin-left: 10px}
 .results-box-top {background: url(/images/fade_results_box_top.png) repeat-x; height: 11px}
 .results-box-bottom {background: url(/images/fade_results_box_bottom.png) repeat-x; height: 11px}
 .results-header {background-image: url(/images/box_top_results_main.png)}
