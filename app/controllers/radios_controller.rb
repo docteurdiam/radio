@@ -99,9 +99,9 @@ class RadiosController < ApplicationController
     results = []
     case type
       when "name"
-        radios = Radio.find(:all, :conditions => ['name LIKE ?', query + "%"], :order => "name")
-        networks = Network.find(:all, :conditions => ['name LIKE ?', query + "%"], :order => "name")
-        totals = Total.find(:all, :conditions => ['name LIKE ?', query + "%"], :order => "name")
+        radios = Radio.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
+        networks = Network.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
+        totals = Total.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
         results += totals.map {|total| total.to_hash}
         results +=  radios.map {|radio| radio.to_hash}
         results +=  networks.map {|network| network.to_hash}
