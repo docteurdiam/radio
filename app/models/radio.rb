@@ -5,6 +5,11 @@ class Radio < ActiveRecord::Base
   belongs_to :partnership
 
   cattr_reader :per_page
-  @@per_page = 20 
+  @@per_page = 20
+
+  def to_hash
+    {:fee => fee, :name => name, :id => id, :type => 'station', :note => note}
+  end
+
 
 end

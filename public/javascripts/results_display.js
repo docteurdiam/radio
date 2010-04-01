@@ -20,10 +20,11 @@ var ResultsDisplay = function(element, selection) {
   });
 
   this.add = function(radios) {
-    this.element.find("ul").empty();
+    var container = this.element.find("ul");
+    container.empty();
     var prefix = "";
     for(var i = 0; i < radios.length; i++) {
-      var radio = radios[i].radio;
+      var radio = radios[i];
       var current_prefix = radio.name ? radio.name.substring(0, 1) : "";
       if (current_prefix != prefix && !(isNumeric(prefix) && isNumeric(current_prefix))) {
         prefix = current_prefix;
@@ -31,12 +32,35 @@ var ResultsDisplay = function(element, selection) {
         $('<li class="prefix">' + display + '</li>').appendTo(this.element.find("ul"));
       }
       var view = i % 2 == 0 ? "normal" : "striped";
-      $('<li class="' + view + '"><input type="checkbox" id="radio-' + radio.id + '" value="' + radio.fee + '" /><label>' + radio.name + '</label><br/></li>').appendTo(this.element.find("ul"));
+      var note = radio.note ? "<a href='#' class='note'>*</a><em>" + radio.note + "</em>" : "";
+      $('<li class="' + view + '"><input type="checkbox" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /><label>' + radio.name + '</label>' + note + '<br/></li>').appendTo(container);
+
+      container.find("a.note").hover(function() {
+        container.find("em").hide(); 
+        $(this).next("em").stop(true, true).animate({opacity: "show"}, "slow");
+      }, function() {
+        $(this).next("em").animate({opacity: "hide"}, "fast");
+      });
+
     }
   };
 
   this.element.find("input:checked").live('click', function() {
-      selection.add($(this).val(), $(this).siblings("label").text(), $(this).attr("id"));
+    var info = parseIdentifier($(this).attr("id"));
+    var id = info["id"];
+    var type = info["type"];
+    if (type == "total") {
+      $.get("/totals/" + id + "/stations", function(data){
+        for (var i = 0; i < data.length; i++) {
+          var station = data[i];
+          selection.add(station.name, "radio-" + station.id + "-" + station.type);
+        }
+      })
+    }
+    else
+    {
+      selection.add($(this).siblings("label").text(), $(this).attr("id"));
+    }
   });
 
 }

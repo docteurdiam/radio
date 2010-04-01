@@ -11,10 +11,6 @@ class RadiosController < ApplicationController
 
   def show
     @radio = Radio.find(params[:id])
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @radio }
-    end
   end
 
   def new
@@ -77,27 +73,48 @@ class RadiosController < ApplicationController
     render :json => radios
   end
 
-#  def calculate
-#    radios =  Radio.find(params[:radios].split(","))
-#    total = 0
-#    radios.each do |radio|
-#      partner = Partnership.check(radio)
-#      if partner && (radios.contains? partner)
-#        total = total + radio.partnership.fee / 2
-#        next
-#      end
-#    end
-#  end
+  def calculate
+    identifiers = params[:identifiers]
+    parts = identifiers.map do |identifier|
+      identifier.split("-")
+    end
+    total = 0
+    parts.each do |part|
+      if part[2] == "station"
+        total = total + Radio.find(part[1]).fee
+      elsif part[2] == "network"
+        total = total + Network.find(part[1]).fee
+      elsif part[2] == "total"
+        total = total + Total.find(part[1]).radios.inject(0) {|radio, sum| sum + radio.fee}
+      else
+        raise "Logic error"
+      end
+    end
+    render :text => total
+  end
 
   private
 
   def execute_search(type, query)
+    results = []
     case type
       when "name"
-        Radio.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
+        radios = Radio.find(:all, :conditions => ['name LIKE ?', query + "%"], :order => "name")
+        networks = Network.find(:all, :conditions => ['name LIKE ?', query + "%"], :order => "name")
+        totals = Total.find(:all, :conditions => ['name LIKE ?', query + "%"], :order => "name")
+        results += totals.map {|total| total.to_hash}
+        results +=  radios.map {|radio| radio.to_hash}
+        results +=  networks.map {|network| network.to_hash}
       when "type"
-        Radio.find_all_by_category(query, :order => "name")
+        case query
+          when "Totals / Networks"
+          results +=  Network.find(:all, :order => "name").map{|network| network.to_hash}
+          results +=  Total.find(:all).map {|total| total.to_hash}
+        else
+          results +=  Radio.find_all_by_category(query, :order => "name").map {|radio| radio.to_hash}
+        end
     end
+    results.sort_by {|result| result[:name]}
   end
 
 end

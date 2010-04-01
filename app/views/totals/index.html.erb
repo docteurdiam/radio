@@ -1,0 +1,23 @@
+<h1>Listing Totals</h1>
+
+<table style="width: 500px">
+  <tr>
+    <th>Name</th>
+    <th>Station Count</th>
+  </tr>
+
+<% @totals.each do |total| %>
+  <tr>
+    <td><%=h total.name %></td>
+    <td><%=h total.radios.count %></td>
+    <td><%= link_to 'Show', total %></td>
+    <td><%= link_to 'Edit', edit_total_path(total) %></td>
+    <td><%= link_to 'Destroy', total, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @totals %>
+
+<br />
+<div class="actions"><%= link_to 'New total', new_total_path %></div>

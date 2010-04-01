@@ -1,0 +1,16 @@
+<h1>New Total</h1>
+
+<% form_for(@total) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <h3><%= f.label :note %>:</h3>
+  <%= f.text_area :note %>
+  <p class="actions">
+    <%= f.submit 'Create' %>   <%= link_to 'Back', totals_path %>
+  </p>
+<% end %>
+

@@ -26,6 +26,8 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .results-items {background: white; height: 320px; margin-left: 1px; width: 593px}
 .results-items ul {height: 298px;  overflow: scroll; overflow-x: hidden}
 .results-items ul li {line-height: 180%; padding-left: 30px}
+.results-items ul {height: 298px;  overflow: scroll; overflow-x: hidden}
+.results-items ul li a.note {font-weight: bold; font-size: 24px; color: black; text-decoration: none; margin-left: 10px}
 .results-items ul li.prefix {font-weight: bold; font-size: 120%; padding-left: 47px}
 .results-items ul li.striped {background-color: #eeeeee}
 .results-items ul label {font-size: 80%; display: inline ! important; margin-left: 10px}
@@ -81,3 +83,18 @@ a.select-all {background-image: url(/images/results_box_main_bottom_butts_03.png
 .ui-widget-content {font-size: 12px}
 
 #right-wrapper {margin: 25px auto auto}
+
+.results-items ul li em {
+border: 1px solid black;
+padding: 10px;
+position: absolute;
+background-color: white;
+width: 230px;
+font-size: 11px;
+line-height: 15px;
+color: #434343;
+left: 400px;
+text-align: center;
+z-index: 2;
+display: none;
+}

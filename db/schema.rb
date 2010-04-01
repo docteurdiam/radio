@@ -9,11 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100401003405) do
+ActiveRecord::Schema.define(:version => 20100401200654) do
 
   create_table "networks", :force => true do |t|
     t.string  "name"
     t.integer "fee"
+    t.text    "note"
   end
 
   create_table "radios", :force => true do |t|
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20100401003405) do
     t.text    "info"
     t.integer "total_id"
     t.integer "network_id"
+    t.text    "note"
   end
 
   create_table "sessions", :force => true do |t|
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20100401003405) do
 
   create_table "totals", :force => true do |t|
     t.string "name"
+    t.text   "note"
   end
 
   create_table "users", :force => true do |t|

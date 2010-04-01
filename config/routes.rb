@@ -38,13 +38,16 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.resources :radios, :collection => {:search => :get}
+  map.resources :radios, :collection => {:search => :get, :calculate => :post}
+  map.resources :totals, :member => {:stations => :get}
+  map.resources :networks
   map.resources :users
   map.resource :user_session
   map.connect 'reminders', :controller => 'reminders', :action => 'show'
   map.connect 'reminders/send', :controller => 'reminders', :action => 'deliver', :conditions => { :method => :post }
   map.connect 'admin', :controller => 'admin', :action => 'home'
   map.connect 'admin/logout', :controller => 'user_sessions', :action => 'destroy', :conditions => { :method => :get }
+  map.connect 'admin/upload/clear', :controller => 'admin', :action => 'clear', :conditions => { :method => :get }
   map.connect 'admin/upload', :controller => 'admin', :action => 'upload', :conditions => { :method => :get }
   map.connect 'admin/upload', :controller => 'admin', :action => 'commit', :conditions => { :method => :post }
   map.connect ':controller/:action'

@@ -1,0 +1,31 @@
+<h1>Editing Total</h1>
+
+<% form_for(@total) do |f| %>
+
+  <%= f.error_messages %>
+
+  <h3><%= f.label :name %>:</h3>
+  <%= f.text_field :name %>
+
+  <h3><%= f.label :note %>:</h3>
+  <%= f.text_area :note, :size => "30x10" %>
+
+  <h3>Stations:</h3>
+  <ul>
+    <% @total.radios.each do |radio| %>
+      <li><%= radio.name %></li>
+    <% end %>
+  </ul>
+
+  <div style="margin-top: 20px">
+    <h3>Add Station: </h3>
+    <%= collection_select(:radio, :id, @radios, :id, :name, :prompt => "") %>
+  </div>
+
+  <p class="actions">
+    <%= f.submit 'Update' %> <%= link_to 'Show', @total %> |
+<%= link_to 'Back', total_path %>
+  </p>
+
+<% end %>
+

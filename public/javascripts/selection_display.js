@@ -14,9 +14,9 @@ var SelectionDisplay = function(element) {
     return false;
   });
 
-  this.add = function(fee, text, id) {
+  this.add = function(text, id) {
     if(list.find("#" + id).length < 1) {
-      $('<li><input class="selected-radio" id="' + id + '" type="checkbox" value="' + fee + '" checked="true" /><label>' + text + '</label><br/></li>').appendTo(list);
+      $('<li><input class="selected-radio" id="' + id + '" type="checkbox" checked="true" /><label>' + text + '</label><br/></li>').appendTo(list);
       $(document).trigger("selection-change");
     }
   }

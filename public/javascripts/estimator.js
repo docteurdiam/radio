@@ -2,11 +2,14 @@ var Estimator = function(element, selector) {
   var container = $(element);
   $(document).bind("selection-change", function() {
     var stations = $(selector);
-    var total = 0;
+    var identifiers = [];    
     for(var i = 0; i < stations.length; i++) {
-      var fee = parseInt(stations.eq(i).val());
-      total = total + parseInt(fee);
+      var identifier = stations.eq(i).attr("id");
+      identifiers.push(identifier)
     };
-    container.find(".result").val("£" + total);
+    $.post("/radios/calculate", {identifiers: identifiers}, function(data) {
+      container.find(".result").val("£" + data);
+    })
+
   });
 }

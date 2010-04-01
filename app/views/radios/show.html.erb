@@ -1,18 +1,13 @@
-<p>
-  <b>Fee:</b>
-  <%=h @radio.fee %>
-</p>
+<h3>Fee:</h3>
+<p><%=h @radio.fee %></p>
 
-<p>
-  <b>Name:</b>
-  <%=h @radio.name %>
-</p>
+<h3>Note:</h3>
+<p><%=h @radio.note %></p>
 
-<p>
-  <b>Category:</b>
-  <%=h @radio.category %>
-</p>
+<h3>Name:</h3>
+<p><%=h @radio.name %></p>
 
+<h3>Category:</h3>
+<p><%=h @radio.category %></p>
 
-<%= link_to 'Edit', edit_radio_path(@radio) %> |
-<%= link_to 'Back', radios_path %>
+<div class="actions"><%= link_to 'Edit', edit_radio_path(@radio) %> | <%= link_to 'Back', radios_path %></div>
