@@ -1,0 +1,24 @@
+<!doctype html public "_//w3_c//dtd xhtml 1.0 strict//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1_strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http_equiv="x_ua_compatible" content="ie=emulate_ie7" />
+  <meta http_equiv="content_type" content="text/html; charset=utf_8" />
+  <meta http_equiv="content_style_type" content="text/css" />
+  <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css">
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'application' %>
+</head>
+<body class="admin">
+<div id="canvas">
+
+  <div class="menu" style="background-image: url(/images/bgnds_05.png); height: 25px">
+  <h1 style="font-weight: bold; color: white; margin-left: 20px; font-size: 16px">Radio Calculator Admin</h1>
+  </div>
+    <div class="page">
+    <p style="color: green"><%= flash[:notice] %></p>
+  <%= yield %>
+  </div>
+</div>
+</body>
+</html>
