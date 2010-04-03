@@ -35,7 +35,6 @@ class TotalsController < ApplicationController
     end
   end
 
-
   def show
     @total = Total.find(params[:id])
   end

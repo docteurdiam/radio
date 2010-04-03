@@ -1,5 +1,5 @@
 class RadiosController < ApplicationController
-  before_filter :require_user, :except => [:search]
+  before_filter :require_user, :except => [:search, :calculate]
 
   def index
     @radios = @books = Radio.paginate(:page => params[:page], :per_page => 20)
@@ -24,6 +24,7 @@ class RadiosController < ApplicationController
 
   def edit
     @radio = Radio.find(params[:id])
+    @potential_partners = Radio.find(:all, :order => "name") - [@radio]
   end
 
   def create

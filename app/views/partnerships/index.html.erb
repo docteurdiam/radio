@@ -1,0 +1,24 @@
+<h1>Listing Partnerships</h1>
+
+<table>
+  <tr>
+    <th>Station</th>
+    <th>Partner</th>
+    <th>Fee</th>
+  </tr>
+
+<% @partnerships.each do |partnership| %>
+  <tr>
+    <td><%=h partnership.station.name %></td>
+    <td><%=h partnership.partner.name %></td>
+    <td><%=h partnership.fee %></td>
+    <td><%= link_to 'Destroy', partnership, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @partnerships %>
+
+<br />
+
+<div class="actions"><%= link_to 'New partnership', new_partnership_path %></div>

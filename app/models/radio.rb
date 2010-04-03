@@ -2,7 +2,7 @@ class Radio < ActiveRecord::Base
   validates_presence_of :name, :fee, :category
   belongs_to :network
   belongs_to :total
-  belongs_to :partnership
+  has_one :partnership
 
   cattr_reader :per_page
   @@per_page = 20
