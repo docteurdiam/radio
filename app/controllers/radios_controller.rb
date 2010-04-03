@@ -80,13 +80,12 @@ class RadiosController < ApplicationController
       identifier.split("-")
     end
     total = 0
+    keys = parts.map {|part| part[1]}
     parts.each do |part|
       if part[2] == "station"
-        total = total + Radio.find(part[1]).fee
+        total = calculate_station_fee(total, Radio.find(part[1]), keys)
       elsif part[2] == "network"
         total = total + Network.find(part[1]).fee
-      elsif part[2] == "total"
-        total = total + Total.find(part[1]).radios.inject(0) {|radio, sum| sum + radio.fee}
       else
         raise "Logic error"
       end
@@ -94,7 +93,14 @@ class RadiosController < ApplicationController
     render :text => total
   end
 
-  private
+  def calculate_station_fee(total, radio, candidates)
+    if radio.partnership
+      key = candidates.find {|candidate| radio.partneship.partner.id == candidate}
+      key ? total + radio.partnership.fee : total + radio.fee
+    else
+      total + radio.fee
+    end
+  end
 
   def execute_search(type, query)
     results = []
