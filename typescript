@@ -1,0 +1,150 @@
+Script started on Sat 03 Apr 2010 13:07:43 BST
+okouam@nikita:~/Projects/radio$ cd script/
+okouam@nikita:~/Projects/radio/script$ ls
+about  console	dbconsole  destroy  generate  performance  plugin  runner  server
+okouam@nikita:~/Projects/radio/script$ sr[Kcript/s[Krspec
+bash: script/rspec: No such file or directory
+okouam@nikita:~/Projects/radio/script$ cd ..
+okouam@nikita:~/Projects/radio$ script/rspec
+bash: script/rspec: No such file or directory
+okouam@nikita:~/Projects/radio$ w[Kscript/generate rspec
+Configuring rspec and rspec-rails gems in config/environments/test.rb ...
+
+      exists  lib/tasks
+      create  lib/tasks/rspec.rake
+      create  script/autospec
+      create  script/spec
+      create  spec
+      create  spec/rcov.opts
+      create  spec/spec.opts
+      create  spec/spec_helper.rb
+okouam@nikita:~/Projects/radio$ cd r
+bash: cd: r: No such file or directory
+okouam@nikita:~/Projects/radio$ cd rs[K[K[K[K[Kcd spec/
+okouam@nikita:~/Projects/radio/spec$ ls
+rcov.opts  spec_helper.rb  spec.opts
+okouam@nikita:~/Projects/radio/spec$ ls
+rcov.opts  spec_helper.rb  spec.opts
+okouam@nikita:~/Projects/radio/spec$ spec spec
+/var/lib/gems/1.8/gems/rspec-1.3.0/lib/spec/runner/options.rb:283:in `files_to_load': File or directory not found: spec (RuntimeError)
+	from /var/lib/gems/1.8/gems/rspec-1.3.0/lib/spec/runner/options.rb:275:in `each'
+	from /var/lib/gems/1.8/gems/rspec-1.3.0/lib/spec/runner/options.rb:275:in `files_to_load'
+	from /var/lib/gems/1.8/gems/rspec-1.3.0/lib/spec/runner/options.rb:133:in `run_examples'
+	from /var/lib/gems/1.8/gems/rspec-1.3.0/lib/spec/runner/command_line.rb:9:in `run'
+	from /var/lib/gems/1.8/gems/rspec-1.3.0/bin/spec:5
+	from /var/lib/gems/1.8/bin/spec:19:in `load'
+	from /var/lib/gems/1.8/bin/spec:19
+okouam@nikita:~/Projects/radio/spec$ cd ,[K..
+okouam@nikita:~/Projects/radio$ spec spec
+[31mF[0m
+
+1)
+[31mNameError in 'Radio creates valid radios'
+uninitialized constant Factory[0m
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:443:in `load_missing_constant'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+/home/okouam/Projects/radio/spec/models/radio_spec.rb:6:
+
+Finished in 0.013664 seconds
+
+[31m1 example, 1 failure[0m
+okouam@nikita:~/Projects/radio$ spec spec
+[31mF[0m
+
+1)
+[31mActiveRecord::RecordInvalid in 'Radio creates valid radios'
+Validation failed: Name can't be blank, Fee can't be blank, Category can't be blank[0m
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/validations.rb:1090:in `save_without_dirty!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/dirty.rb:87:in `save_without_transactions!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:200:in `save!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/database_statements.rb:136:in `transaction'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:182:in `transaction'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:200:in `save!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:208:in `rollback_active_record_state!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:200:in `save!'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/proxy/create.rb:6:in `result'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/factory.rb:316:in `run'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/factory.rb:260:in `create'
+/home/okouam/Projects/radio/spec/models/radio_spec.rb:6:
+
+Finished in 0.013135 seconds
+
+[31m1 example, 1 failure[0m
+okouam@nikita:~/Projects/radio$ spec spec
+[31mF[0m
+
+1)
+[31mActiveRecord::RecordInvalid in 'Radio creates valid radios'
+Validation failed: Fee can't be blank, Category can't be blank[0m
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/validations.rb:1090:in `save_without_dirty!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/dirty.rb:87:in `save_without_transactions!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:200:in `save!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/database_statements.rb:136:in `transaction'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:182:in `transaction'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:200:in `save!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:208:in `rollback_active_record_state!'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/transactions.rb:200:in `save!'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/proxy/create.rb:6:in `result'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/factory.rb:316:in `run'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/factory.rb:260:in `create'
+/home/okouam/Projects/radio/spec/models/radio_spec.rb:6:
+
+Finished in 0.01242 seconds
+
+[31m1 example, 1 failure[0m
+okouam@nikita:~/Projects/radio$ spec spec
+[32m.[0m
+
+Finished in 0.014651 seconds
+
+[32m1 example, 0 failures[0m
+okouam@nikita:~/Projects/radio$ spec spec
+[31mF[0m[32m.[0m
+
+1)
+[31mActiveRecord::StatementInvalid in 'Partnership creates a valid partnership'
+Could not find table 'partnerships'[0m
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/sqlite_adapter.rb:228:in `columns'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/base.rb:1271:in `columns'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/base.rb:3014:in `attributes_from_column_definition_without_lock'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/base.rb:2434:in `initialize'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/proxy/build.rb:5:in `new'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/proxy/build.rb:5:in `initialize'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/factory.rb:307:in `new'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/factory.rb:307:in `run'
+/var/lib/gems/1.8/gems/factory_girl-1.2.3/lib/factory_girl/factory.rb:260:in `create'
+/home/okouam/Projects/radio/spec/models/partnership_spec.rb:6:
+
+Finished in 0.018575 seconds
+
+[31m2 examples, 1 failure[0m
+okouam@nikita:~/Projects/radio$ rake db:migrate RAILS_ENV=test
+(in /home/okouam/Projects/radio)
+==  AddNoteToNetwork: migrating ===============================================
+-- add_column(:networks, :note, :text)
+   -> 0.0006s
+==  AddNoteToNetwork: migrated (0.0007s) ======================================
+
+==  AddNoteToTotal: migrating =================================================
+-- add_column(:totals, :note, :text)
+   -> 0.0004s
+==  AddNoteToTotal: migrated (0.0005s) ========================================
+
+==  AlterRadioAgain: migrating ================================================
+-- add_column(:radios, :partnership_id, :integer)
+   -> 0.0005s
+-- remove_column(:radios, :partner_id)
+   -> 0.0173s
+==  AlterRadioAgain: migrated (0.0180s) =======================================
+
+==  CreatePartnership: migrating ==============================================
+-- create_table(:partnerships)
+   -> 0.0009s
+==  CreatePartnership: migrated (0.0010s) =====================================
+
+okouam@nikita:~/Projects/radio$ rake db:migrate RAILS_ENV=testsp

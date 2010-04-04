@@ -6,9 +6,8 @@ class PartnershipsController < ApplicationController
 
   def new
     @partnership = Partnership.new
-    @radios = Radio.find(:all)
+    @radios = Radio.find(:all, :order => "name")
   end
-
 
   def destroy
     @partnership = Partnership.find(params[:id])
@@ -17,12 +16,20 @@ class PartnershipsController < ApplicationController
   end
 
   def create
-    @partnership = Partnership.new(params[:partnership])
+    fee = params[:partnership][:fee]
+    station_id = params[:partnership][:station_id]
+    partner_id = params[:partnership][:partner_id]
+    @partnership = Partnership.new
+    @partnership.station = Radio.find(station_id)
+    @partnership.partner = Radio.find(partner_id)
+    @partnership.fee = fee
     if @partnership.save
+      debugger
       flash[:notice] = 'Partnership was successfully created.'
       redirect_to(partnerships_path)
     else
-      render :action => "index"
+      @radios = Radio.find(:all, :order => "name")
+      render :action => "new"
     end
   end
 

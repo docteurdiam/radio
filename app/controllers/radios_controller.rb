@@ -2,7 +2,7 @@ class RadiosController < ApplicationController
   before_filter :require_user, :except => [:search, :calculate]
 
   def index
-    @radios = @books = Radio.paginate(:page => params[:page], :per_page => 20)
+    @radios = @books = Radio.paginate(:page => params[:page], :per_page => 20, :order => "name")
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @radios }
@@ -83,7 +83,7 @@ class RadiosController < ApplicationController
     keys = parts.map {|part| part[1]}
     parts.each do |part|
       if part[2] == "station"
-        total = calculate_station_fee(total, Radio.find(part[1]), keys)
+        total =  total + Radio.find(part[1]).calculate_fee(keys)
       elsif part[2] == "network"
         total = total + Network.find(part[1]).fee
       else
@@ -91,15 +91,6 @@ class RadiosController < ApplicationController
       end
     end
     render :text => total
-  end
-
-  def calculate_station_fee(total, radio, candidates)
-    if radio.partnership
-      key = candidates.find {|candidate| radio.partneship.partner.id == candidate}
-      key ? total + radio.partnership.fee : total + radio.fee
-    else
-      total + radio.fee
-    end
   end
 
   def execute_search(type, query)
