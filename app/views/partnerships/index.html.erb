@@ -9,8 +9,8 @@
 
 <% @partnerships.each do |partnership| %>
   <tr>
-    <td><%=h partnership.station.name %></td>
-    <td><%=h partnership.partner.name %></td>
+    <td><%=h partnership.radios[1].name %></td>
+    <td><%=h partnership.radios[0].name %></td>
     <td><%=h partnership.fee %></td>
     <td><%= link_to 'Destroy', partnership, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

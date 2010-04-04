@@ -16,13 +16,11 @@ class PartnershipsController < ApplicationController
   end
 
   def create
-    fee = params[:partnership][:fee]
     station_id = params[:partnership][:station_id]
     partner_id = params[:partnership][:partner_id]
-    @partnership = Partnership.new
-    @partnership.station = Radio.find(station_id)
-    @partnership.partner = Radio.find(partner_id)
-    @partnership.fee = fee
+    @partnership = Partnership.create(:fee => params[:partnership][:fee])
+    add_partner(@partnership, Radio.find(station_id))
+    add_partner(@partnership, Radio.find(partner_id))
     if @partnership.save
       debugger
       flash[:notice] = 'Partnership was successfully created.'
@@ -31,6 +29,13 @@ class PartnershipsController < ApplicationController
       @radios = Radio.find(:all, :order => "name")
       render :action => "new"
     end
+  end
+
+  private
+
+  def add_partner(partnership, station)
+    station.partnership = @partnership
+    station.save!
   end
 
 end

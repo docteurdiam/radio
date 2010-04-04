@@ -67,9 +67,23 @@ class AdminController < ApplicationController
         Exception: #{e} }
       end
     end
+    create_partnerships(partnerships)
+  end
+
+  def create_partnerships(partnerships)
+    partnerships.each do |partnership|
+      station = partnership[0]
+      partner = Radio.find_by_name(partnership[1])
+      result = Partnership.create(:fee => partnership[2])
+      station.partnership = result
+      partner.partnership = result
+      station.save!
+      partner.save!
+    end
   end
 
   def check_for_total(name, radio)
+
     if name
       total = Total.find_or_create_by_name(name)
       total.radios << radio
