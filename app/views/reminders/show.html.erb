@@ -18,7 +18,6 @@
         name: $("#name-to-send").val(),
         email: $("#email-to-send").val()
       }, function(data) {
-        debugger;
         $(".email-first").hide();
         $(".email-second").show();
       })
@@ -29,8 +28,8 @@
 
 
 <style>
-label {width: 150px; display: block; float: left; margin-bottom: 5px; margin-top: 10px}
-.action {display: block; margin-top: 10px; float: right}
-.data {width: 270px}
+.email-first label {width: 150px; display: block; float: left; margin-bottom: 5px; margin-top: 10px}
+.email-first .action {display: block; margin-top: 10px; float: right}
+.email-first .data {width: 270px}
 
 </style>

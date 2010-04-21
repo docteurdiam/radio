@@ -1,0 +1,10 @@
+  <div id="canvas-header">
+    Veuillez trouver les directions ci-dessous pour votre trajet
+  </div>
+<ul class="route-directions">
+    <% for(var i=0; i<directions.length; i++) { %>
+        <li><%= directions[i] %></li>
+    <% } %>
+</ul>
+
+  <a style="float: right; position: relative; top: -33px; margin-right: 10px" href="#">Imprimer</a>

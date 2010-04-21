@@ -1,0 +1,11 @@
+
+<% for(var i=0; i < categories.length; i++) { %>
+  <li>
+    <a class="icon" href='#<%= categories[i].id %>'>
+      <img src="/images/google/<%= categories[i].icon %>" />
+    </a>
+        <a href='#<%= categories[i].id %>'>
+      <%= categories[i].name %>
+    </a>
+  </li>
+  <% } %>

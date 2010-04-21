@@ -80,12 +80,12 @@ class RadiosController < ApplicationController
       identifier.split("-")
     end
     total = 0
-    keys = parts.map {|part| part[1]}
+    keys = parts.map {|part| part[0]}
     parts.each do |part|
-      if part[2] == "station"
-        total =  total + Radio.find(part[1]).calculate_fee(keys)
-      elsif part[2] == "network"
-        total = total + Network.find(part[1]).fee
+      if part[1] == "station"
+        total =  total + Radio.find(part[0]).calculate_fee(keys)
+      elsif part[1] == "network"
+        total = total + Network.find(part[0]).fee
       else
         raise "Logic error"
       end
@@ -96,10 +96,17 @@ class RadiosController < ApplicationController
   def execute_search(type, query)
     results = []
     case type
-      when "name"
+      when "alphabetical"
         radios = Radio.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
         networks = Network.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
         totals = Total.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
+        results += totals.map {|total| total.to_hash}
+        results += radios.map {|radio| radio.to_hash}
+        results += networks.map {|network| network.to_hash}
+      when "name"
+        radios = Radio.find(:all, :conditions => ['name ILIKE ?', "%" + query + "%"], :order => "name")
+        networks = Network.find(:all, :conditions => ['name ILIKE ?', "%" + query + "%"], :order => "name")
+        totals = Total.find(:all, :conditions => ['name ILIKE ?', "%" + query + "%"], :order => "name")
         results += totals.map {|total| total.to_hash}
         results +=  radios.map {|radio| radio.to_hash}
         results +=  networks.map {|network| network.to_hash}

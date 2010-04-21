@@ -3,15 +3,9 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>Radio Calculator</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script src="/client/jmvc/include.js?radio,development" type="text/javascript"></script>
     <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
     <script type="text/javascript" src="javascripts/common.js"></script>
-    <script type="text/javascript" src="javascripts/alphabetical_search.js"></script>
-    <script type="text/javascript" src="javascripts/type_search.js"></script>
-    <script type="text/javascript" src="javascripts/name_search.js"></script>
-    <script type="text/javascript" src="javascripts/estimator.js"></script>
-    <script type="text/javascript" src="javascripts/selection_display.js"></script>
-    <script type="text/javascript" src="javascripts/results_display.js"></script>
     <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css" />
     <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css" />
     <link type="text/css" rel="stylesheet" href="/stylesheets/application.css" />
@@ -24,7 +18,7 @@
         This is called Radio Usage.</p>                                           <br/>
       <p class="normal">Fees are based on a per artist, per script, per radio station, per three months on air.</p>
          <br/>
-      <p class="small">The radiousage.tv calculator is based on radio equity usage, but is offered as a guide only. While we have
+      <p class="small">The radiousage.tv calculator is based on radio Equity usage, but is offered as a guide only. While we have
       endeavored to provide accurate and up to date informationw we cannot be held responsible for any loss incurred through
       its use.</p> <br/>
       <p class="small">With Tags (same script with regional changes) the first script is calculated at full fee, then extra tags are
@@ -42,12 +36,12 @@
           <div class="panel">
             <div><h2 style="margin-bottom: 10px">Or, Search by type</h2></div>
             <div class="type">
-              <li><a class="button" href="#" rel="National & News" style="padding-left: 22px; width: 169px">National & News</a></li>
-              <li><a class="button" href="#" rel="Totals / Networks" style="padding-left: 22px; width: 169px">Totals / Networks</a></li>
-              <li><a class="button" href="#" rel="Digital / Internet" style="padding-left: 22px; width: 169px">Digital / Internet</a></li>
-              <li><a class="button" href="#" rel="Local & Regional" style="padding-left: 22px; width: 169px">Local & Regional</a></li>
-              <li><a class="button" href="#" rel="ILR Buyouts" style="padding-left: 42px; width: 149px">ILR Buyouts</a></li>
-              <li><a class="button" href="#" rel="Irish & ROI" style="padding-left: 42px; width: 149px">Irish & ROI</a></li>
+              <li><a class="button" rel="National & News" style="padding-left: 22px; width: 169px">National & News</a></li>
+              <li><a class="button"  rel="Totals / Networks" style="padding-left: 22px; width: 169px">Totals / Networks</a></li>
+              <li><a class="button"  rel="Digital / Internet" style="padding-left: 22px; width: 169px">Digital / Internet</a></li>
+              <li><a class="button"  rel="Local & Regional" style="padding-left: 22px; width: 169px">Local & Regional</a></li>
+              <li><a class="button"  rel="ILR Buyouts" style="padding-left: 42px; width: 149px">ILR Buyouts</a></li>
+              <li><a class="button"  rel="Irish & ROI" style="padding-left: 42px; width: 149px">Irish & ROI</a></li>
             </div>
           </div>
           <div class="clear"></div>
@@ -66,7 +60,7 @@
           </div>
 
           <div style="background: url(/images/box_bottom_results_main.png); height: 55px">
-              <a class="button clear-all" href="#"></a><a class="select-all button" href="#"></a>
+              <a class="button clear-all" ></a><a class="select-all button"></a>
 
           </div>
         </div>
@@ -85,8 +79,8 @@
             <img src="/images/box_top_selected_stations_NEW_03.png" alt="visuals" /><h2>Selected Stations:</h2>
             <ul></ul>
             <div style="text-align: right; width: 210px; margin-right: 13px">
-              <a class="button clear-all" style="float: left" href="#"></a><a class="select-all button" href="#"></a>
-              <a href="#" class="email button"></a>
+              <a class="button clear-all" style="float: left" ></a><a class="select-all button" ></a>
+              <a  class="email button"></a>
               <div class="clear"></div>
             </div></div></div></div><img style="margin-top: 0; padding-top: 0;" src="/images/bgnd_secondary_results_box_06.png" alt="visuals" /></div>
       </div>
@@ -96,17 +90,12 @@
   </body>
 
   <script type="text/javascript">
-
-    var selection_display = new SelectionDisplay(".selection", new Estimator(".estimate", ".selection ul li input:checked"));
-
-    var results_display = new ResultsDisplay(".results", selection_display);
-
-    var alphabetical_search = new AlphabeticalSearch(".search .alphabetical", results_display);
-
-    var type_search = new TypeSearch(".search .type", results_display);
-
-    var name_search = new NameSearch(".search .name", results_display);
-   
+    $(".selection").selection_controller();
+    $(".estimate").estimator_controller();
+    $(".results").results_controller();
+    $(".search .name").name_search_controller();
+    $(".search .alphabetical").alphabetical_search_controller();
+    $(".search .type").type_search_controller();
   </script>
 
 

@@ -98,3 +98,5 @@ text-align: center;
 z-index: 2;
 display: none;
 }
+
+a {cursor: pointer}
