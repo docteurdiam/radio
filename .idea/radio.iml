@@ -12,31 +12,31 @@
   <component name="GemRequirementsHolder" version="2">
     <requirement>
       <requirement>
-        <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="pg" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="pg" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/database.yml" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/boot.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rspec-rails" version="1.3.2" bound="GREATER_OR_EQUAL" />
+        <dependency name="rspec-rails" version="1.3.2" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environments/test.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="will_paginate" version="2.3.11" bound="LATEST_IN_BRANCH" url="http://gemcutter.org" />
+        <dependency name="will_paginate" version="2.3.11" bound="LATEST_IN_BRANCH" url="http://gemcutter.org" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>

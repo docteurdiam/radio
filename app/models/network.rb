@@ -1,5 +1,5 @@
 class Network < ActiveRecord::Base
-  validates_presence_of :name, :fee
+  validates_presence_of :name
   has_many :radios
 
   def to_hash

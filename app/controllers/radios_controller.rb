@@ -79,20 +79,13 @@ class RadiosController < ApplicationController
     parts = identifiers.map do |identifier|
       identifier.split("-")
     end
-    total = 0
-    keys = parts.map {|part| part[0]}
-    parts.each do |part|
-      if part[1] == "station"
-        total =  total + Radio.find(part[0]).calculate_fee(keys)
-      elsif part[1] == "network"
-        total = total + Network.find(part[0]).fee
-      else
-        raise "Logic error"
-      end
+    items = parts.map do |part|
+      {:type => part[1], :id => part[0]}
     end
+    total = FeeCalculator.new.calculate(items)
     render :text => total
   end
-
+    
   def execute_search(type, query)
     results = []
     case type
