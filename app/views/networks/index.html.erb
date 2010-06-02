@@ -3,13 +3,11 @@
 <table style="width: 500px">
   <tr>
     <th>Name</th>
-    <th>Fee</th>
     <th>Station Count</th>
   </tr>
 
 <% @networks.each do |network| %>
   <tr>
-    <td><%=h network.name %></td>
     <td><%=h network.name %></td>
     <td><%=h network.radios.count %></td>
     <td><%= link_to 'Show', network %></td>

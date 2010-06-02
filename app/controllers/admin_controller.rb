@@ -18,20 +18,16 @@ class AdminController < ApplicationController
   end
 
   def commit
-    if !params[:file] || params[:file].size.zero? then
-      flash[:error] = 'No file was selected'
-    else
-      radios = Parser.new.parse(params[:file])
-      DataImport.new!(radios).process()
-      flash[:status] = "Done"
-    end
+    uploader = Upload.new
+    uploader.save_upload(params[:file])
+    radios = Parser.new.parse(uploader.absolute_path)
+    DataImport.new().process(radios)
+    flash[:status] = "Done"
     render 'upload'
   end
 
   def clear
     Radio.delete_all
-    Network.delete_all
-    Total.delete_all
     render :action => :upload
   end
 

@@ -82,7 +82,16 @@ class RadiosController < ApplicationController
     items = parts.map do |part|
       {:type => part[1], :id => part[0]}
     end
-    total = FeeCalculator.new.calculate(items)
+    stations = []
+    items.each do |item|
+      if item[:type] == "station"
+        stations << item[:id]
+      else
+        network = Network.find(item[:id])
+        stations = stations + network.radios.map {|radio| radio.id}
+      end
+    end
+    total = FeeCalculator.new.calculate(stations)
     render :text => total
   end
     
@@ -105,9 +114,13 @@ class RadiosController < ApplicationController
         results +=  networks.map {|network| network.to_hash}
       when "type"
         case query
-          when "Totals / Networks"
-          results +=  Network.find(:all, :order => "name").map{|network| network.to_hash}
+          when "Digital / Internet"
+            results +=   Radio.find_all_by_category("DAB Only", :order => "name").map {|radio| radio.to_hash}
+            results +=   Radio.find_all_by_category("DAB", :order => "name").map {|radio| radio.to_hash}
+          when "Totals"
           results +=  Total.find(:all).map {|total| total.to_hash}
+          when "Networks"
+          results +=  Network.find(:all, :order => "name").map{|network| network.to_hash}
         else
           results +=  Radio.find_all_by_category(query, :order => "name").map {|radio| radio.to_hash}
         end

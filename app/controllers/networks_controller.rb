@@ -12,7 +12,7 @@ class NetworksController < ApplicationController
     @network = Network.new(params[:network])
     if @network.save
       flash[:notice] = 'Network was successfully created.'
-      redirect_to(@network)
+      redirect_to(networks_url)
     else
       render :action => "new"
     end
@@ -32,6 +32,11 @@ class NetworksController < ApplicationController
     end
   end
 
+  def destroy
+    network = Network.find(params[:id])
+    network.destroy
+    redirect_to(networks_url)
+  end
 
   def show
     @network = Network.find(params[:id])

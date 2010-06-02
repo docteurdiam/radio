@@ -1,21 +1,28 @@
 class DataImport
 
-  def process(items)
-    @items = items.map do |item|
-      create_radio(item)
-    end
+  def process(rows)
+    @ic = Iconv.new("utf-8", "iso-8859-1")
+    @items = rows.map do |row|
+      create_radio(row)
+    end.find_all {|station| !station.nil?}
+    Rails.logger.info "#{@items.size} stations have been saved to the database"
     identify_partnerships
     identify_networks
     identify_totals
   end
 
   def create_radio(row)
-    item = {:station => Radio.create!(:name => row[0], :fee => row[1], :category => row[2], :note => row[7])}
-    item[:partner] = row[3]
-    item[:partner_fee] = row[6]
-    item[:network] = row[4]
-    item[:total] = row[5]
-    item
+    unless row[0].blank? || row[1].blank? || row[2].blank?
+      name = @ic.iconv(row[0].strip.gsub("'", "''"))
+      item = {:station => Radio.create!(:name => name, :fee => row[1], :category => row[2], :note => row[7])}
+      item[:partner] = row[3].nil? ? "" : @ic.iconv(row[3].strip.gsub("'", "''"))
+      item[:partner_fee] = row[6]
+      item[:network] = row[4]
+      item[:total] = row[5]
+      item
+    else
+      nil
+    end
   end
 
   def identify_partnerships

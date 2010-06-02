@@ -23,6 +23,12 @@ class TotalsController < ApplicationController
     render :json => total.radios.map{|radio| radio.to_hash}
   end
 
+  def destroy
+    total = Total.find(params[:id])
+    total.destroy
+    redirect_to(totals_url)
+  end
+
   def update
     @total = Total.find(params[:id])
     if @total.update_attributes(params[:total])
