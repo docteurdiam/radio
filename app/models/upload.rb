@@ -12,7 +12,7 @@ class Upload
   end
 
   def absolute_path
-    File.join(Rails.root, 'public/system/uploads', self.new_filename)
+    File.join(Rails.root, 'tmp', self.new_filename)
   end
 
   private

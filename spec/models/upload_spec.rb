@@ -12,8 +12,8 @@ describe Upload do
     document.original_filename.should == "test.doc"
     document.new_filename.should =~ /\d{2}\d{2}\d{4}\d{2}\d{2}\d{2}-test.doc/
 
-    File.exist?("#{Rails.root}/public/system/uploads/#{document.new_filename}").should == true
-    File.open("#{Rails.root}/public/system/uploads/#{document.new_filename}", "r") { |f| f.read.should == uploaded_file.read }
+    File.exist?("#{Rails.root}/tmp/#{document.new_filename}").should == true
+    File.open("#{Rails.root}/tmp/#{document.new_filename}", "r") { |f| f.read.should == uploaded_file.read }
   end
 
 end

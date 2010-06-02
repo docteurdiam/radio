@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="317d2616-f3c7-40f3-b517-29774ef024c5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/upload.rb" afterPath="$PROJECT_DIR$/app/models/upload.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gems" afterPath="$PROJECT_DIR$/.gems" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/upload_spec.rb" afterPath="$PROJECT_DIR$/spec/models/upload_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="radio.iws" />
@@ -54,10 +56,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gems" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gems" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gems">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.047244094">
+            <state line="2" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="radio_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/models/radio_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/models/upload_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="17" selection-start="532" selection-end="549" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/upload.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="30" selection-start="393" selection-end="393" vertical-scroll-proportion="0.21259843">
               <folding />
             </state>
           </provider>
@@ -79,9 +108,7 @@
         <option value="$PROJECT_DIR$/app/views/networks/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/networks/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/networks_controller.rb" />
-        <option value="$PROJECT_DIR$/spec/models/upload_spec.rb" />
         <option value="$PROJECT_DIR$/spec/controllers/admin_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/app/models/upload.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/parser.rb" />
         <option value="$PROJECT_DIR$/app/models/data_import.rb" />
@@ -89,6 +116,8 @@
         <option value="$PROJECT_DIR$/app/controllers/radios_controller.rb" />
         <option value="$PROJECT_DIR$/spec/controllers/radios_controller_spec.rb" />
         <option value="$PROJECT_DIR$/.gems" />
+        <option value="$PROJECT_DIR$/spec/models/upload_spec.rb" />
+        <option value="$PROJECT_DIR$/app/models/upload.rb" />
       </list>
     </option>
   </component>
@@ -920,21 +949,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/partnership.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="36" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/client/controllers/selection_controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1005,7 +1019,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gems">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.047244094">
+        <state line="2" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/radio_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/upload_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="532" selection-end="549" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/upload.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="393" selection-end="393" vertical-scroll-proportion="0.21259843">
           <folding />
         </state>
       </provider>
