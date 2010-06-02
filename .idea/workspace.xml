@@ -2,40 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="317d2616-f3c7-40f3-b517-29774ef024c5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/dashboard/categories.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/spec/views/canvas_spec.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/networks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/networks/index.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/spec/views/dashboard_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/info/feature.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/radios_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/radios_controller_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/upload_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/data_import.rb" afterPath="$PROJECT_DIR$/app/models/data_import.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/spec/controllers/canvas_controller_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/spec/controllers/dashboard_controller_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/spec/models/category_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/canvas/default.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/canvas/feedback.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/canvas/localization.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/dashboard/index.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/networks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/networks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/radios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/radios_controller.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/spec/models/route_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/dashboard/route.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/canvas/features.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/networks/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/networks/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/parser.rb" afterPath="$PROJECT_DIR$/app/models/parser.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/dashboard/feedback.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/canvas/route.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/dashboard/localization.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/dashboard/tabs.ejs" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/upload.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/spec/views/map_spec.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/networks/new.html.erb" afterPath="$PROJECT_DIR$/app/views/networks/new.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/client/views/dashboard/shop.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gems" afterPath="$PROJECT_DIR$/.gems" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/totals_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/totals_controller.rb" />
     </list>
     <ignored path="radio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,10 +45,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="radios_controller_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="radios_controller_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/controllers/radios_controller_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="28" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.77952754">
+            <state line="33" column="28" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gems" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gems">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.047244094">
               <folding />
             </state>
           </provider>
@@ -96,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/fee_calculator.rb" />
         <option value="$PROJECT_DIR$/spec/models/fee_calculator_spec.rb" />
         <option value="$PROJECT_DIR$/app/controllers/totals_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/networks/edit.html.erb" />
@@ -112,6 +88,7 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/app/controllers/radios_controller.rb" />
         <option value="$PROJECT_DIR$/spec/controllers/radios_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/.gems" />
       </list>
     </option>
   </component>
@@ -943,11 +920,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/models/upload_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="3" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/partnership.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1026,7 +998,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/radios_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.77952754">
+        <state line="33" column="28" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gems">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.047244094">
           <folding />
         </state>
       </provider>
