@@ -4321,7 +4321,11 @@ $("<li class=\"prefix\">"+_c+"</li>").appendTo(this.element.find("ul"));
 }
 var _d=i%2==0?"normal":"striped";
 var _e=_a.note?"<a href='#' class='note'>*</a><em>"+_a.note+"</em>":"";
-$("<li class=\""+_d+"\"><input type=\"checkbox\" id=\"radio-"+_a.id+"-"+_a.type+"\" value=\""+_a.fee+"\" /><label>"+_a.name+"</label>"+_e+"<br/></li>").appendTo(_7);
+var _f=_a.name;
+if(_a.fee){
+_f=_a.name+" - £"+_a.fee;
+}
+$("<li class=\""+_d+"\"><input type=\"checkbox\" id=\"radio-"+_a.id+"-"+_a.type+"\" value=\""+_a.fee+"\" /><label>"+_f+"</label>"+_e+"<br/></li>").appendTo(_7);
 _7.find("a.note").hover(function(){
 _7.find("em").hide();
 $(this).next("em").stop(true,true).animate({opacity:"show"},"slow");
@@ -4329,44 +4333,44 @@ $(this).next("em").stop(true,true).animate({opacity:"show"},"slow");
 $(this).next("em").animate({opacity:"hide"},"fast");
 });
 }
-},"selection-cleared subscribe":function(_f,_10){
+},"selection-cleared subscribe":function(_10,_11){
 this.element.find("input").attr("checked",false);
 return false;
 },".select-all click":function(el,ev){
 this.element.find("input").attr("checked",true);
-this.selectStations(this.element.find("input:checked"),function(_13){
-this.publish("station-selected",_13);
+this.selectStations(this.element.find("input:checked"),function(_14){
+this.publish("station-selected",_14);
 }.bind(this));
 return false;
 },".clear-all click":function(el,ev){
 this.element.find("input").attr("checked",false);
 return false;
 },"input:checked click":function(el,ev){
-this.selectStations(el,function(_18){
-this.publish("station-selected",_18);
+this.selectStations(el,function(_19){
+this.publish("station-selected",_19);
 }.bind(this));
 return false;
-},selectStations:function(_19,_1a){
-var _1b=[];
-_19.each(function(_1c,el){
-var _1e=$(el).attr("id");
-var _1f=parseIdentifier(_1e);
-var id=_1f["id"];
-var _21=_1f["type"];
-if(_21=="total"){
-$.getJSON("/totals/"+id+"/stations",function(_22){
-for(var i=0;i<_22.length;i++){
-var _24=_22[i].name;
-var _25="radio-"+_22[i].id+"-"+_22[i].type;
-_1b.push([_24,_25]);
+},selectStations:function(_1a,_1b){
+var _1c=[];
+_1a.each(function(_1d,el){
+var _1f=$(el).attr("id");
+var _20=parseIdentifier(_1f);
+var id=_20["id"];
+var _22=_20["type"];
+if(_22=="total"){
+$.getJSON("/totals/"+id+"/stations",function(_23){
+for(var i=0;i<_23.length;i++){
+var _25=_23[i].name;
+var _26="radio-"+_23[i].id+"-"+_23[i].type;
+_1c.push([_25,_26]);
 }
-_1a(_1b);
+_1b(_1c);
 });
 }else{
-_1b.push([$(el).siblings("label").text(),_1e]);
+_1c.push([$(el).siblings("label").text(),_1f]);
 }
 });
-_1a(_1b);
+_1b(_1c);
 },isNumeric:function(val){
 return val.match(/^[0-9]+$/);
 }});

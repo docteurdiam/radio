@@ -42,26 +42,28 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 
 .type {margin-left: -13px}
 .type li {width: 191px; height: 31px; float: left; padding-top: 10px; margin-right: 10px; margin-bottom: 10px}
-.type li a {width: 181px; padding-left: 10px; height: 28px; text-decoration: none; color: white; font-weight: bold; font-size: 14px; margin-left: 15px; padding-top: 13px; background-image: url(/images/butt_main_off.png);}
-.type li a.selected {background-image: url(/images/butt_main_on.png)}
+.type li a {width: 181px; padding-left: 10px; height: 28px; text-decoration: none; color: white; font-weight: bold; font-size: 14px; margin-left: 15px; padding-top: 13px}
 .type li a:hover {color: #eaeaea}
 .type li a {text-shadow: 0 1px 0 #000000}
 
 a.button {display: block}
-a.clear-all {background-image: url(/images/results_box_main_bottom_butts_05.png); width: 103px;}
-a.clear-all:hover {background-image: url(/images/results_box_main_bottom_butts_over_05.png)}
-a.select-all:hover {background-image: url(/images/results_box_main_bottom_butts_over_03.png)}
-a.select-all {background-image: url(/images/results_box_main_bottom_butts_03.png); width: 103px}
+a.sprite.clear-all {background-position: 0 0; width: 103px}
+a.sprite.clear-all:hover {background-position: 0 -27px}
+a.sprite.select-all:hover {background-position: -109px -28px}
+a.sprite.select-all {background-position: -109px 0; width: 103px}
+a.sprite {background-image: url(/images/sprite.png)}
+a.sprite.search-types {background-position: 0 -145px}
+a.sprite.search-types.selected {background-position: -1px -94px}
 
 .selection a.button { height: 24px; float: left; margin-top: 7px}
-.selection a.email {background-image: url(/images/email_quote_on_08.png); width: 224px}
-.selection a.email:hover {background-image: url("/images/butt_email_quote_over_08.png");}
+.selection a.email {background-position: -1px -57px; width: 224px}
+.selection a.email:hover {background-position: -230px -58px}
 .selection ul li {line-height: 180%; padding-left: 5px}
 .selection ul label {font-size: 80%}
 .selection ul {overflow: scroll; overflow-x: hidden; height: 495px; width: 223px; background-color: white}
 .selection h2 {color: #434343; margin-bottom: 0; width: 203px; background-color: white; height: 25px; padding: 5px 10px 10px;}
 .selection {margin-left: 5px}
-.selection .select-all {background-image: url(/images/results_box_main_bottom_butts_03.png); width: 103px; position: relative; left: 16px}
+.selection .select-all {width: 103px; position: relative; left: 16px}
 
 .estimate {margin-left: 10px}
 .estimate h2 {margin-bottom: 10px}

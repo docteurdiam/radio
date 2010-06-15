@@ -115,8 +115,8 @@ class RadiosController < ApplicationController
       when "type"
         case query
           when "Digital / Internet"
-            results +=   Radio.find_all_by_category("DAB Only", :order => "name").map {|radio| radio.to_hash}
-            results +=   Radio.find_all_by_category("DAB", :order => "name").map {|radio| radio.to_hash}
+            results +=  Radio.find_all_by_category("DAB Only", :order => "name").map {|radio| radio.to_hash}
+            results +=  Radio.find_all_by_category("DAB", :order => "name").map {|radio| radio.to_hash}
           when "Totals"
           results +=  Total.find(:all).map {|total| total.to_hash}
           when "Networks"

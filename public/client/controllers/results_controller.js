@@ -23,7 +23,9 @@ $.Controller.extend('ResultsController',
       }
       var view = i % 2 == 0 ? "normal" : "striped";
       var note = radio.note ? "<a href='#' class='note'>*</a><em>" + radio.note + "</em>" : "";
-      $('<li class="' + view + '"><input type="checkbox" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /><label>' + radio.name + '</label>' + note + '<br/></li>').appendTo(container);
+      var label = radio.name;
+      if (radio.fee) label = radio.name + " - £" + radio.fee;
+      $('<li class="' + view + '"><input type="checkbox" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /><label>' + label  +  '</label>' + note + '<br/></li>').appendTo(container);
 
       container.find("a.note").hover(function() {
         container.find("em").hide();
