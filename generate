@@ -689,4 +689,87 @@ Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressin
 Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.72 KiB, done.
 Total 7 (delta 6), reused 0 (delta 0)
 
------> Heroku
+-----> Heroku receiving push
+-----> Rails app detected
+-----> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
+       Compiled slug size is 9.2MB
+-----> Launching............ done
+       http://radio.heroku.com deployed to Heroku
+
+To git@heroku.com:radio.git
+   d9a4282..e8ab2b3  master -> master
+okouam@nikita:/opt/Rails/apps/radio$ git push herokucommit -m "All"[10Padd .
+okouam@nikita:/opt/Rails/apps/radio$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	[32mmodified:   .gems[m
+#	[32mmodified:   .idea/radio.iml[m
+#	[32mmodified:   .idea/workspace.xml[m
+#	[32mmodified:   config/environment.rb[m
+#	[32mmodified:   generate[m
+#
+okouam@nikita:/opt/Rails/apps/radio$ git status[1Padd .push herokucommit -m "All"
+[master 4ebe306] All
+ 5 files changed, 92 insertions(+), 13 deletions(-)
+okouam@nikita:/opt/Rails/apps/radio$ git commit -m "All"[9Pstatus[1Padd .push heroku
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 1.57 KiB, done.
+Total 9 (delta 8), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Rails app detected
+
+-----> Installing gem authlogic from http://rubygems.org
+       Successfully installed authlogic-2.1.5
+       1 gem installed
+
+-----> Installing gem haml >= 2.2.17 from http://rubygems.org
+       Successfully installed haml-3.0.13
+       1 gem installed
+
+-----> Installing gem will_paginate >= 2.3.12 from http://gemcutter.org, http://rubygems.org
+       Successfully installed will_paginate-2.3.14
+       1 gem installed
+
+-----> Installing gem formtastic >= 0.9.7 from http://gemcutter.org, http://rubygems.org and ignoring dependencies
+       
+         ========================================================================
+         Thanks for installing Formtastic!
+         ------------------------------------------------------------------------
+         You can now (optionally) run the generator to copy some stylesheets and
+         a config initializer into your application:
+           ./script/generate formtastic
+       
+         To generate some semantic form markup for your existing models, just run:
+           ./script/generate form MODEL_NAME
+       
+         Find out more and get involved:
+           http://github.com/justinfrench/formtastic
+           http://groups.google.com.au/group/formtastic
+         ========================================================================
+         
+       Successfully installed formtastic-0.9.10
+       1 gem installed
+
+-----> Installing gem fastercsv from http://rubygems.org
+       Successfully installed fastercsv-1.5.3
+       1 gem installed
+
+-----> Installing gem searchlogic from http://rubygems.org
+       Successfully installed searchlogic-2.4.19
+       Successfully installed activesupport-2.3.8
+       2 gems installed
+
+-----> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
+       Compiled slug size is 9.0MB
+-----> Launching.......... done
+       http://radio.heroku.com deployed to Heroku
+
+To git@heroku.com:radio.git
+   e8ab2b3..4ebe306  master -> master
+okouam@nikita:/opt/Rails/apps/radio$ git push herokucommit -m "All"[9Pstatus[1Padd .
+okouam@nikita:/opt/Rails/apps

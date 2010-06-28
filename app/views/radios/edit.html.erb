@@ -16,6 +16,6 @@
   <%= select_tag "radio[category]", options_for_select(
             [ "Local & Regional", "National & News", "Digital / Internet", "Irish & ROI", "ILR Buyouts"], @radio.category) %>
 
-  <p class="actions"><%= f.submit 'Update' %><%= link_to 'Show', @radio %> | <%= link_to 'Back', radios_path %></p>
+  <p class="actions"><%= f.submit 'Update' %> <%= link_to 'Back', radios_path %></p>
 <% end %>
 
