@@ -616,4 +616,77 @@ Gem searchlogic-2.4.19
   activerecord (>= 2.0.0, runtime)
 
 okouam@nikita:/opt/Rails/apps/radio$ gem dependency searchlogic[4Pcy hobofieldsdency formtastic[10Pit push herokucommit -m "All"[10Padd .
-okouam@nikita:/opt/Rails/apps/radio$ git add .em dependency searchlogic[4Pcy hobofieldsdency formtastic
+okouam@nikita:/opt/Rails/apps/radio$ git add .em dependency searchlogic[4Pcy hobofieldsdency formtastic[10Pit push herokucommit -m "All"
+[master d9a4282] All
+ 3 files changed, 37 insertions(+), 400 deletions(-)
+okouam@nikita:/opt/Rails/apps/radio$ git commit -m "All"[10Padd .em dependency searchlogic[4Pcy hobofieldsdency formtastic[10Pit push heroku
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 1.06 KiB, done.
+Total 6 (delta 4), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Rails app detected
+
+-----> Installing gem authlogic from http://rubygems.org
+       Successfully installed authlogic-2.1.5
+       1 gem installed
+
+-----> Installing gem haml >= 2.2.17 from http://rubygems.org
+       Successfully installed haml-3.0.13
+       1 gem installed
+
+-----> Installing gem will_paginate >= 2.3.12 from http://gemcutter.org, http://rubygems.org
+       Successfully installed will_paginate-2.3.14
+       1 gem installed
+
+-----> Installing gem formtastic >= 0.9.7 from http://gemcutter.org, http://rubygems.org
+       
+         ========================================================================
+         Thanks for installing Formtastic!
+         ------------------------------------------------------------------------
+         You can now (optionally) run the generator to copy some stylesheets and
+         a config initializer into your application:
+           ./script/generate formtastic
+       
+         To generate some semantic form markup for your existing models, just run:
+           ./script/generate form MODEL_NAME
+       
+         Find out more and get involved:
+           http://github.com/justinfrench/formtastic
+           http://groups.google.com.au/group/formtastic
+         ========================================================================
+         
+       Successfully installed formtastic-0.9.10
+       Successfully installed rack-1.1.0
+       2 gems installed
+
+-----> Installing gem fastercsv from http://rubygems.org
+       Successfully installed fastercsv-1.5.3
+       1 gem installed
+
+-----> Installing gem searchlogic from http://rubygems.org
+       Successfully installed searchlogic-2.4.19
+       Successfully installed activesupport-2.3.8
+       2 gems installed
+
+-----> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
+       Compiled slug size is 9.2MB
+-----> Launching..................... done
+       http://radio.heroku.com deployed to Heroku
+
+To git@heroku.com:radio.git
+   0c923d4..d9a4282  master -> master
+okouam@nikita:/opt/Rails/apps/radio$ git push herokucommit -m "All"[10Padd .
+okouam@nikita:/opt/Rails/apps/radio$ git add .push herokucommit -m "All"
+[master e8ab2b3] All
+ 3 files changed, 90 insertions(+), 14 deletions(-)
+okouam@nikita:/opt/Rails/apps/radio$ git commit -m "All"[10Padd .push heroku
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.72 KiB, done.
+Total 7 (delta 6), reused 0 (delta 0)
+
+-----> Heroku
