@@ -537,4 +537,83 @@ To git@heroku.com:radio.git
    0643f41..38ce21d  master -> master
 okouam@nikita:/opt/Rails/apps/radio$ git push heroku[Kconfig push.default matching
 okouam@nikita:/opt/Rails/apps/radio$ git config push.default matching[17Ppush heroku[Kconfig push.default matchingpush[Kcommit -m "All"[10Padd .
-okouam@nikit
+okouam@nikita:/opt/Rails/apps/radio$ git add .config push.default matching[17Ppush heroku[Kconfig push.default matchingpush[Kcommit -m "All"
+[master 0c923d4] All
+ 3 files changed, 322 insertions(+), 32 deletions(-)
+okouam@nikita:/opt/Rails/apps/radio$ git commit -m "All"[10Padd .config push.default matching[17Ppush heroku[K heroku
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 9.53 KiB, done.
+Total 6 (delta 3), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Rails app detected
+
+-----> Installing gem authlogic from http://rubygems.org
+       Successfully installed authlogic-2.1.5
+       1 gem installed
+
+-----> Installing gem will_paginate from http://rubygems.org
+       Successfully installed will_paginate-2.3.14
+       1 gem installed
+
+-----> Installing gem fastercsv from http://rubygems.org
+       Successfully installed fastercsv-1.5.3
+       1 gem installed
+
+-----> Installing gem searchlogic from http://rubygems.org
+       Successfully installed searchlogic-2.4.19
+       Successfully installed activesupport-2.3.8
+       2 gems installed
+
+-----> Installing gem formtastic from http://rubygems.org
+       
+         ========================================================================
+         Thanks for installing Formtastic!
+         ------------------------------------------------------------------------
+         You can now (optionally) run the generator to copy some stylesheets and
+         a config initializer into your application:
+           ./script/generate formtastic
+       
+         To generate some semantic form markup for your existing models, just run:
+           ./script/generate form MODEL_NAME
+       
+         Find out more and get involved:
+           http://github.com/justinfrench/formtastic
+           http://groups.google.com.au/group/formtastic
+         ========================================================================
+         
+       Successfully installed formtastic-0.9.10
+       Successfully installed rack-1.1.0
+       2 gems installed
+
+-----> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
+       Compiled slug size is 8.2MB
+-----> Launching........ done
+       http://radio.heroku.com deployed to Heroku
+
+To git@heroku.com:radio.git
+   38ce21d..0c923d4  master -> master
+okouam@nikita:/opt/Rails/apps/radio$ gem dependency formtastic
+Gem formtastic-0.9.8
+  actionpack (>= 2.3.0, runtime)
+  activesupport (>= 2.3.0, runtime)
+  rspec-rails (>= 1.2.6, development)
+  rspec_tag_matchers (>= 1.0.0, development)
+
+Gem formtastic-0.9.10
+  actionpack (>= 2.3.0, runtime)
+  activesupport (>= 2.3.0, runtime)
+  rspec-rails (>= 1.2.6, development)
+  rspec_tag_matchers (>= 1.0.0, development)
+
+okouam@nikita:/opt/Rails/apps/radio$ gem depency hobofields
+ERROR:  While executing gem ... (RuntimeError)
+    Unknown command depency
+okouam@nikita:/opt/Rails/apps/radio$ gem depency hobofields[K[K[K[K[K[K[K[K[K[K[K[K[Kdency searchlogic
+Gem searchlogic-2.4.19
+  activerecord (>= 2.0.0, runtime)
+
+okouam@nikita:/opt/Rails/apps/radio$ gem dependency searchlogic[4Pcy hobofieldsdency formtastic[10Pit push herokucommit -m "All"[10Padd .
+okouam@nikita:/opt/Rails/apps/radio$ git add .em dependency searchlogic[4Pcy hobofieldsdency formtastic
