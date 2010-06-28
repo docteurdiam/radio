@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="317d2616-f3c7-40f3-b517-29774ef024c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/backend.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/backend.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/networks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/networks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/networks/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/networks/edit.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/radios/show.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/totals/index.html.erb" afterPath="$PROJECT_DIR$/app/views/totals/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/partnerships_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/partnerships_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/networks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/networks/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/radios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/radios_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/formtastic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partnerships/index.html.erb" afterPath="$PROJECT_DIR$/app/views/partnerships/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/networks/show.html.erb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gems" afterPath="$PROJECT_DIR$/.gems" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate" afterPath="$PROJECT_DIR$/generate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partnerships/new.html.erb" afterPath="$PROJECT_DIR$/app/views/partnerships/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/data_import.rb" afterPath="$PROJECT_DIR$/app/models/data_import.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/master.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/master.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/radios/index.html.erb" afterPath="$PROJECT_DIR$/app/views/radios/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/radio.iml" afterPath="$PROJECT_DIR$/.idea/radio.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/admin.css" afterPath="$PROJECT_DIR$/public/stylesheets/admin.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/totals/show.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/totals_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/totals_controller.rb" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="radio.iws" />
@@ -106,10 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="27" selection-start="113" selection-end="113" vertical-scroll-proportion="0.17128874">
+            <state line="7" column="27" selection-start="113" selection-end="113" vertical-scroll-proportion="-4.7727275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gems" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gems">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="10" selection-start="56" selection-end="56" vertical-scroll-proportion="0.09448819">
               <folding />
             </state>
           </provider>
@@ -143,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/radios/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/radios/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/backend.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/master.html.erb" />
@@ -159,6 +143,7 @@
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/.gems" />
       </list>
     </option>
   </component>
@@ -966,7 +951,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="113" selection-end="113" vertical-scroll-proportion="0.17128874">
+        <state line="7" column="27" selection-start="113" selection-end="113" vertical-scroll-proportion="-4.7727275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gems">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="10" selection-start="56" selection-end="56" vertical-scroll-proportion="0.09448819">
           <folding />
         </state>
       </provider>

@@ -1,3 +1,5 @@
 authlogic
 will_paginate
 fastercsv
+searchlogic
+formtastic

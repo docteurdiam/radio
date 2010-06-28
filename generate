@@ -228,3 +228,299 @@ okouam@nikita:/opt/Rails/apps/radio$ git status
 #
 #	[31mgenerate[m
 #	[31mtmp/06232010231149-RadioStationsdata.csv[m
+#	[31mtmp/06262010204504-RadioStationsdata2.csv[m
+#	[31mtmp/06262010205656-RadioStationsdata2.csv[m
+#	[31mtmp/06262010210334-RadioStationsdata2.csv[m
+#	[31mtmp/06262010210349-RadioStationsdata2.csv[m
+#	[31mtmp/06262010210442-RadioStationsdata2.csv[m
+#	[31mtmp/06262010210507-RadioStationsdata2.csv[m
+#	[31mvendor/[m
+okouam@nikita:/opt/Rails/apps/radio$ git add [K[K[K[K[K[K[K[Kgit add .
+okouam@nikita:/opt/Rails/apps/radio$ gt[Kit commit -m "All"
+[master 38ce21d] All
+ 273 files changed, 11208 insertions(+), 421 deletions(-)
+ rewrite app/controllers/admin_controller.rb (71%)
+ rewrite app/controllers/partnerships_controller.rb (64%)
+ delete mode 100644 app/views/networks/show.html.erb
+ rewrite app/views/partnerships/new.html.erb (90%)
+ rewrite app/views/radios/index.html.erb (99%)
+ delete mode 100644 app/views/radios/show.html.erb
+ delete mode 100644 app/views/totals/show.html.erb
+ rewrite app/views/users/index.html.erb (77%)
+ create mode 100644 generate
+ create mode 100644 public/stylesheets/formtastic.css
+ create mode 100644 tmp/06232010231149-RadioStationsdata.csv
+ create mode 100644 tmp/06262010204504-RadioStationsdata2.csv
+ create mode 100644 tmp/06262010205656-RadioStationsdata2.csv
+ create mode 100644 tmp/06262010210334-RadioStationsdata2.csv
+ create mode 100644 tmp/06262010210349-RadioStationsdata2.csv
+ create mode 100644 tmp/06262010210442-RadioStationsdata2.csv
+ create mode 100644 tmp/06262010210507-RadioStationsdata2.csv
+ create mode 100644 vendor/plugins/resource_controller/LICENSE
+ create mode 100644 vendor/plugins/resource_controller/README.rdoc
+ create mode 100644 vendor/plugins/resource_controller/Rakefile
+ copy app/views/users/edit.html.erb => vendor/plugins/resource_controller/TODO (100%)
+ create mode 100644 vendor/plugins/resource_controller/VERSION.yml
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/USAGE
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/scaffold_resource_generator.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/controller.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/fixtures.yml
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/functional_test.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/helper.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/migration.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/model.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/old_migration.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/functional_spec.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/helper_spec.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/routing_spec.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/unit_spec.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/views/edit_spec.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/views/index_spec.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/views/new_spec.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/views/show_spec.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/shoulda_functional_test.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/unit_test.rb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view__form.erb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view__form.haml
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_edit.erb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_edit.haml
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_index.erb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_index.haml
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_new.erb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_new.haml
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_show.erb
+ create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_show.haml
+ create mode 100644 vendor/plugins/resource_controller/init.rb
+ create mode 100644 vendor/plugins/resource_controller/install.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/accessors.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/action_options.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/actions.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/base.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/class_methods.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/controller.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/failable_action_options.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/current_objects.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/internal.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/nested.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/singleton_customizations.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/urls.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/response_collector.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/singleton.rb
+ create mode 100644 vendor/plugins/resource_controller/lib/urligence.rb
+ create mode 100644 vendor/plugins/resource_controller/rails/init.rb
+ create mode 100644 vendor/plugins/resource_controller/resource_controller.gemspec
+ create mode 100644 vendor/plugins/resource_controller/test/Rakefile
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/accounts_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/application_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/cms/options_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/cms/personnel_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/cms/photos_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/cms/products_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/comments_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/images_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/options_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/people_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/photos_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/posts_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/projects_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/somethings_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/tags_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/controllers/users_controller.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/accounts_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/application_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/cms/products_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/comments_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/images_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/options_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/people_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/photos_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/posts_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/projects_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/somethings_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/tags_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/helpers/users_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/account.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/comment.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/image.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/option.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/personnel.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/photo.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/post.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/product.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/project.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/something.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/tag.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/models/user.rb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/accounts/_form.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/accounts/edit.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/accounts/new.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/accounts/show.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/options/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/options/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/options/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/options/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/photos/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/photos/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/photos/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/photos/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/products/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/products/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/products/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/products/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/comments/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/comments/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/comments/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/comments/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/images/_form.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/images/edit.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/images/new.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/application.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/comments.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/options.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/people.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/photos.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/projects.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/somethings.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/tags.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/options/_form.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/options/edit.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/options/index.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/options/new.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/options/show.html.erb
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/people/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/people/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/people/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/people/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/photos/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/photos/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/photos/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/photos/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/posts/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/posts/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/posts/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/posts/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/projects/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/projects/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/projects/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/projects/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/somethings/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/somethings/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/somethings/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/somethings/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/tags/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/tags/index.rhtml
+ rename app/views/users/show.html.erb => vendor/plugins/resource_controller/test/app/views/tags/index.rjs (100%)
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/tags/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/tags/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/users/edit.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/users/index.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/users/new.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/app/views/users/show.rhtml
+ create mode 100644 vendor/plugins/resource_controller/test/config/boot.rb
+ create mode 100644 vendor/plugins/resource_controller/test/config/database.yml
+ create mode 100644 vendor/plugins/resource_controller/test/config/environment.rb
+ create mode 100644 vendor/plugins/resource_controller/test/config/environments/development.rb
+ create mode 100644 vendor/plugins/resource_controller/test/config/environments/test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/config/initializers/inflections.rb
+ create mode 100644 vendor/plugins/resource_controller/test/config/routes.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/001_create_posts.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/002_create_products.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/003_create_comments.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/004_create_options.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/005_create_photos.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/006_create_tags.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/007_create_somethings.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/008_create_accounts.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/009_add_account_id_to_photos.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/010_create_projects.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/011_create_images.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/012_create_users.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/013_create_personnel.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/migrate/014_add_personnel_id_to_photos.rb
+ create mode 100644 vendor/plugins/resource_controller/test/db/schema.rb
+ create mode 100755 vendor/plugins/resource_controller/test/script/console
+ create mode 100755 vendor/plugins/resource_controller/test/script/destroy
+ create mode 100755 vendor/plugins/resource_controller/test/script/generate
+ create mode 100755 vendor/plugins/resource_controller/test/script/server
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/accounts.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/comments.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/images.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/options.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/personnel.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/photos.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/photos_tags.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/posts.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/products.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/projects.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/somethings.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/tags.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/users.yml
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/cms/options_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/cms/photos_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/cms/products_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/comments_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/images_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/people_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/photos_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/posts_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/projects_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/somethings_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/tags_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/functional/users_controller_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/test_helper.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/accessors_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/account_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/action_options_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/base_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/comment_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/failable_action_options_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/current_objects_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/internal_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/nested_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/singleton_current_objects_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/singleton_nested_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/singleton_urls_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/urls_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/image_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/option_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/photo_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/post_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/project_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/response_collector_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/something_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/tag_test.rb
+ create mode 100644 vendor/plugins/resource_controller/test/test/unit/urligence_test.rb
+ rename app/views/users/edit.html.erb => vendor/plugins/resource_controller/test/tmp/.gitignore (100%)
+ create mode 120000 vendor/plugins/resource_controller/test/vendor/gems/resource_controller-10.0.0
+ create mode 100644 vendor/plugins/resource_controller/uninstall.rb
+okouam@nikita:/opt/Rails/apps/radio$ git push
+warning: You did not specify any refspecs to push, and the current remote
+warning: has not configured any push refspecs. The default action in this
+warning: case is to push all matching refspecs, that is, all branches
+warning: that exist both locally and remotely will be updated.  This may
+warning: not necessarily be what you want to happen.
+warning: 
+warning: You can specify what action you want to take in this case, and
+warning: avoid seeing this message again, by configuring 'push.default' to:
+warning:   'nothing'  : Do not push anything
+warning:   'matching' : Push all matching branches (default)
+warning:   'tracking' : Push the current branch to whatever it is tracking
+warning:   'current'  : Push the current branch
+Counting objects: 347, done.
+Delta compression using up to 4 threads.
+Compressing objects:   0% (1/288)   Compressing objects:   1% (3/288)   Compressing objects:   2% (6/288)   Compressing objects:   3% (9/288)   Compressing objects:   4% (12/288)   Compressing objects:   5% (15/288)   Compressing objects:   6% (18/288)   Compressing objects:   7% (21/288)   Compressing objects:   8% (24/288)   Compressing objects:   9% (26/288)   Compressing objects:  10% (29/288)   Compressing objects:  11% (32/288)   Compressing objects:  12% (35/288)   Compressing objects:  13% (38/288)   Compressing objects:  14% (41/288)   Compressing objects:  15% (44/288)   Compressing objects:  16% (47/288)   Compressing objects:  17% (49/288)   Compressing objects:  18% (52/288)   Compressing objects:  19% (55/288)   Compressing objects:  20% (58/288)   Compressing objects:  21% (61/288)   Compressing objects:  22% (64/288)   Compressing objects:  23% (67/288)   Compressing objects:  24% (70/288)   Compressing objects:  25% (72/288)   Compressing objects:  26% (75/288)   Compressing objects:  27% (78/288)   Compressing objects:  28% (81/288)   Compressing objects:  29% (84/288)   Compressing objects:  30% (87/288)   Compressing objects:  31% (90/288)   Compressing objects:  32% (93/288)   Compressing objects:  33% (96/288)   Compressing objects:  34% (98/288)   Compressing objects:  35% (101/288)   Compressing objects:  36% (104/288)   Compressing objects:  37% (107/288)   Compressing objects:  38% (110/288)   Compressing objects:  39% (113/288)   Compressing objects:  40% (116/288)   Compressing objects:  41% (119/288)   Compressing objects:  42% (121/288)   Compressing objects:  43% (124/288)   Compressing objects:  44% (127/288)   Compressing objects:  45% (130/288)   Compressing objects:  46% (133/288)   Compressing objects:  47% (136/288)   Compressing objects:  48% (139/288)   Compressing objects:  49% (142/288)   Compressing objects:  50% (144/288)   Compressing objects:  51% (147/288)   Compressing objects:  52% (150/288)   Compressing objects:  53% (153/288)   Compressing objects:  54% (156/288)   Compressing objects:  55% (159/288)   Compressing objects:  56% (162/288)   Compressing objects:  57% (165/288)   Compressing objects:  58% (168/288)   Compressing objects:  59% (170/288)   Compressing objects:  60% (173/288)   Compressing objects:  61% (176/288)   Compressing objects:  62% (179/288)   Compressing objects:  63% (182/288)   Compressing objects:  64% (185/288)   Compressing objects:  65% (188/288)   Compressing objects:  66% (191/288)   Compressing objects:  67% (193/288)   Compressing objects:  68% (196/288)   Compressing objects:  69% (199/288)   Compressing objects:  70% (202/288)   Compressing objects:  71% (205/288)   Compressing objects:  72% (208/288)   Compressing objects:  73% (211/288)   Compressing objects:  74% (214/288)   Compressing objects:  75% (216/288)   Compressing objects:  76% (219/288)   Compressing objects:  77% (222/288)   Compressing objects:  78% (225/288)   Compressing objects:  79% (228/288)   Compressing objects:  80% (231/288)   Compressing objects:  81% (234/288)   Compressing objects:  82% (237/288)   Compressing objects:  83% (240/288)   Compressing objects:  84% (242/288)   Compressing objects:  85% (245/288)   Compressing objects:  86% (248/288)   Compressing objects:  87% (251/288)   Compressing objects:  88% (254/288)   Compressing objects:  89% (257/288)   Compressing objects:  90% (260/288)   Compressing objects:  91% (263/288)   Compressing objects:  92% (265/288)   Compressing objects:  93% (268/288)   Compressing objects:  94% (271/288)   Compressing objects:  95% (274/288)   Compressing objects:  96% (277/288)   Compressing objects:  97% (280/288)   Compressing objects:  98% (283/288)   Compressing objects:  99% (286/288)   Compressing objects: 100% (288/288)   Compressing objects: 100% (288/288), done.
+Writing objects:   0% (1/318)   Writing objects:   1% (4/318)   Writing objects:   2% (7/318)   Writing objects:   3% (10/318)   Writing objects:   4% (13/318)   Writing objects:   5% (16/318)   Writing objects:   6% (20/318)   Writing objects:   7% (23/318)   Writing objects:   8% (26/318)   Writing objects:   9% (29/318)   Writing objects:  10% (32/318)   Writing objects:  11% (35/318)   Writing objects:  12% (39/318)   Writing objects:  13% (42/318)   Writing objects:  14% (45/318)   Writing objects:  15% (48/318)   Writing objects:  16% (51/318)   Writing objects:  17% (55/318)   Writing objects:  18% (59/318)   Writing objects:  19% (61/318)   Writing objects:  20% (64/318)   Writing objects:  21% (69/318)   Writing objects:  22% (70/318)   Writing objects:  23% (74/318)   Writing objects:  24% (78/318)   Writing objects:  25% (80/318)   Writing objects:  26% (83/318)   Writing objects:  27% (86/318)   Writing objects:  28% (90/318)   Writing objects:  29% (93/318)   Writing objects:  30% (96/318)   Writing objects:  31% (99/318)   Writing objects:  32% (102/318)   Writing objects:  33% (105/318)   Writing objects:  34% (109/318)   Writing objects:  35% (112/318)   Writing objects:  36% (115/318)   Writing objects:  37% (118/318)   Writing objects:  38% (121/318)   Writing objects:  39% (125/318)   Writing objects:  40% (128/318)   Writing objects:  41% (131/318)   Writing objects:  42% (134/318)   Writing objects:  43% (137/318)   Writing objects:  44% (140/318)   Writing objects:  45% (144/318)   Writing objects:  46% (147/318)   Writing objects:  47% (150/318)   Writing objects:  48% (153/318)   Writing objects:  49% (156/318)   Writing objects:  50% (159/318)   Writing objects:  51% (163/318)   Writing objects:  52% (167/318)   Writing objects:  53% (171/318)   Writing objects:  55% (175/318)   Writing objects:  56% (180/318)   Writing objects:  57% (182/318)   Writing objects:  58% (185/318)   Writing objects:  59% (188/318)   Writing objects:  60% (191/318)   Writing objects:  61% (194/318)   Writing objects:  62% (198/318)   Writing objects:  63% (201/318)   Writing objects:  64% (204/318)   Writing objects:  65% (208/318)   Writing objects:  66% (210/318)   Writing objects:  67% (214/318)   Writing objects:  68% (217/318)   Writing objects:  69% (220/318)   Writing objects:  70% (223/318)   Writing objects:  71% (227/318)   Writing objects:  72% (229/318)   Writing objects:  73% (233/318)   Writing objects:  74% (236/318)   Writing objects:  75% (239/318)   Writing objects:  76% (242/318)   Writing objects:  77% (245/318)   Writing objects:  78% (249/318)   Writing objects:  79% (253/318)   Writing objects:  80% (255/318)   Writing objects:  81% (258/318)   Writing objects:  82% (261/318)   Writing objects:  83% (264/318)   Writing objects:  84% (268/318)   Writing objects:  85% (271/318)   Writing objects:  86% (274/318)   Writing objects:  87% (278/318)   Writing objects:  88% (281/318)   Writing objects:  89% (284/318)   Writing objects:  90% (287/318)   Writing objects:  91% (290/318)   Writing objects:  92% (293/318)   Writing objects:  93% (296/318)   Writing objects:  94% (299/318)   Writing objects:  95% (303/318)   Writing objects:  96% (307/318)   Writing objects:  97% (309/318)   Writing objects:  98% (312/318)   Writing objects:  99% (315/318)   Writing objects: 100% (318/318)   Writing objects: 100% (318/318), 85.98 KiB, done.
+Total 318 (delta 90), reused 0 (delta 0)
+To git@github.com:okouam/Radio.git
+   0643f41..38ce21d  master -> master
+okouam@nikita:/opt/Rails/apps/radio$ git config push.defu[Kault matching
+okouam@nikita:/opt/Rails/apps/radio$ git push
+Everything up-to-date
+okouam@nikita:/opt/Rails/apps/radio$ ig [Kt[K[K[Kgit push herokou[K[Ku
+Counting objects: 347, done.
+Delta compression using up to 4 threads.
+Compressing objects:   0% (1/288)   Compressing objects:   1% (3/288)   Compressing objects:   2% (6/288)   Compressing objects:   3% (9/288)   Compressing objects:   4% (12/288)   Compressing objects:   5% (15/288)   Compressing objects:   6% (18/288)   Compressing objects:   7% (21/288)   Compressing objects:   8% (24/288)   Compressing objects:   9% (26/288)   Compressing objects:  10% (29/288)   Compressing objects:  11% (32/288)   Compressing objects:  12% (35/288)   Compressing objects:  13% (38/288)   Compressing objects:  14% (41/288)   Compressing objects:  15% (44/288)   Compressing objects:  16% (47/288)   Compressing objects:  17% (49/288)   Compressing objects:  18% (52/288)   Compressing objects:  19% (55/288)   Compressing objects:  20% (58/288)   Compressing objects:  21% (61/288)   Compressing objects:  22% (64/288)   Compressing objects:  23% (67/288)   Compressing objects:  24% (70/288)   Compressing objects:  25% (72/288)   Compressing objects:  26% (75/288)   Compressing objects:  27% (78/288)   Compressing objects:  28% (81/288)   Compressing objects:  29% (84/288)   Compressing objects:  30% (87/288)   Compressing objects:  31% (90/288)   Compressing objects:  32% (93/288)   Compressing objects:  33% (96/288)   Compressing objects:  34% (98/288)   Compressing objects:  35% (101/288)   Compressing objects:  36% (104/288)   Compressing objects:  37% (107/288)   Compressing objects:  38% (110/288)   Compressing objects:  39% (113/288)   Compressing objects:  40% (116/288)   Compressing objects:  41% (119/288)   Compressing objects:  42% (121/288)   Compressing objects:  43% (124/288)   Compressing objects:  44% (127/288)   Compressing objects:  45% (130/288)   Compressing objects:  46% (133/288)   Compressing objects:  47% (136/288)   Compressing objects:  48% (139/288)   Compressing objects:  49% (142/288)   Compressing objects:  50% (144/288)   Compressing objects:  51% (147/288)   Compressing objects:  52% (150/288)   Compressing objects:  53% (153/288)   Compressing objects:  54% (156/288)   Compressing objects:  55% (159/288)   Compressing objects:  56% (162/288)   Compressing objects:  57% (165/288)   Compressing objects:  58% (168/288)   Compressing objects:  59% (170/288)   Compressing objects:  60% (173/288)   Compressing objects:  61% (176/288)   Compressing objects:  62% (179/288)   Compressing objects:  63% (182/288)   Compressing objects:  64% (185/288)   Compressing objects:  65% (188/288)   Compressing objects:  66% (191/288)   Compressing objects:  67% (193/288)   Compressing objects:  68% (196/288)   Compressing objects:  69% (199/288)   Compressing objects:  70% (202/288)   Compressing objects:  71% (205/288)   Compressing objects:  72% (208/288)   Compressing objects:  73% (211/288)   Compressing objects:  74% (214/288)   Compressing objects:  75% (216/288)   Compressing objects:  76% (219/288)   Compressing objects:  77% (222/288)   Compressing objects:  78% (225/288)   Compressing objects:  79% (228/288)   Compressing objects:  80% (231/288)   Compressing objects:  81% (234/288)   Compressing objects:  82% (237/288)   Compressing objects:  83% (240/288)   Compressing objects:  84% (242/288)   Compressing objects:  85% (245/288)   Compressing objects:  86% (248/288)   Compressing objects:  87% (251/288)   Compressing objects:  88% (254/288)   Compressing objects:  89% (257/288)   Compressing objects:  90% (260/288)   Compressing objects:  91% (263/288)   Compressing objects:  92% (265/288)   Compressing objects:  93% (268/288)   Compressing objects:  94% (271/288)   Compressing objects:  95% (274/288)   Compressing objects:  96% (277/288)   Compressing objects:  97% (280/288)   Compressing objects:  98% (283/288)   Compressing objects:  99% (286/288)   Compressing objects: 100% (288/288)   Compressing objects: 100% (288/288), done.
+Writing objects:   0% (1/318)   Writing objects:   1% (4/318)   Writing objects:   2% (7/318)   Writing objects:   3% (10/318)   Writing objects:   
