@@ -1,26 +1,49 @@
-<h1>Listing Stations</h1>
+<br/>
 
-<table>
-  <tr>
-    <th>Fee</th>
-    <th>Name</th>
-    <th>Category</th>
-  </tr>
+<div style="float: left; width: 200px">
 
-<% @radios.each do |radio| %>
-  <tr>
-    <td><%=h radio.fee %></td>
-    <td><%=h radio.name %></td>
-    <td><%=h radio.category %></td>
-    <td><%= link_to 'Show', radio %></td>
-    <td><%= link_to 'Edit', edit_radio_path(radio) %></td>
-    <td><%= link_to 'Delete', radio, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <% semantic_form_for :s, :url => "/radios/change_search" do |form| %>
 
-<%= will_paginate @radios %>
+    <div id="search-parameters" style="background: white; border: 1px solid #aaa; padding: 10px">
+      <h2 style="color: #434343; margin-bottom: 10px">Search Criteria</h2>
+      <hr/>
+      <%= form.input :fee_eq, :label => "Fee", :required => false %>
+      <%= form.input :name_like, :required => false, :label => "Name" %>
+      <%= form.input :category_id_eq, :as => :select, :collection => @all_categories, :required => false, :label => "Category" %>
+      <input class="button" style="width: 100px; margin-right: 6px; margin-top: 15px; float: right" type="submit" value="Search" />
+      <div style="clear: both"></div>
+    </div>
+  <% end %>
+  <div class="actions">
+    <% semantic_form_for :s, :url => "/radios/new" do |form| %>
+      <input class="button" style="width: 140px; margin-right: 6px; margin-top: 15px" type="submit" value="Add New Radio" />
+    <% end %>
+  </div>
+</div>
 
-<br />
+<div style="margin-left: 270px">
+  <table>
+    <tr>
+      <th style="width: 50px">Fee</th>
+      <th>Name</th>
+      <th style="width: 150px">Category</th>
+      <th style="width: 40px"></th>
+      <th style="width: 50px"></th>
+    </tr>
+    <% @radios.each do |radio| %>
+      <tr class="<%= cycle("even", "odd") %>">
+        <td><%=h radio.fee %></td>
+        <td><%=h radio.name %></td>
+        <td><%=h radio.category %></td>
+        <td><%= link_to 'Edit', edit_radio_path(radio) %></td>
+        <td><%= link_to 'Delete', radio, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @radios %>
+  <br />
+</div>
 
-<div class="actions"><%= link_to 'New station', new_radio_path %></div>
+<style type="text/css">
+
+</style>

@@ -1,25 +1,13 @@
 class RadiosController < ApplicationController
+  resource_controller
   before_filter :require_user, :except => [:search, :calculate]
 
   def index
-    @radios = @books = Radio.paginate(:page => params[:page], :per_page => 20, :order => "name")
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @radios }
-    end
+    @radios = @books = Radio.search(params[:s]).all.paginate(:page => params[:page], :per_page => 15, :order => "name")
   end
 
-  def show
-    @radio = Radio.find(params[:id])
-  end
-
-  def new
-    @radio = Radio.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @radio }
-    end
+  def change_search
+    redirect_to :action => :index, :s => params[:s]
   end
 
   def edit
@@ -54,16 +42,6 @@ class RadiosController < ApplicationController
         format.html { render :action => "edit" }
         format.xml  { render :xml => @radio.errors, :status => :unprocessable_entity }
       end
-    end
-  end
-
-  def destroy
-    @radio = Radio.find(params[:id])
-    @radio.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(radios_url) }
-      format.xml  { head :ok }
     end
   end
 

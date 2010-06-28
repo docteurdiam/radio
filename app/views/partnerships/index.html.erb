@@ -1,15 +1,16 @@
-<h1>Listing Partnerships</h1>
+<br/>
 
 <table>
   <tr>
     <th>Station</th>
     <th>Partner</th>
     <th>Fee</th>
+    <th></th>
   </tr>
 
 <% @partnerships.each do |partnership| %>
-  <tr>
-    <td><%=h partnership.radios[1].name %></td>
+   <tr class="<%= cycle("even", "odd") %>">
+    <td><%=h partnership.radios[1].name if partnership.radios[1] %></td>
     <td><%=h partnership.radios[0].name %></td>
     <td><%=h partnership.fee %></td>
     <td><%= link_to 'Delete', partnership, :confirm => 'Are you sure?', :method => :delete %></td>

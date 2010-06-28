@@ -2,3 +2,27 @@ h3 {font-weight: bold; margin-bottom: 5px; margin-top: 10px; color: #434343; fon
 .actions {margin-top: 10px}
 .actions input {margin-right: 10px}
 .actions a {margin-right: 10px; font-weight: bold}
+
+tr.odd {background-color: white}
+tr.even {background-color: #DCF9FF}
+td {padding: 8px 7px; font-size: 14px}
+table {border: 1px solid #cccccc}
+th {background-color: #888; padding: 8px 7px; color: white; font-size: 14px}
+#search-parameters {width: 210px}
+.button {margin-top: 10px}
+.button:hover {cursor: pointer}
+#search-parameters label {display: block; margin-top: 5px; font-weight: bold; margin-bottom: 3px}
+#search-parameters select, #search-parameters input, .button  {
+  width: 190px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  background:none repeat scroll 0 0 #FEFEFE;
+  border:1px solid #BBBBBB;
+  color:#333333;
+  font-family:"Lucida Grande",Verdana,sans-serif;
+  font-size:14px;
+  outline:medium none;
+  padding:7px;
+  vertical-align:middle;
+}
+.pagination a {font-size: 14px}
+#search-parameters select {width: 205px}

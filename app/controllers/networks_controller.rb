@@ -1,11 +1,8 @@
 class NetworksController < ApplicationController
+  resource_controller
 
   def index
     @networks = Network.paginate(:page => params[:page], :per_page => 20)
-  end
-
-  def new
-    @network = Network.new
   end
 
   def create
@@ -26,20 +23,10 @@ class NetworksController < ApplicationController
         @network.save!
       end
       flash[:notice] = 'Network was successfully updated.'
-      redirect_to(@network)
+      redirect_to(networks_url)
     else
       render :action => "edit"
     end
-  end
-
-  def destroy
-    network = Network.find(params[:id])
-    network.destroy
-    redirect_to(networks_url)
-  end
-
-  def show
-    @network = Network.find(params[:id])
   end
 
   def edit

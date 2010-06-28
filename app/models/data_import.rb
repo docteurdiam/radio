@@ -21,7 +21,7 @@ class DataImport
       item[:total] = row[5]
       item
     else
-      nil
+      Rails.logger.info "Could not read station data"
     end
   end
 
@@ -43,6 +43,10 @@ class DataImport
 
   def identify_networks
     items = @items.find_all {|item| !item[:network].blank?}
+    networks = items.map{|item| item[:network]}.uniq
+    networks.each do |network|
+      Network.create(:name => network, :fee => 0)     
+    end
     items.each do |item|
       network = Network.find_by_name(item[:network])
       raise "The network #{item[:network]} is invalid!" if network.nil?
@@ -53,6 +57,10 @@ class DataImport
 
   def identify_totals
     items = @items.find_all {|item| !item[:total].blank?}
+    totals = items.map{|item| item[:total]}.uniq
+    totals.each do |total|
+      Total.create(:name => total)
+    end
     items.each do |item|
       total = Total.find_by_name(item[:total])
       raise "The total #{item[:total]} is invalid!" if total.nil?
