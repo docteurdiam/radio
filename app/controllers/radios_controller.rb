@@ -21,7 +21,7 @@ class RadiosController < ApplicationController
     respond_to do |format|
       if @radio.save
         flash[:notice] = 'Radio was successfully created.'
-        format.html { redirect_to(@radio) }
+        format.html { redirect_to(radios_path) }
         format.xml  { render :xml => @radio, :status => :created, :location => @radio }
       else
         format.html { render :action => "new" }
@@ -36,7 +36,7 @@ class RadiosController < ApplicationController
     respond_to do |format|
       if @radio.update_attributes(params[:radio])
         flash[:notice] = 'Radio was successfully updated.'
-        format.html { redirect_to(@radio) }
+        format.html { redirect_to(radios_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
