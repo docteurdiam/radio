@@ -11,9 +11,9 @@
   <%= f.text_area :note, :size => "30x10" %>
 
   <h3>Stations:</h3>
-  <ul>
+  <ul class="current_stations" id="<%= @total.id %>">
     <% @total.radios.each do |radio| %>
-      <li><%= radio.name %></li>
+      <li id="<%= radio.id %>"><%= radio.name %> <a style="weight: bold; font-size: 9px; color: red">X</a></li>
     <% end %>
   </ul>
 
@@ -28,4 +28,24 @@
   </p>
 
 <% end %>
+
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    $(".current_stations li a").click(function() {
+      var id = $(this).parent().attr("id");
+      var total_id = $(".current_stations").attr("id");
+      $.ajax({
+        type: 'POST',
+        url: "/totals/" + total_id + "/remove_station?station_id=" + id,
+        success: function() {
+          window.location = "/totals/" + total_id + "/edit";
+        }
+      })
+    });
+  });
+
+</script>
+
 

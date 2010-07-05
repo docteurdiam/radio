@@ -39,7 +39,7 @@ ActionController::Routing::Routes.draw do |map|
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
   map.resources :radios, :collection => {:search => :get, :calculate => :post}
-  map.resources :totals, :member => {:stations => :get}
+  map.resources :totals, :member => {:stations => :get, :remove_station => :post}
   map.resources :networks
   map.resources :users
   map.resources :partnerships

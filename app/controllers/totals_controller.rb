@@ -24,10 +24,17 @@ class TotalsController < ApplicationController
     render :json => total.radios.map{|radio| radio.to_hash}
   end
 
+  def remove_station
+    @total = Total.find(params[:id])
+    @station = Radio.find(params[:station_id])
+    @total.radios.delete(@station)
+    render :text => "OK"
+  end
+
   def update
     @total = Total.find(params[:id])
     if @total.update_attributes(params[:total])
-      @total.radios << Radio.find(params[:radio][:id])
+      @total.radios << Radio.find(params[:radio][:id]) unless params[:radio][:id].blank?
       @total.save!
       flash[:notice] = 'Total was successfully updated.'
       redirect_to(totals_url)
