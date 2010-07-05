@@ -30,7 +30,7 @@ class TotalsController < ApplicationController
       @total.radios << Radio.find(params[:radio][:id])
       @total.save!
       flash[:notice] = 'Total was successfully updated.'
-      redirect_to(@total)
+      redirect_to(totals_url)
     else
       render :action => "edit"
     end
@@ -42,7 +42,7 @@ class TotalsController < ApplicationController
 
   def edit
     @total = Total.find(params[:id])
-    @radios = Radio.find(:all)
+    @radios = Radio.find(:all, :order => "name")
   end
 
 end
