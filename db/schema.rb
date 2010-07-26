@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100404143215) do
+ActiveRecord::Schema.define(:version => 20100726205322) do
 
   create_table "networks", :force => true do |t|
     t.string  "name"
@@ -31,6 +31,12 @@ ActiveRecord::Schema.define(:version => 20100404143215) do
     t.text    "note"
     t.integer "partnership_id"
   end
+
+  add_index "radios", ["category"], :name => "index_radios_on_category"
+  add_index "radios", ["name"], :name => "index_radios_on_name"
+  add_index "radios", ["network_id"], :name => "index_radios_on_network_id"
+  add_index "radios", ["partnership_id"], :name => "index_radios_on_partnership_id"
+  add_index "radios", ["total_id"], :name => "index_radios_on_total_id"
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
