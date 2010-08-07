@@ -7,7 +7,7 @@ class RemindersController < ApplicationController
 
   def deliver
     radios =  Radio.find(params[:radios].split(","))
-    total = radios.inject(0){|sum, radio| sum + radio.fee}
+    total = FeeCalculator.new.calculate(params[:radios].split(","))
     name = params[:name]
     email = params[:email]
     EmailSender.deliver_reminder_notification(name, email, radios, total)
