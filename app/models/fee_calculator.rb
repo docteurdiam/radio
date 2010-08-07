@@ -4,9 +4,20 @@ class FeeCalculator
     @stations = identifiers.map do |identifier|
       Radio.find(identifier)
     end
+
     network_stations = @stations.find_all {|station| !station.network.nil?}
+    puts "#{network_stations.size} selected stations belong to a network"
+
     independent_stations = @stations - network_stations
-    sum(independent_stations) + process_networks(network_stations)
+    puts "#{independent_stations.size} selected stations are independent"
+
+    independent_total =  sum(independent_stations)
+    puts "The toal for independent stations is #{independent_total}"
+
+    network_total =  sum(network_stations)
+    puts "The toal for network stations is #{network_total}"
+
+    network_total + independent_total
   end
 
   def is_partner_present(partnership)
@@ -34,11 +45,14 @@ class FeeCalculator
   def sum(stations)
     total = 0
     stations.each do |station|
+      additional_fee = 0
       if station.partnership && is_partner_present(station.partnership)
-        total = total + station.partnership.fee
+        additional_fee = station.partnership.fee / 2
       else
-        total = total + station.fee
+        additional_fee = station.fee
       end
+      puts "Adding #{additional_fee} for #{station.name}"
+      total = total + additional_fee
     end
     total
   end
