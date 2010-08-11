@@ -2,7 +2,7 @@ class PartnershipsController < ApplicationController
   resource_controller
 
   def index
-    @partnerships = Partnership.paginate(:page => params[:page], :per_page => 20)
+    @partnerships = Partnership.paginate(:page => params[:page], :per_page => 15)
   end
 
   def new

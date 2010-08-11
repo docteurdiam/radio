@@ -1,6 +1,6 @@
 <br/>
 
-<div style="float: left; width: 200px">
+<div style="float: left; width: 200px; margin-top: 25px">
 
   <% semantic_form_for :s, :url => "/radios/change_search" do |form| %>
 
@@ -14,14 +14,17 @@
       <div style="clear: both"></div>
     </div>
   <% end %>
-  <div class="actions">
-    <% semantic_form_for :s, :url => "/radios/new" do |form| %>
-      <input class="button" style="width: 140px; margin-right: 6px; margin-top: 15px" type="submit" value="Add New Radio" />
-    <% end %>
-  </div>
+
 </div>
 
-<div style="margin-left: 270px">
+<div style="margin-left: 270px; margin-top: -20px">
+
+  <div class="actions" style="text-align: right; margin-top: 0px">
+    <% semantic_form_for :s, :url => "/radios/new" do |form| %>
+      <input class="button" style="width: 140px" type="submit" value="Add New Radio" />
+    <% end %>
+  </div>
+
   <table>
     <tr>
       <th style="width: 50px">Fee</th>

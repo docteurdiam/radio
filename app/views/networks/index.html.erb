@@ -1,8 +1,7 @@
-<br/>
-<table style="width: 500px">
+<table>
   <tr>
     <th>Name</th>
-    <th>Station Count</th>   <th></th><th></th> 
+    <th>Station Count</th>   <th style="width: 50px"></th><th style="width: 50px"></th> 
   </tr>
 
 <% @networks.each do |network| %>
@@ -16,7 +15,3 @@
 </table>
 
 <%= will_paginate @networks %>
-
-<br />
-
-<div class="actions"><%= link_to 'New network', new_network_path %></div>

@@ -1,16 +1,22 @@
-<br/>
+<div class="actions" style="margin-top: -17px">
+  <% semantic_form_for :s, :url => new_total_path do |form| %>
+    <input class="button" style="float: right; width: 160px; margin-top: 15px" type="submit" value="Add New Total" />
+  <% end %>
+</div>
 
-<table style="width: 500px">
+<table>
   <tr>
     <th>Name</th>
     <th>Station Count</th>
-    <th></th><th></th>
+    <th>Total Fee</th>
+    <th style="width: 50px"></th><th style="width: 50px"></th>
   </tr>
 
 <% @totals.each do |total| %>
   <tr class="<%= cycle("even", "odd") %>">
     <td><%=h total.name %></td>
     <td><%=h total.radios.count %></td>
+    <td><%=h total.radios.inject(0) {|sum, total| sum + total.fee } %></td>
     <td><%= link_to 'Edit', edit_total_path(total) %></td>
     <td><%= link_to 'Delete', total, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -18,6 +24,3 @@
 </table>
 
 <%= will_paginate @totals %>
-
-<br />
-<div class="actions"><%= link_to 'New total', new_total_path %></div>

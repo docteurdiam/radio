@@ -1,4 +1,8 @@
-<br/>
+<div class="actions" style="margin-top: -17px">
+  <% semantic_form_for :s, :url => new_partnership_path do |form| %>
+    <input class="button" style="float: right; width: 160px; margin-top: 15px" type="submit" value="Add New Partnership" />
+  <% end %>
+</div>
 
 <table>
   <tr>
@@ -19,7 +23,3 @@
 </table>
 
 <%= will_paginate @partnerships %>
-
-<br />
-
-<div class="actions"><%= link_to 'New partnership', new_partnership_path %></div>

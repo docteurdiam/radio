@@ -1,4 +1,8 @@
-<br/>
+<div class="actions" style="margin-top: -17px">
+  <% semantic_form_for :s, :url => new_user_path do |form| %>
+    <input class="button" style="float: right; width: 160px; margin-top: 15px" type="submit" value="Add New User" />
+  <% end %>
+</div>
 
 <table>
   <tr>
@@ -17,7 +21,3 @@
     </tr>
   <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New user', new_user_path %>

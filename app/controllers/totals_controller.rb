@@ -2,7 +2,7 @@ class TotalsController < ApplicationController
   resource_controller
 
   def index
-    @totals = Total.paginate(:page => params[:page], :per_page => 20)
+    @totals = Total.paginate(:page => params[:page], :per_page => 15)
   end
 
   def new
