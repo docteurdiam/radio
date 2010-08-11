@@ -48,7 +48,7 @@ class FeeCalculator
     stations.each do |station|
       additional_fee = 0
       if station.partnership && is_partner_present(station.partnership)
-        additional_fee = station.partnership.fee
+        additional_fee = station.partnership.fee / 2
       else
         additional_fee = station.fee
       end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100726205322) do
+ActiveRecord::Schema.define(:version => 20100811204915) do
 
   create_table "networks", :force => true do |t|
     t.string  "name"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20100726205322) do
   create_table "radios", :force => true do |t|
     t.string  "name"
     t.string  "category"
-    t.integer "fee"
+    t.decimal "fee"
     t.text    "info"
     t.integer "total_id"
     t.integer "network_id"
