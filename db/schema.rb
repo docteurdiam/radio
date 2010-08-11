@@ -9,16 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100811204915) do
+ActiveRecord::Schema.define(:version => 20100811211043) do
 
   create_table "networks", :force => true do |t|
     t.string  "name"
-    t.integer "fee"
+    t.decimal "fee"
     t.text    "note"
   end
 
   create_table "partnerships", :force => true do |t|
-    t.integer "fee"
+    t.decimal "fee"
   end
 
   create_table "radios", :force => true do |t|

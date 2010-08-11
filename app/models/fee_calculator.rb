@@ -39,7 +39,7 @@ class FeeCalculator
     elsif  sum(networks["ILR AM"]) > 1000
       1000 + sum(networks["ILR FM"])
     else
-      sum(networks["ILR FM"]) + sum(networks["ILR FM"])
+      sum(networks["ILR AM"]) + sum(networks["ILR FM"])
     end  
   end
 
