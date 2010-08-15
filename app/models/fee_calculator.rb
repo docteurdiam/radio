@@ -1,24 +1,53 @@
 class FeeCalculator
 
-  def calculate(identifiers)
+  def calculate(ids)
+    @stations = ids.map {|id| Radio.find(id)}
+    network_stations, independents = split_stations(@stations)
+    process_networks(network_stations) +  sum(independents)
+  end
 
-    @stations = identifiers.map do |identifier|
-      Radio.find(identifier)
+  def analyze(identifiers)
+    messages = []
+    @stations = identifiers.map {|identifier| Radio.find(identifier)}
+    network_stations, independents = split_stations(@stations)
+    messages = messages + analyse_networks(network_stations)
+    messages = messages + analyze_stations(independents)
+  end
+
+  def analyze_stations(stations)
+    partnerships = []
+    stations.inject([]) do |result, station|
+      if station.partnership && is_partner_present(station.partnership) && !partnerships.include?(station.partnership)
+        result << "Both #{station.name} and #{find_partner(station).name} are packaged together at a rate of £#{station.partnership.fee}"
+        partnerships << station.partnership
+      end
+      result
     end
+  end
 
-    network_stations = @stations.find_all {|station| !station.network.nil?}
-    puts "#{network_stations.size} selected stations belong to a network"
+  def find_partner(original)
+    @stations.find {|station| station.partnership == original.partnership && station != original}
+  end
 
-    independent_stations = @stations - network_stations
-    puts "#{independent_stations.size} selected stations are independent"
+  def analyse_networks(stations)
+    return [] if stations.nil? || stations.empty?
+    networks = {"ILR FM" => [], "ILR AM" => []}
+    stations.each {|station| networks[station.network.name] << station}
 
-    independent_total =  sum(independent_stations)
-    puts "The toal for independent stations is #{independent_total}"
+    if sum(networks["ILR FM"]) > 1000 && sum(networks["ILR AM"]) > 1000
+      ["The total rate for stations in both ILR FM and ILR AM has exceeded £2000 so they are packaged at a rate of £1500"]
+    elsif sum(networks["ILR FM"]) > 1000
+       ["The total rate for stations in ILR FM has exceeded £1000 so they are packaged at a rate of £1000"]
+    elsif  sum(networks["ILR AM"]) > 1000
+       ["The total rate for stations in ILR AM has exceeded £1000 so they are packaged at a rate of £1000"]
+    else
+      analyze_stations(networks["ILR AM"]) + analyze_stations(networks["ILR FM"])
+    end
+  end
 
-    network_total =  process_networks(network_stations)
-    puts "The total for network stations is #{network_total}"
-
-    network_total + independent_total
+  def split_stations(stations)
+    network_stations = stations.find_all {|station| !station.network.nil?}
+    return network_stations, stations - network_stations
   end
 
   def is_partner_present(partnership)

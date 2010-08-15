@@ -10,5 +10,16 @@
 <% end %>
 </ul>
 
+<% if @messages %>
+
+  <ul>
+    <% @messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+
+<% end %>
+
+
 <p>For more information, please contact us directly.</p>
 

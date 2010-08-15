@@ -7,10 +7,12 @@ class RemindersController < ApplicationController
 
   def deliver
     radios =  Radio.find(params[:radios].split(","))
-    total = FeeCalculator.new.calculate(params[:radios].split(","))
+    identifiers = params[:radios].split(",")
+    total = FeeCalculator.new.calculate(identifiers)
+    messages = FeeCalculator.new.analyze(identifiers)
     name = params[:name]
     email = params[:email]
-    EmailSender.deliver_reminder_notification(name, email, radios, total)
+    EmailSender.deliver_reminder_notification(name, email, radios, total, messages)
     render :text => "ok"
   end
 
