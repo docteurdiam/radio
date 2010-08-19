@@ -24,9 +24,14 @@ class ApplicationController < ActionController::Base
   end
 
   def parse(identifiers)
-    parts = identifiers.map do |identifier|
-      identifier.split("-")
+    if identifiers.is_a? String
+      parts = identifiers.split(",").map do |identifier|
+        identifier.split("-")
+      end
+    else
+      parts = identifiers.map {|identifier| identifier.split("-")}
     end
+
     items = parts.map do |part|
       {:type => part[1], :id => part[0]}
     end

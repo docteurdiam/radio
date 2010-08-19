@@ -37,9 +37,9 @@ class FeeCalculator
     if sum(networks["ILR FM"]) > 1000 && sum(networks["ILR AM"]) > 1000
       ["The total rate for stations in both ILR FM and ILR AM has exceeded £2000 so they are packaged at a rate of £1500"]
     elsif sum(networks["ILR FM"]) > 1000
-       ["The total rate for stations in ILR FM has exceeded £1000 so they are packaged at a rate of £1000"]
+       ["The total rate for stations in ILR FM has exceeded £1000 so they are packaged at a rate of £1000"] + analyze_stations(networks["ILR AM"])
     elsif  sum(networks["ILR AM"]) > 1000
-       ["The total rate for stations in ILR AM has exceeded £1000 so they are packaged at a rate of £1000"]
+       ["The total rate for stations in ILR AM has exceeded £1000 so they are packaged at a rate of £1000"]  + analyze_stations(networks["ILR FM"])
     else
       analyze_stations(networks["ILR AM"]) + analyze_stations(networks["ILR FM"])
     end
