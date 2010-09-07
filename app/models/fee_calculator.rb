@@ -1,8 +1,13 @@
 class FeeCalculator
 
   def calculate(ids)
+    puts "#{ids.size} stations have been selected"
     @stations = ids.map {|id| Radio.find(id)}
     network_stations, independents = split_stations(@stations)
+    puts "** There are #{network_stations ? network_stations.size : 0} network stations"
+    network_stations.each {|station| puts station.name}
+    puts "** There are #{independents ? independents.size : 0} independent stations"
+    independents.each {|station| puts station.name}
     process_networks(network_stations) +  sum(independents)
   end
 
@@ -61,15 +66,22 @@ class FeeCalculator
     stations.each do |station|
       networks[station.network.name] << station
     end
-    if sum(networks["ILR FM"]) > 1000 && sum(networks["ILR AM"]) > 1000
+    if sum_network_stations(networks["ILR FM"]) > 1000 && sum_network_stations(networks["ILR AM"]) > 1000
+      puts "Capping FM and AM at £1500"
       1500
     elsif sum(networks["ILR FM"]) > 1000
+      puts "Capping FM at £1000"
       1000 + sum(networks["ILR AM"])
-    elsif  sum(networks["ILR AM"]) > 1000
+    elsif sum_network_stations(networks["ILR AM"]) > 1000
+      puts "Capping AM at £1000"
       1000 + sum(networks["ILR FM"])
     else
       sum(networks["ILR AM"]) + sum(networks["ILR FM"])
     end  
+  end
+
+  def sum_network_stations(stations)
+    stations.inject(0) {|total, station| total + station.fee}
   end
 
   def sum(stations)
