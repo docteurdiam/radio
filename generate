@@ -1,775 +1,0 @@
-Script started on Mon 28 Jun 2010 21:56:26 BST
-okouam@nikita:/opt/Rails/apps/radio$ ls
-app  config  db  doc  generate	lib  log  public  Rakefile  README  script  spec  test	tmp  typescript  vendor
-okouam@nikita:/opt/Rails/apps/radio$ cd public
-okouam@nikita:/opt/Rails/apps/radio/public$ sl[K[Kls
-client	images	index.html  stylesheets  system
-okouam@nikita:/opt/Rails/apps/radio/public$ cd system/
-okouam@nikita:/opt/Rails/apps/radio/public/system$ ls
-uploads
-okouam@nikita:/opt/Rails/apps/radio/public/system$ cd ..
-okouam@nikita:/opt/Rails/apps/radio/public$ cd stylesheets/
-okouam@nikita:/opt/Rails/apps/radio/public/stylesheets$ ls
-admin.css  application.css  formtastic.css  reset.css  scaffold.css
-okouam@nikita:/opt/Rails/apps/radio/public/stylesheets$ cd ..
-okouam@nikita:/opt/Rails/apps/radio/public$ cd ..
-okouam@nikita:/opt/Rails/apps/radio$ relationship  script/plugin install git://github.com/giraffesoft/resource_controller.gi
-relationship: command not found
-okouam@nikita:/opt/Rails/apps/radio$ relationship  script/plugin install git://github.com/giraffesoft/resource_controller.git[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P
-Initialized empty Git repository in /opt/Rails/apps/radio/vendor/plugins/resource_controller/.git/
-fatal: The remote end hung up unexpectedly
-okouam@nikita:/opt/Rails/apps/radio$  script/plugin install git://github.com/giraffesoft/resource_controller.git
-Initialized empty Git repository in /opt/Rails/apps/radio/vendor/plugins/resource_controller/.git/
-fatal: The remote end hung up unexpectedly
-okouam@nikita:/opt/Rails/apps/radio$  script/plugin install git://github.com/giraffesoft/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.git[1P/resource_controller.gitj/resource_controller.gita/resource_controller.gitm/resource_controller.gite/resource_controller.gits/resource_controller.gitg/resource_controller.gito/resource_controller.gitl/resource_controller.giti/resource_controller.gitc/resource_controller.gitk/resource_controller.git
-Initialized empty Git repository in /opt/Rails/apps/radio/vendor/plugins/resource_controller/.git/
-remote: Counting objects: 283, done.[K
-remote: Compressing objects:   0% (1/198)   [Kremote: Compressing objects:   1% (2/198)   [Kremote: Compressing objects:   2% (4/198)   [Kremote: Compressing objects:   3% (6/198)   [Kremote: Compressing objects:   4% (8/198)   [Kremote: Compressing objects:   5% (10/198)   [Kremote: Compressing objects:   6% (12/198)   [Kremote: Compressing objects:   7% (14/198)   [Kremote: Compressing objects:   8% (16/198)   [Kremote: Compressing objects:   9% (18/198)   [Kremote: Compressing objects:  10% (20/198)   [Kremote: Compressing objects:  11% (22/198)   [Kremote: Compressing objects:  12% (24/198)   [Kremote: Compressing objects:  13% (26/198)   [Kremote: Compressing objects:  14% (28/198)   [Kremote: Compressing objects:  15% (30/198)   [Kremote: Compressing objects:  16% (32/198)   [Kremote: Compressing objects:  17% (34/198)   [Kremote: Compressing objects:  18% (36/198)   [Kremote: Compressing objects:  19% (38/198)   [Kremote: Compressing objects:  20% (40/198)   [Kremote: Compressing objects:  21% (42/198)   [Kremote: Compressing objects:  22% (44/198)   [Kremote: Compressing objects:  23% (46/198)   [Kremote: Compressing objects:  24% (48/198)   [Kremote: Compressing objects:  25% (50/198)   [Kremote: Compressing objects:  26% (52/198)   [Kremote: Compressing objects:  27% (54/198)   [Kremote: Compressing objects:  28% (56/198)   [Kremote: Compressing objects:  29% (58/198)   [Kremote: Compressing objects:  30% (60/198)   [Kremote: Compressing objects:  31% (62/198)   [Kremote: Compressing objects:  32% (64/198)   [Kremote: Compressing objects:  33% (66/198)   [Kremote: Compressing objects:  34% (68/198)   [Kremote: Compressing objects:  35% (70/198)   [Kremote: Compressing objects:  36% (72/198)   [Kremote: Compressing objects:  37% (74/198)   [Kremote: Compressing objects:  38% (76/198)   [Kremote: Compressing objects:  39% (78/198)   [Kremote: Compressing objects:  40% (80/198)   [Kremote: Compressing objects:  41% (82/198)   [Kremote: Compressing objects:  42% (84/198)   [Kremote: Compressing objects:  43% (86/198)   [Kremote: Compressing objects:  44% (88/198)   [Kremote: Compressing objects:  45% (90/198)   [Kremote: Compressing objects:  46% (92/198)   [Kremote: Compressing objects:  47% (94/198)   [Kremote: Compressing objects:  48% (96/198)   [Kremote: Compressing objects:  49% (98/198)   [Kremote: Compressing objects:  50% (99/198)   [Kremote: Compressing objects:  51% (101/198)   [Kremote: Compressing objects:  52% (103/198)   [Kremote: Compressing objects:  53% (105/198)   [Kremote: Compressing objects:  54% (107/198)   [Kremote: Compressing objects:  55% (109/198)   [Kremote: Compressing objects:  56% (111/198)   [Kremote: Compressing objects:  57% (113/198)   [Kremote: Compressing objects:  58% (115/198)   [Kremote: Compressing objects:  59% (117/198)   [Kremote: Compressing objects:  60% (119/198)   [Kremote: Compressing objects:  61% (121/198)   [Kremote: Compressing objects:  62% (123/198)   [Kremote: Compressing objects:  63% (125/198)   [Kremote: Compressing objects:  64% (127/198)   [Kremote: Compressing objects:  65% (129/198)   [Kremote: Compressing objects:  66% (131/198)   [Kremote: Compressing objects:  67% (133/198)   [Kremote: Compressing objects:  68% (135/198)   [Kremote: Compressing objects:  69% (137/198)   [Kremote: Compressing objects:  70% (139/198)   [Kremote: Compressing objects:  71% (141/198)   [Kremote: Compressing objects:  72% (143/198)   [Kremote: Compressing objects:  73% (145/198)   [Kremote: Compressing objects:  74% (147/198)   [Kremote: Compressing objects:  75% (149/198)   [Kremote: Compressing objects:  76% (151/198)   [Kremote: Compressing objects:  77% (153/198)   [Kremote: Compressing objects:  78% (155/198)   [Kremote: Compressing objects:  79% (157/198)   [Kremote: Compressing objects:  80% (159/198)   [Kremote: Compressing objects:  81% (161/198)   [Kremote: Compressing objects:  82% (163/198)   [Kremote: Compressing objects:  83% (165/198)   [Kremote: Compressing objects:  84% (167/198)   [Kremote: Compressing objects:  85% (169/198)   [Kremote: Compressing objects:  86% (171/198)   [Kremote: Compressing objects:  87% (173/198)   [Kremote: Compressing objects:  88% (175/198)   [Kremote: Compressing objects:  89% (177/198)   [Kremote: Compressing objects:  90% (179/198)   [Kremote: Compressing objects:  91% (181/198)   [Kremote: Compressing objects:  92% (183/198)   [Kremote: Compressing objects:  93% (185/198)   [Kremote: Compressing objects:  94% (187/198)   [Kremote: Compressing objects:  95% (189/198)   [Kremote: Compressing objects:  96% (191/198)   [Kremote: Compressing objects:  97% (193/198)   [Kremote: Compressing objects:  98% (195/198)   [Kremote: Compressing objects:  99% (197/198)   [Kremote: Compressing objects: 100% (198/198)   [Kremote: Compressing objects: 100% (198/198), done.[K
-Receiving objects:   0% (1/283)   Receiving objects:   1% (3/283)   Receiving objects:   2% (6/283)   Receiving objects:   3% (9/283)   Receiving objects:   4% (12/283)   Receiving objects:   5% (15/283), 12.00 KiB | 11 KiB/s   Receiving objects:   6% (17/283), 12.00 KiB | 11 KiB/s   Receiving objects:   7% (20/283), 12.00 KiB | 11 KiB/s   Receiving objects:   8% (23/283), 12.00 KiB | 11 KiB/s   Receiving objects:   9% (26/283), 12.00 KiB | 11 KiB/s   Receiving objects:  10% (29/283), 12.00 KiB | 11 KiB/s   Receiving objects:  11% (32/283), 12.00 KiB | 11 KiB/s   Receiving objects:  12% (34/283), 12.00 KiB | 11 KiB/s   Receiving objects:  13% (37/283), 12.00 KiB | 11 KiB/s   Receiving objects:  14% (40/283), 12.00 KiB | 11 KiB/s   Receiving objects:  15% (43/283), 12.00 KiB | 11 KiB/s   Receiving objects:  16% (46/283), 12.00 KiB | 11 KiB/s   Receiving objects:  16% (47/283), 12.00 KiB | 11 KiB/s   Receiving objects:  17% (49/283), 12.00 KiB | 11 KiB/s   Receiving objects:  18% (51/283), 12.00 KiB | 11 KiB/s   Receiving objects:  19% (54/283), 12.00 KiB | 11 KiB/s   Receiving objects:  20% (57/283), 12.00 KiB | 11 KiB/s   Receiving objects:  21% (60/283), 12.00 KiB | 11 KiB/s   Receiving objects:  22% (63/283), 28.00 KiB | 17 KiB/s   Receiving objects:  23% (66/283), 28.00 KiB | 17 KiB/s   Receiving objects:  24% (68/283), 28.00 KiB | 17 KiB/s   Receiving objects:  25% (71/283), 28.00 KiB | 17 KiB/s   Receiving objects:  26% (74/283), 28.00 KiB | 17 KiB/s   Receiving objects:  27% (77/283), 28.00 KiB | 17 KiB/s   Receiving objects:  28% (80/283), 28.00 KiB | 17 KiB/s   Receiving objects:  29% (83/283), 28.00 KiB | 17 KiB/s   Receiving objects:  30% (85/283), 28.00 KiB | 17 KiB/s   Receiving objects:  31% (88/283), 28.00 KiB | 17 KiB/s   Receiving objects:  32% (91/283), 28.00 KiB | 17 KiB/s   Receiving objects:  33% (94/283), 28.00 KiB | 17 KiB/s   Receiving objects:  34% (97/283), 28.00 KiB | 17 KiB/s   Receiving objects:  35% (100/283), 28.00 KiB | 17 KiB/s   Receiving objects:  36% (102/283), 28.00 KiB | 17 KiB/s   Receiving objects:  37% (105/283), 28.00 KiB | 17 KiB/s   Receiving objects:  38% (108/283), 28.00 KiB | 17 KiB/s   Receiving objects:  39% (111/283), 28.00 KiB | 17 KiB/s   Receiving objects:  40% (114/283), 28.00 KiB | 17 KiB/s   Receiving objects:  41% (117/283), 28.00 KiB | 17 KiB/s   Receiving objects:  42% (119/283), 28.00 KiB | 17 KiB/s   Receiving objects:  43% (122/283), 28.00 KiB | 17 KiB/s   Receiving objects:  44% (125/283), 28.00 KiB | 17 KiB/s   Receiving objects:  45% (128/283), 28.00 KiB | 17 KiB/s   Receiving objects:  46% (131/283), 28.00 KiB | 17 KiB/s   Receiving objects:  47% (134/283), 28.00 KiB | 17 KiB/s   Receiving objects:  48% (136/283), 28.00 KiB | 17 KiB/s   Receiving objects:  49% (139/283), 28.00 KiB | 17 KiB/s   Receiving objects:  50% (142/283), 28.00 KiB | 17 KiB/s   Receiving objects:  51% (145/283), 28.00 KiB | 17 KiB/s   Receiving objects:  52% (148/283), 28.00 KiB | 17 KiB/s   Receiving objects:  53% (150/283), 28.00 KiB | 17 KiB/s   Receiving objects:  54% (153/283), 28.00 KiB | 17 KiB/s   Receiving objects:  55% (156/283), 28.00 KiB | 17 KiB/s   Receiving objects:  56% (159/283), 28.00 KiB | 17 KiB/s   Receiving objects:  57% (162/283), 28.00 KiB | 17 KiB/s   Receiving objects:  58% (165/283), 28.00 KiB | 17 KiB/s   Receiving objects:  59% (167/283), 28.00 KiB | 17 KiB/s   Receiving objects:  60% (170/283), 28.00 KiB | 17 KiB/s   Receiving objects:  61% (173/283), 28.00 KiB | 17 KiB/s   Receiving objects:  62% (176/283), 28.00 KiB | 17 KiB/s   Receiving objects:  63% (179/283), 28.00 KiB | 17 KiB/s   Receiving objects:  64% (182/283), 28.00 KiB | 17 KiB/s   Receiving objects:  65% (184/283), 28.00 KiB | 17 KiB/s   Receiving objects:  66% (187/283), 44.00 KiB | 20 KiB/s   Receiving objects:  67% (190/283), 44.00 KiB | 20 KiB/s   Receiving objects:  68% (193/283), 44.00 KiB | 20 KiB/s   Receiving objects:  69% (196/283), 44.00 KiB | 20 KiB/s   Receiving objects:  70% (199/283), 44.00 KiB | 20 KiB/s   Receiving objects:  71% (201/283), 44.00 KiB | 20 KiB/s   Receiving objects:  72% (204/283), 44.00 KiB | 20 KiB/s   Receiving objects:  73% (207/283), 44.00 KiB | 20 KiB/s   Receiving objects:  74% (210/283), 44.00 KiB | 20 KiB/s   Receiving objects:  75% (213/283), 44.00 KiB | 20 KiB/s   Receiving objects:  76% (216/283), 44.00 KiB | 20 KiB/s   Receiving objects:  77% (218/283), 44.00 KiB | 20 KiB/s   Receiving objects:  77% (220/283), 52.00 KiB | 18 KiB/s   Receiving objects:  78% (221/283), 52.00 KiB | 18 KiB/s   Receiving objects:  79% (224/283), 52.00 KiB | 18 KiB/s   Receiving objects:  80% (227/283), 52.00 KiB | 18 KiB/s   Receiving objects:  81% (230/283), 52.00 KiB | 18 KiB/s   Receiving objects:  82% (233/283), 52.00 KiB | 18 KiB/s   Receiving objects:  83% (235/283), 52.00 KiB | 18 KiB/s   Receiving objects:  84% (238/283), 52.00 KiB | 18 KiB/s   Receiving objects:  85% (241/283), 52.00 KiB | 18 KiB/s   Receiving objects:  86% (244/283), 52.00 KiB | 18 KiB/s   Receiving objects:  87% (247/283), 52.00 KiB | 18 KiB/s   Receiving objects:  88% (250/283), 52.00 KiB | 18 KiB/s   Receiving objects:  89% (252/283), 52.00 KiB | 18 KiB/s   Receiving objects:  90% (255/283), 52.00 KiB | 18 KiB/s   Receiving objects:  91% (258/283), 52.00 KiB | 18 KiB/s   remote: Total 283 (delta 77), reused 209 (delta 56)[K
-Receiving objects:  92% (261/283), 52.00 KiB | 18 KiB/s   Receiving objects:  93% (264/283), 52.00 KiB | 18 KiB/s   Receiving objects:  94% (267/283), 52.00 KiB | 18 KiB/s   Receiving objects:  95% (269/283), 52.00 KiB | 18 KiB/s   Receiving objects:  96% (272/283), 52.00 KiB | 18 KiB/s   Receiving objects:  97% (275/283), 52.00 KiB | 18 KiB/s   Receiving objects:  98% (278/283), 52.00 KiB | 18 KiB/s   Receiving objects:  99% (281/283), 52.00 KiB | 18 KiB/s   Receiving objects: 100% (283/283), 52.00 KiB | 18 KiB/s   Receiving objects: 100% (283/283), 64.77 KiB | 18 KiB/s, done.
-Resolving deltas:   0% (0/77)   Resolving deltas:   1% (1/77)   Resolving deltas:   2% (2/77)   Resolving deltas:   3% (3/77)   Resolving deltas:   7% (6/77)   Resolving deltas:   9% (7/77)   Resolving deltas:  10% (8/77)   Resolving deltas:  11% (9/77)   Resolving deltas:  12% (10/77)   Resolving deltas:  14% (11/77)   Resolving deltas:  16% (13/77)   Resolving deltas:  19% (15/77)   Resolving deltas:  44% (34/77)   Resolving deltas:  55% (43/77)   Resolving deltas:  57% (44/77)   Resolving deltas:  64% (50/77)   Resolving deltas:  66% (51/77)   Resolving deltas:  67% (52/77)   Resolving deltas:  68% (53/77)   Resolving deltas:  70% (54/77)   Resolving deltas:  71% (55/77)   Resolving deltas:  76% (59/77)   Resolving deltas:  77% (60/77)   Resolving deltas:  79% (61/77)   Resolving deltas:  83% (64/77)   Resolving deltas:  84% (65/77)   Resolving deltas:  85% (66/77)   Resolving deltas:  90% (70/77)   Resolving deltas:  92% (71/77)   Resolving deltas:  93% (72/77)   Resolving deltas:  94% (73/77)   Resolving deltas:  96% (74/77)   Resolving deltas: 100% (77/77)   Resolving deltas: 100% (77/77), done.
-From git://github.com/jamesgolick/resource_controller
- * branch            HEAD       -> FETCH_HEAD
-okouam@nikita:/opt/Rails/apps/radio$ rake -T
-(in /opt/Rails/apps/radio)
-rake db:abort_if_pending_migrations       # Raises an error if there are pending migrations
-rake db:charset                           # Retrieves the charset for the current environment's database
-rake db:collation                         # Retrieves the collation for the current environment's database
-rake db:create                            # Create the database defined in config/database.yml for the current RAILS_ENV
-rake db:create:all                        # Create all the local databases defined in config/database.yml
-rake db:drop                              # Drops the database for the current RAILS_ENV
-rake db:drop:all                          # Drops all the local databases defined in config/database.yml
-rake db:fixtures:identify                 # Search for a fixture given a LABEL or ID.
-rake db:fixtures:load                     # Load fixtures into the current environment's database.
-rake db:migrate                           # Migrate the database through scripts in db/migrate and update db/schema.rb by invoking db:schema:dump. Target specific version w...
-rake db:migrate:down                      # Runs the "down" for a given migration VERSION.
-rake db:migrate:redo                      # Rollbacks the database one migration and re migrate up.
-rake db:migrate:reset                     # Resets your database using your migrations for the current environment
-rake db:migrate:up                        # Runs the "up" for a given migration VERSION.
-rake db:reset                             # Drops and recreates the database from db/schema.rb for the current environment and loads the seeds.
-rake db:rollback                          # Rolls the schema back to the previous version.
-rake db:schema:dump                       # Create a db/schema.rb file that can be portably used against any DB supported by AR
-rake db:schema:load                       # Load a schema.rb file into the database
-rake db:seed                              # Load the seed data from db/seeds.rb
-rake db:sessions:clear                    # Clear the sessions table
-rake db:sessions:create                   # Creates a sessions migration for use with ActiveRecord::SessionStore
-rake db:setup                             # Create the database, load the schema, and initialize with the seed data
-rake db:structure:dump                    # Dump the database structure to a SQL file
-rake db:test:clone                        # Recreate the test database from the current environment's database schema
-rake db:test:clone_structure              # Recreate the test databases from the development structure
-rake db:test:load                         # Recreate the test database from the current schema.rb
-rake db:test:prepare                      # Check for pending migrations and load the test schema
-rake db:test:purge                        # Empty the test database
-rake db:version                           # Retrieves the current schema version number
-rake doc:app                              # Build the RDOC HTML Files
-rake doc:clobber_app                      # Remove rdoc products
-rake doc:clobber_plugins                  # Remove plugin documentation
-rake doc:clobber_rails                    # Remove rdoc products
-rake doc:guides                           # Generate Rails guides
-rake doc:plugins                          # Generate documentation for all installed plugins
-rake doc:plugins:resource_controller      # Generate documentation for the resource_controller plugin
-rake doc:rails                            # Build the RDOC HTML Files
-rake doc:reapp                            # Force a rebuild of the RDOC files
-rake doc:rerails                          # Force a rebuild of the RDOC files
-rake gems                                 # List the gems that this rails application depends on
-rake gems:build                           # Build any native extensions for unpacked gems
-rake gems:build:force                     # Force the build of all gems
-rake gems:install                         # Installs all required gems.
-rake gems:refresh_specs                   # Regenerate gem specifications in correct format.
-rake gems:unpack                          # Unpacks all required gems into vendor/gems.
-rake gems:unpack:dependencies             # Unpacks all required gems and their dependencies into vendor/gems.
-rake log:clear                            # Truncates all *.log files in log/ to zero bytes
-rake middleware                           # Prints out your Rack middleware stack
-rake notes                                # Enumerate all annotations
-rake notes:custom                         # Enumerate a custom annotation, specify with ANNOTATION=WTFHAX
-rake notes:fixme                          # Enumerate all FIXME annotations
-rake notes:optimize                       # Enumerate all OPTIMIZE annotations
-rake notes:todo                           # Enumerate all TODO annotations
-rake rails:freeze:edge                    # Lock to latest Edge Rails, for a specific release use RELEASE=1.2.0
-rake rails:freeze:gems                    # Lock this application to the current gems (by unpacking them into vendor/rails)
-rake rails:template                       # Applies the template supplied by LOCATION=/path/to/template
-rake rails:unfreeze                       # Unlock this application from freeze of gems or edge and return to a fluid use of system gems
-rake rails:update                         # Update both configs, scripts and public/javascripts from Rails
-rake rails:update:application_controller  # Rename application.rb to application_controller.rb
-rake rails:update:configs                 # Update config/boot.rb from your current rails install
-rake rails:update:generate_dispatchers    # Generate dispatcher files in RAILS_ROOT/public
-rake rails:update:javascripts             # Update your javascripts from your current rails install
-rake rails:update:scripts                 # Add new scripts to the application script/ directory
-rake routes                               # Print out all defined routes in match order, with names.
-rake secret                               # Generate a crytographically secure secret key.
-rake spec                                 # Run all specs in spec directory (excluding plugin specs)
-rake spec:clobber_rcov                    # Remove rcov products for rcov
-rake spec:controllers                     # Run the code examples in spec/controllers
-rake spec:db:fixtures:load                # Load fixtures (from spec/fixtures) into the current environment's database.
-rake spec:doc                             # Print Specdoc for all specs (excluding plugin specs)
-rake spec:helpers                         # Run the code examples in spec/helpers
-rake spec:integration                     # Run the code examples in spec/integration
-rake spec:lib                             # Run the code examples in spec/lib
-rake spec:models                          # Run the code examples in spec/models
-rake spec:plugin_doc                      # Print Specdoc for all plugin examples
-rake spec:plugins                         # Run the code examples in vendor/plugins (except RSpec's own)
-rake spec:plugins:rspec_on_rails          # Runs the examples for rspec_on_rails
-rake spec:rcov                            # Run all specs in spec directory with RCov (excluding plugin specs)
-rake spec:views                           # Run the code examples in spec/views
-rake stats                                # Report code statistics (KLOCs, etc) from the application
-rake test                                 # Run all unit, functional and integration tests
-rake test:benchmark                       # Run tests for benchmarkdb:test:prepare / Benchmark the performance tests
-rake test:functionals                     # Run tests for functionalsdb:test:prepare / Run the functional tests in test/functional
-rake test:integration                     # Run tests for integrationdb:test:prepare / Run the integration tests in test/integration
-rake test:plugins                         # Run tests for pluginsenvironment / Run the plugin tests in vendor/plugins/*/**/test (or specify with PLUGIN=name)
-rake test:profile                         # Run tests for profiledb:test:prepare / Profile the performance tests
-rake test:recent                          # Run tests for recentdb:test:prepare / Test recent changes
-rake test:uncommitted                     # Run tests for uncommitteddb:test:prepare / Test changes since last checkin (only Subversion and Git)
-rake test:units                           # Run tests for unitsdb:test:prepare / Run the unit tests in test/unit
-rake time:zones:all                       # Displays names of all time zones recognized by the Rails TimeZone class, grouped by offset.
-rake time:zones:local                     # Displays names of time zones recognized by the Rails TimeZone class with the same offset as the system local time
-rake time:zones:us                        # Displays names of US time zones recognized by the Rails TimeZone class, grouped by offset.
-rake tmp:cache:clear                      # Clears all files and directories in tmp/cache
-rake tmp:clear                            # Clear session, cache, and socket files from tmp/
-rake tmp:create                           # Creates tmp directories for sessions, cache, sockets, and pids
-rake tmp:pids:clear                       # Clears all files in tmp/pids
-rake tmp:sessions:clear                   # Clears all files in tmp/sessions
-rake tmp:sockets:clear                    # Clears all files in tmp/sockets
-okouam@nikita:/opt/Rails/apps/radio$ rake routes
-(in /opt/Rails/apps/radio)
- calculate_radios POST   /radios/calculate(.:format)        {:action=>"calculate", :controller=>"radios"}
-    search_radios GET    /radios/search(.:format)           {:action=>"search", :controller=>"radios"}
-           radios GET    /radios(.:format)                  {:action=>"index", :controller=>"radios"}
-                  POST   /radios(.:format)                  {:action=>"create", :controller=>"radios"}
-        new_radio GET    /radios/new(.:format)              {:action=>"new", :controller=>"radios"}
-       edit_radio GET    /radios/:id/edit(.:format)         {:action=>"edit", :controller=>"radios"}
-            radio GET    /radios/:id(.:format)              {:action=>"show", :controller=>"radios"}
-                  PUT    /radios/:id(.:format)              {:action=>"update", :controller=>"radios"}
-                  DELETE /radios/:id(.:format)              {:action=>"destroy", :controller=>"radios"}
-           totals GET    /totals(.:format)                  {:action=>"index", :controller=>"totals"}
-                  POST   /totals(.:format)                  {:action=>"create", :controller=>"totals"}
-        new_total GET    /totals/new(.:format)              {:action=>"new", :controller=>"totals"}
-       edit_total GET    /totals/:id/edit(.:format)         {:action=>"edit", :controller=>"totals"}
-   stations_total GET    /totals/:id/stations(.:format)     {:action=>"stations", :controller=>"totals"}
-            total GET    /totals/:id(.:format)              {:action=>"show", :controller=>"totals"}
-                  PUT    /totals/:id(.:format)              {:action=>"update", :controller=>"totals"}
-                  DELETE /totals/:id(.:format)              {:action=>"destroy", :controller=>"totals"}
-         networks GET    /networks(.:format)                {:action=>"index", :controller=>"networks"}
-                  POST   /networks(.:format)                {:action=>"create", :controller=>"networks"}
-      new_network GET    /networks/new(.:format)            {:action=>"new", :controller=>"networks"}
-     edit_network GET    /networks/:id/edit(.:format)       {:action=>"edit", :controller=>"networks"}
-          network GET    /networks/:id(.:format)            {:action=>"show", :controller=>"networks"}
-                  PUT    /networks/:id(.:format)            {:action=>"update", :controller=>"networks"}
-                  DELETE /networks/:id(.:format)            {:action=>"destroy", :controller=>"networks"}
-            users GET    /users(.:format)                   {:action=>"index", :controller=>"users"}
-                  POST   /users(.:format)                   {:action=>"create", :controller=>"users"}
-         new_user GET    /users/new(.:format)               {:action=>"new", :controller=>"users"}
-        edit_user GET    /users/:id/edit(.:format)          {:action=>"edit", :controller=>"users"}
-             user GET    /users/:id(.:format)               {:action=>"show", :controller=>"users"}
-                  PUT    /users/:id(.:format)               {:action=>"update", :controller=>"users"}
-                  DELETE /users/:id(.:format)               {:action=>"destroy", :controller=>"users"}
-     partnerships GET    /partnerships(.:format)            {:action=>"index", :controller=>"partnerships"}
-                  POST   /partnerships(.:format)            {:action=>"create", :controller=>"partnerships"}
-  new_partnership GET    /partnerships/new(.:format)        {:action=>"new", :controller=>"partnerships"}
- edit_partnership GET    /partnerships/:id/edit(.:format)   {:action=>"edit", :controller=>"partnerships"}
-      partnership GET    /partnerships/:id(.:format)        {:action=>"show", :controller=>"partnerships"}
-                  PUT    /partnerships/:id(.:format)        {:action=>"update", :controller=>"partnerships"}
-                  DELETE /partnerships/:id(.:format)        {:action=>"destroy", :controller=>"partnerships"}
- new_user_session GET    /user_session/new(.:format)        {:action=>"new", :controller=>"user_sessions"}
-edit_user_session GET    /user_session/edit(.:format)       {:action=>"edit", :controller=>"user_sessions"}
-     user_session GET    /user_session(.:format)            {:action=>"show", :controller=>"user_sessions"}
-                  PUT    /user_session(.:format)            {:action=>"update", :controller=>"user_sessions"}
-                  DELETE /user_session(.:format)            {:action=>"destroy", :controller=>"user_sessions"}
-                  POST   /user_session(.:format)            {:action=>"create", :controller=>"user_sessions"}
-                         /reminders                         {:action=>"show", :controller=>"reminders"}
-                  POST   /reminders/send                    {:action=>"deliver", :controller=>"reminders"}
-                         /admin                             {:action=>"home", :controller=>"admin"}
-                  GET    /admin/logout                      {:action=>"destroy", :controller=>"user_sessions"}
-                  GET    /admin/upload/clear                {:action=>"clear", :controller=>"admin"}
-                  GET    /admin/upload                      {:action=>"upload", :controller=>"admin"}
-                  POST   /admin/upload                      {:action=>"commit", :controller=>"admin"}
-                         /:controller/:action               
-                         /:controller/:action/:id(.:format) 
-okouam@nikita:/opt/Rails/apps/radio$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	[32mdeleted:    app/views/networks/show.html.erb[m
-#	[32mdeleted:    app/views/radios/show.html.erb[m
-#	[32mdeleted:    app/views/totals/show.html.erb[m
-#	[32mdeleted:    app/views/users/show.html.erb[m
-#	[32mrenamed:    app/views/users/edit.html.erb -> public/stylesheets/formtastic.css[m
-#
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	[31mmodified:   .idea/radio.iml[m
-#	[31mmodified:   .idea/workspace.xml[m
-#	[31mmodified:   app/controllers/admin_controller.rb[m
-#	[31mmodified:   app/controllers/networks_controller.rb[m
-#	[31mmodified:   app/controllers/partnerships_controller.rb[m
-#	[31mmodified:   app/controllers/radios_controller.rb[m
-#	[31mmodified:   app/controllers/totals_controller.rb[m
-#	[31mmodified:   app/controllers/users_controller.rb[m
-#	[31mmodified:   app/models/data_import.rb[m
-#	[31mmodified:   app/views/layouts/backend.html.erb[m
-#	[31mmodified:   app/views/layouts/master.html.erb[m
-#	[31mmodified:   app/views/networks/edit.html.erb[m
-#	[31mmodified:   app/views/networks/index.html.erb[m
-#	[31mmodified:   app/views/partnerships/index.html.erb[m
-#	[31mmodified:   app/views/partnerships/new.html.erb[m
-#	[31mmodified:   app/views/radios/index.html.erb[m
-#	[31mmodified:   app/views/totals/index.html.erb[m
-#	[31mmodified:   app/views/users/index.html.erb[m
-#	[31mmodified:   app/views/users/new.html.erb[m
-#	[31mmodified:   config/environment.rb[m
-#	[31mmodified:   public/stylesheets/admin.css[m
-#	[31mmodified:   public/stylesheets/formtastic.css[m
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	[31mgenerate[m
-#	[31mtmp/06232010231149-RadioStationsdata.csv[m
-#	[31mtmp/06262010204504-RadioStationsdata2.csv[m
-#	[31mtmp/06262010205656-RadioStationsdata2.csv[m
-#	[31mtmp/06262010210334-RadioStationsdata2.csv[m
-#	[31mtmp/06262010210349-RadioStationsdata2.csv[m
-#	[31mtmp/06262010210442-RadioStationsdata2.csv[m
-#	[31mtmp/06262010210507-RadioStationsdata2.csv[m
-#	[31mvendor/[m
-okouam@nikita:/opt/Rails/apps/radio$ git add [K[K[K[K[K[K[K[Kgit add .
-okouam@nikita:/opt/Rails/apps/radio$ gt[Kit commit -m "All"
-[master 38ce21d] All
- 273 files changed, 11208 insertions(+), 421 deletions(-)
- rewrite app/controllers/admin_controller.rb (71%)
- rewrite app/controllers/partnerships_controller.rb (64%)
- delete mode 100644 app/views/networks/show.html.erb
- rewrite app/views/partnerships/new.html.erb (90%)
- rewrite app/views/radios/index.html.erb (99%)
- delete mode 100644 app/views/radios/show.html.erb
- delete mode 100644 app/views/totals/show.html.erb
- rewrite app/views/users/index.html.erb (77%)
- create mode 100644 generate
- create mode 100644 public/stylesheets/formtastic.css
- create mode 100644 tmp/06232010231149-RadioStationsdata.csv
- create mode 100644 tmp/06262010204504-RadioStationsdata2.csv
- create mode 100644 tmp/06262010205656-RadioStationsdata2.csv
- create mode 100644 tmp/06262010210334-RadioStationsdata2.csv
- create mode 100644 tmp/06262010210349-RadioStationsdata2.csv
- create mode 100644 tmp/06262010210442-RadioStationsdata2.csv
- create mode 100644 tmp/06262010210507-RadioStationsdata2.csv
- create mode 100644 vendor/plugins/resource_controller/LICENSE
- create mode 100644 vendor/plugins/resource_controller/README.rdoc
- create mode 100644 vendor/plugins/resource_controller/Rakefile
- copy app/views/users/edit.html.erb => vendor/plugins/resource_controller/TODO (100%)
- create mode 100644 vendor/plugins/resource_controller/VERSION.yml
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/USAGE
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/scaffold_resource_generator.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/controller.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/fixtures.yml
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/functional_test.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/helper.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/migration.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/model.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/old_migration.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/functional_spec.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/helper_spec.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/routing_spec.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/unit_spec.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/views/edit_spec.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/views/index_spec.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/views/new_spec.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/rspec/views/show_spec.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/shoulda_functional_test.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/unit_test.rb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view__form.erb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view__form.haml
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_edit.erb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_edit.haml
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_index.erb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_index.haml
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_new.erb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_new.haml
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_show.erb
- create mode 100644 vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_show.haml
- create mode 100644 vendor/plugins/resource_controller/init.rb
- create mode 100644 vendor/plugins/resource_controller/install.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/accessors.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/action_options.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/actions.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/base.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/class_methods.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/controller.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/failable_action_options.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/current_objects.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/internal.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/nested.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/singleton_customizations.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/helpers/urls.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/response_collector.rb
- create mode 100644 vendor/plugins/resource_controller/lib/resource_controller/singleton.rb
- create mode 100644 vendor/plugins/resource_controller/lib/urligence.rb
- create mode 100644 vendor/plugins/resource_controller/rails/init.rb
- create mode 100644 vendor/plugins/resource_controller/resource_controller.gemspec
- create mode 100644 vendor/plugins/resource_controller/test/Rakefile
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/accounts_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/application_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/cms/options_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/cms/personnel_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/cms/photos_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/cms/products_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/comments_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/images_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/options_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/people_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/photos_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/posts_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/projects_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/somethings_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/tags_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/controllers/users_controller.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/accounts_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/application_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/cms/products_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/comments_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/images_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/options_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/people_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/photos_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/posts_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/projects_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/somethings_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/tags_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/helpers/users_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/account.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/comment.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/image.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/option.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/personnel.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/photo.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/post.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/product.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/project.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/something.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/tag.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/models/user.rb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/accounts/_form.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/accounts/edit.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/accounts/new.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/accounts/show.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/options/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/options/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/options/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/options/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/photos/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/photos/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/photos/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/photos/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/products/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/products/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/products/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/cms/products/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/comments/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/comments/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/comments/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/comments/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/images/_form.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/images/edit.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/images/new.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/application.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/comments.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/options.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/people.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/photos.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/projects.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/somethings.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/layouts/tags.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/options/_form.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/options/edit.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/options/index.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/options/new.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/options/show.html.erb
- create mode 100644 vendor/plugins/resource_controller/test/app/views/people/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/people/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/people/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/people/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/photos/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/photos/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/photos/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/photos/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/posts/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/posts/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/posts/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/posts/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/projects/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/projects/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/projects/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/projects/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/somethings/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/somethings/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/somethings/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/somethings/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/tags/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/tags/index.rhtml
- rename app/views/users/show.html.erb => vendor/plugins/resource_controller/test/app/views/tags/index.rjs (100%)
- create mode 100644 vendor/plugins/resource_controller/test/app/views/tags/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/tags/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/users/edit.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/users/index.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/users/new.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/app/views/users/show.rhtml
- create mode 100644 vendor/plugins/resource_controller/test/config/boot.rb
- create mode 100644 vendor/plugins/resource_controller/test/config/database.yml
- create mode 100644 vendor/plugins/resource_controller/test/config/environment.rb
- create mode 100644 vendor/plugins/resource_controller/test/config/environments/development.rb
- create mode 100644 vendor/plugins/resource_controller/test/config/environments/test.rb
- create mode 100644 vendor/plugins/resource_controller/test/config/initializers/inflections.rb
- create mode 100644 vendor/plugins/resource_controller/test/config/routes.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/001_create_posts.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/002_create_products.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/003_create_comments.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/004_create_options.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/005_create_photos.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/006_create_tags.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/007_create_somethings.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/008_create_accounts.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/009_add_account_id_to_photos.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/010_create_projects.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/011_create_images.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/012_create_users.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/013_create_personnel.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/migrate/014_add_personnel_id_to_photos.rb
- create mode 100644 vendor/plugins/resource_controller/test/db/schema.rb
- create mode 100755 vendor/plugins/resource_controller/test/script/console
- create mode 100755 vendor/plugins/resource_controller/test/script/destroy
- create mode 100755 vendor/plugins/resource_controller/test/script/generate
- create mode 100755 vendor/plugins/resource_controller/test/script/server
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/accounts.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/comments.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/images.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/options.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/personnel.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/photos.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/photos_tags.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/posts.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/products.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/projects.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/somethings.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/tags.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/fixtures/users.yml
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/cms/options_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/cms/photos_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/cms/products_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/comments_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/images_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/people_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/photos_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/posts_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/projects_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/somethings_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/tags_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/functional/users_controller_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/test_helper.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/accessors_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/account_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/action_options_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/base_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/comment_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/failable_action_options_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/current_objects_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/internal_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/nested_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/singleton_current_objects_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/singleton_nested_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/singleton_urls_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers/urls_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/helpers_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/image_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/option_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/photo_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/post_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/project_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/response_collector_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/something_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/tag_test.rb
- create mode 100644 vendor/plugins/resource_controller/test/test/unit/urligence_test.rb
- rename app/views/users/edit.html.erb => vendor/plugins/resource_controller/test/tmp/.gitignore (100%)
- create mode 120000 vendor/plugins/resource_controller/test/vendor/gems/resource_controller-10.0.0
- create mode 100644 vendor/plugins/resource_controller/uninstall.rb
-okouam@nikita:/opt/Rails/apps/radio$ git push
-warning: You did not specify any refspecs to push, and the current remote
-warning: has not configured any push refspecs. The default action in this
-warning: case is to push all matching refspecs, that is, all branches
-warning: that exist both locally and remotely will be updated.  This may
-warning: not necessarily be what you want to happen.
-warning: 
-warning: You can specify what action you want to take in this case, and
-warning: avoid seeing this message again, by configuring 'push.default' to:
-warning:   'nothing'  : Do not push anything
-warning:   'matching' : Push all matching branches (default)
-warning:   'tracking' : Push the current branch to whatever it is tracking
-warning:   'current'  : Push the current branch
-Counting objects: 347, done.
-Delta compression using up to 4 threads.
-Compressing objects:   0% (1/288)   Compressing objects:   1% (3/288)   Compressing objects:   2% (6/288)   Compressing objects:   3% (9/288)   Compressing objects:   4% (12/288)   Compressing objects:   5% (15/288)   Compressing objects:   6% (18/288)   Compressing objects:   7% (21/288)   Compressing objects:   8% (24/288)   Compressing objects:   9% (26/288)   Compressing objects:  10% (29/288)   Compressing objects:  11% (32/288)   Compressing objects:  12% (35/288)   Compressing objects:  13% (38/288)   Compressing objects:  14% (41/288)   Compressing objects:  15% (44/288)   Compressing objects:  16% (47/288)   Compressing objects:  17% (49/288)   Compressing objects:  18% (52/288)   Compressing objects:  19% (55/288)   Compressing objects:  20% (58/288)   Compressing objects:  21% (61/288)   Compressing objects:  22% (64/288)   Compressing objects:  23% (67/288)   Compressing objects:  24% (70/288)   Compressing objects:  25% (72/288)   Compressing objects:  26% (75/288)   Compressing objects:  27% (78/288)   Compressing objects:  28% (81/288)   Compressing objects:  29% (84/288)   Compressing objects:  30% (87/288)   Compressing objects:  31% (90/288)   Compressing objects:  32% (93/288)   Compressing objects:  33% (96/288)   Compressing objects:  34% (98/288)   Compressing objects:  35% (101/288)   Compressing objects:  36% (104/288)   Compressing objects:  37% (107/288)   Compressing objects:  38% (110/288)   Compressing objects:  39% (113/288)   Compressing objects:  40% (116/288)   Compressing objects:  41% (119/288)   Compressing objects:  42% (121/288)   Compressing objects:  43% (124/288)   Compressing objects:  44% (127/288)   Compressing objects:  45% (130/288)   Compressing objects:  46% (133/288)   Compressing objects:  47% (136/288)   Compressing objects:  48% (139/288)   Compressing objects:  49% (142/288)   Compressing objects:  50% (144/288)   Compressing objects:  51% (147/288)   Compressing objects:  52% (150/288)   Compressing objects:  53% (153/288)   Compressing objects:  54% (156/288)   Compressing objects:  55% (159/288)   Compressing objects:  56% (162/288)   Compressing objects:  57% (165/288)   Compressing objects:  58% (168/288)   Compressing objects:  59% (170/288)   Compressing objects:  60% (173/288)   Compressing objects:  61% (176/288)   Compressing objects:  62% (179/288)   Compressing objects:  63% (182/288)   Compressing objects:  64% (185/288)   Compressing objects:  65% (188/288)   Compressing objects:  66% (191/288)   Compressing objects:  67% (193/288)   Compressing objects:  68% (196/288)   Compressing objects:  69% (199/288)   Compressing objects:  70% (202/288)   Compressing objects:  71% (205/288)   Compressing objects:  72% (208/288)   Compressing objects:  73% (211/288)   Compressing objects:  74% (214/288)   Compressing objects:  75% (216/288)   Compressing objects:  76% (219/288)   Compressing objects:  77% (222/288)   Compressing objects:  78% (225/288)   Compressing objects:  79% (228/288)   Compressing objects:  80% (231/288)   Compressing objects:  81% (234/288)   Compressing objects:  82% (237/288)   Compressing objects:  83% (240/288)   Compressing objects:  84% (242/288)   Compressing objects:  85% (245/288)   Compressing objects:  86% (248/288)   Compressing objects:  87% (251/288)   Compressing objects:  88% (254/288)   Compressing objects:  89% (257/288)   Compressing objects:  90% (260/288)   Compressing objects:  91% (263/288)   Compressing objects:  92% (265/288)   Compressing objects:  93% (268/288)   Compressing objects:  94% (271/288)   Compressing objects:  95% (274/288)   Compressing objects:  96% (277/288)   Compressing objects:  97% (280/288)   Compressing objects:  98% (283/288)   Compressing objects:  99% (286/288)   Compressing objects: 100% (288/288)   Compressing objects: 100% (288/288), done.
-Writing objects:   0% (1/318)   Writing objects:   1% (4/318)   Writing objects:   2% (7/318)   Writing objects:   3% (10/318)   Writing objects:   4% (13/318)   Writing objects:   5% (16/318)   Writing objects:   6% (20/318)   Writing objects:   7% (23/318)   Writing objects:   8% (26/318)   Writing objects:   9% (29/318)   Writing objects:  10% (32/318)   Writing objects:  11% (35/318)   Writing objects:  12% (39/318)   Writing objects:  13% (42/318)   Writing objects:  14% (45/318)   Writing objects:  15% (48/318)   Writing objects:  16% (51/318)   Writing objects:  17% (55/318)   Writing objects:  18% (59/318)   Writing objects:  19% (61/318)   Writing objects:  20% (64/318)   Writing objects:  21% (69/318)   Writing objects:  22% (70/318)   Writing objects:  23% (74/318)   Writing objects:  24% (78/318)   Writing objects:  25% (80/318)   Writing objects:  26% (83/318)   Writing objects:  27% (86/318)   Writing objects:  28% (90/318)   Writing objects:  29% (93/318)   Writing objects:  30% (96/318)   Writing objects:  31% (99/318)   Writing objects:  32% (102/318)   Writing objects:  33% (105/318)   Writing objects:  34% (109/318)   Writing objects:  35% (112/318)   Writing objects:  36% (115/318)   Writing objects:  37% (118/318)   Writing objects:  38% (121/318)   Writing objects:  39% (125/318)   Writing objects:  40% (128/318)   Writing objects:  41% (131/318)   Writing objects:  42% (134/318)   Writing objects:  43% (137/318)   Writing objects:  44% (140/318)   Writing objects:  45% (144/318)   Writing objects:  46% (147/318)   Writing objects:  47% (150/318)   Writing objects:  48% (153/318)   Writing objects:  49% (156/318)   Writing objects:  50% (159/318)   Writing objects:  51% (163/318)   Writing objects:  52% (167/318)   Writing objects:  53% (171/318)   Writing objects:  55% (175/318)   Writing objects:  56% (180/318)   Writing objects:  57% (182/318)   Writing objects:  58% (185/318)   Writing objects:  59% (188/318)   Writing objects:  60% (191/318)   Writing objects:  61% (194/318)   Writing objects:  62% (198/318)   Writing objects:  63% (201/318)   Writing objects:  64% (204/318)   Writing objects:  65% (208/318)   Writing objects:  66% (210/318)   Writing objects:  67% (214/318)   Writing objects:  68% (217/318)   Writing objects:  69% (220/318)   Writing objects:  70% (223/318)   Writing objects:  71% (227/318)   Writing objects:  72% (229/318)   Writing objects:  73% (233/318)   Writing objects:  74% (236/318)   Writing objects:  75% (239/318)   Writing objects:  76% (242/318)   Writing objects:  77% (245/318)   Writing objects:  78% (249/318)   Writing objects:  79% (253/318)   Writing objects:  80% (255/318)   Writing objects:  81% (258/318)   Writing objects:  82% (261/318)   Writing objects:  83% (264/318)   Writing objects:  84% (268/318)   Writing objects:  85% (271/318)   Writing objects:  86% (274/318)   Writing objects:  87% (278/318)   Writing objects:  88% (281/318)   Writing objects:  89% (284/318)   Writing objects:  90% (287/318)   Writing objects:  91% (290/318)   Writing objects:  92% (293/318)   Writing objects:  93% (296/318)   Writing objects:  94% (299/318)   Writing objects:  95% (303/318)   Writing objects:  96% (307/318)   Writing objects:  97% (309/318)   Writing objects:  98% (312/318)   Writing objects:  99% (315/318)   Writing objects: 100% (318/318)   Writing objects: 100% (318/318), 85.98 KiB, done.
-Total 318 (delta 90), reused 0 (delta 0)
-To git@github.com:okouam/Radio.git
-   0643f41..38ce21d  master -> master
-okouam@nikita:/opt/Rails/apps/radio$ git config push.defu[Kault matching
-okouam@nikita:/opt/Rails/apps/radio$ git push
-Everything up-to-date
-okouam@nikita:/opt/Rails/apps/radio$ ig [Kt[K[K[Kgit push herokou[K[Ku
-Counting objects: 347, done.
-Delta compression using up to 4 threads.
-Compressing objects:   0% (1/288)   Compressing objects:   1% (3/288)   Compressing objects:   2% (6/288)   Compressing objects:   3% (9/288)   Compressing objects:   4% (12/288)   Compressing objects:   5% (15/288)   Compressing objects:   6% (18/288)   Compressing objects:   7% (21/288)   Compressing objects:   8% (24/288)   Compressing objects:   9% (26/288)   Compressing objects:  10% (29/288)   Compressing objects:  11% (32/288)   Compressing objects:  12% (35/288)   Compressing objects:  13% (38/288)   Compressing objects:  14% (41/288)   Compressing objects:  15% (44/288)   Compressing objects:  16% (47/288)   Compressing objects:  17% (49/288)   Compressing objects:  18% (52/288)   Compressing objects:  19% (55/288)   Compressing objects:  20% (58/288)   Compressing objects:  21% (61/288)   Compressing objects:  22% (64/288)   Compressing objects:  23% (67/288)   Compressing objects:  24% (70/288)   Compressing objects:  25% (72/288)   Compressing objects:  26% (75/288)   Compressing objects:  27% (78/288)   Compressing objects:  28% (81/288)   Compressing objects:  29% (84/288)   Compressing objects:  30% (87/288)   Compressing objects:  31% (90/288)   Compressing objects:  32% (93/288)   Compressing objects:  33% (96/288)   Compressing objects:  34% (98/288)   Compressing objects:  35% (101/288)   Compressing objects:  36% (104/288)   Compressing objects:  37% (107/288)   Compressing objects:  38% (110/288)   Compressing objects:  39% (113/288)   Compressing objects:  40% (116/288)   Compressing objects:  41% (119/288)   Compressing objects:  42% (121/288)   Compressing objects:  43% (124/288)   Compressing objects:  44% (127/288)   Compressing objects:  45% (130/288)   Compressing objects:  46% (133/288)   Compressing objects:  47% (136/288)   Compressing objects:  48% (139/288)   Compressing objects:  49% (142/288)   Compressing objects:  50% (144/288)   Compressing objects:  51% (147/288)   Compressing objects:  52% (150/288)   Compressing objects:  53% (153/288)   Compressing objects:  54% (156/288)   Compressing objects:  55% (159/288)   Compressing objects:  56% (162/288)   Compressing objects:  57% (165/288)   Compressing objects:  58% (168/288)   Compressing objects:  59% (170/288)   Compressing objects:  60% (173/288)   Compressing objects:  61% (176/288)   Compressing objects:  62% (179/288)   Compressing objects:  63% (182/288)   Compressing objects:  64% (185/288)   Compressing objects:  65% (188/288)   Compressing objects:  66% (191/288)   Compressing objects:  67% (193/288)   Compressing objects:  68% (196/288)   Compressing objects:  69% (199/288)   Compressing objects:  70% (202/288)   Compressing objects:  71% (205/288)   Compressing objects:  72% (208/288)   Compressing objects:  73% (211/288)   Compressing objects:  74% (214/288)   Compressing objects:  75% (216/288)   Compressing objects:  76% (219/288)   Compressing objects:  77% (222/288)   Compressing objects:  78% (225/288)   Compressing objects:  79% (228/288)   Compressing objects:  80% (231/288)   Compressing objects:  81% (234/288)   Compressing objects:  82% (237/288)   Compressing objects:  83% (240/288)   Compressing objects:  84% (242/288)   Compressing objects:  85% (245/288)   Compressing objects:  86% (248/288)   Compressing objects:  87% (251/288)   Compressing objects:  88% (254/288)   Compressing objects:  89% (257/288)   Compressing objects:  90% (260/288)   Compressing objects:  91% (263/288)   Compressing objects:  92% (265/288)   Compressing objects:  93% (268/288)   Compressing objects:  94% (271/288)   Compressing objects:  95% (274/288)   Compressing objects:  96% (277/288)   Compressing objects:  97% (280/288)   Compressing objects:  98% (283/288)   Compressing objects:  99% (286/288)   Compressing objects: 100% (288/288)   Compressing objects: 100% (288/288), done.
-Writing objects:   0% (1/318)   Writing objects:   1% (4/318)   Writing objects:   2% (7/318)   Writing objects:   3% (10/318)   Writing objects:   4% (13/318)   Writing objects:   5% (16/318)   Writing objects:   6% (20/318)   Writing objects:   7% (23/318)   Writing objects:   8% (26/318)   Writing objects:   9% (29/318)   Writing objects:  10% (32/318)   Writing objects:  11% (35/318)   Writing objects:  12% (39/318)   Writing objects:  13% (42/318)   Writing objects:  14% (45/318)   Writing objects:  15% (48/318)   Writing objects:  16% (51/318)   Writing objects:  17% (55/318)   Writing objects:  18% (59/318)   Writing objects:  19% (61/318)   Writing objects:  20% (64/318)   Writing objects:  21% (69/318)   Writing objects:  22% (70/318)   Writing objects:  23% (74/318)   Writing objects:  24% (78/318)   Writing objects:  25% (80/318)   Writing objects:  26% (83/318)   Writing objects:  27% (86/318)   Writing objects:  28% (90/318)   Writing objects:  29% (93/318)   Writing objects:  30% (96/318)   Writing objects:  31% (99/318)   Writing objects:  32% (102/318)   Writing objects:  33% (105/318)   Writing objects:  34% (109/318)   Writing objects:  35% (112/318)   Writing objects:  36% (115/318)   Writing objects:  37% (118/318)   Writing objects:  38% (121/318)   Writing objects:  39% (125/318)   Writing objects:  40% (128/318)   Writing objects:  41% (131/318)   Writing objects:  42% (134/318)   Writing objects:  43% (137/318)   Writing objects:  44% (140/318)   Writing objects:  45% (144/318)   Writing objects:  46% (147/318)   Writing objects:  47% (150/318)   Writing objects:  48% (153/318)   Writing objects:  49% (156/318)   Writing objects:  50% (159/318)   Writing objects:  51% (163/318)   Writing objects:  52% (167/318)   Writing objects:  53% (171/318)   Writing objects:  55% (175/318)   Writing objects:  56% (180/318)   Writing objects:  57% (182/318)   Writing objects:  58% (185/318)   Writing objects:  59% (188/318)   Writing objects:  60% (191/318)   Writing objects:  61% (194/318)   Writing objects:  62% (198/318)   Writing objects:  63% (201/318)   Writing objects:  64% (204/318)   Writing objects:  65% (208/318)   Writing objects:  66% (210/318)   Writing objects:  67% (214/318)   Writing objects:  68% (217/318)   Writing objects:  69% (220/318)   Writing objects:  70% (223/318)   Writing objects:  71% (227/318)   Writing objects:  72% (229/318)   Writing objects:  73% (233/318)   Writing objects:  74% (236/318)   Writing objects:  75% (239/318)   Writing objects:  76% (242/318)   Writing objects:  77% (245/318)   Writing objects:  78% (249/318)   Writing objects:  79% (253/318)   Writing objects:  80% (255/318)   Writing objects:  81% (258/318)   Writing objects:  82% (261/318)   Writing objects:  83% (264/318)   Writing objects:  84% (268/318)   Writing objects:  85% (271/318)   Writing objects:  86% (274/318)   Writing objects:  87% (278/318)   Writing objects:  88% (281/318)   Writing objects:  89% (284/318)   Writing objects:  90% (287/318)   Writing objects:  91% (290/318)   Writing objects:  92% (293/318)   Writing objects:  93% (296/318)   Writing objects:  94% (299/318)   Writing objects:  95% (303/318)   Writing objects:  96% (307/318)   Writing objects:  97% (309/318)   Writing objects:  98% (312/318)   Writing objects:  99% (315/318)   Writing objects: 100% (318/318)   Writing objects: 100% (318/318), 87.46 KiB, done.
-Total 318 (delta 88), reused 0 (delta 0)
-
------> Heroku receiving push
------> Rails app detected
------> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
-       Compiled slug size is 7.0MB
------> Launching.......... done
-       http://radio.heroku.com deployed to Heroku
-
-To git@heroku.com:radio.git
-   0643f41..38ce21d  master -> master
-okouam@nikita:/opt/Rails/apps/radio$ git push heroku[Kconfig push.default matching
-okouam@nikita:/opt/Rails/apps/radio$ git config push.default matching[17Ppush heroku[Kconfig push.default matchingpush[Kcommit -m "All"[10Padd .
-okouam@nikita:/opt/Rails/apps/radio$ git add .config push.default matching[17Ppush heroku[Kconfig push.default matchingpush[Kcommit -m "All"
-[master 0c923d4] All
- 3 files changed, 322 insertions(+), 32 deletions(-)
-okouam@nikita:/opt/Rails/apps/radio$ git commit -m "All"[10Padd .config push.default matching[17Ppush heroku[K heroku
-Counting objects: 11, done.
-Delta compression using up to 4 threads.
-Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
-Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 9.53 KiB, done.
-Total 6 (delta 3), reused 0 (delta 0)
-
------> Heroku receiving push
------> Rails app detected
-
------> Installing gem authlogic from http://rubygems.org
-       Successfully installed authlogic-2.1.5
-       1 gem installed
-
------> Installing gem will_paginate from http://rubygems.org
-       Successfully installed will_paginate-2.3.14
-       1 gem installed
-
------> Installing gem fastercsv from http://rubygems.org
-       Successfully installed fastercsv-1.5.3
-       1 gem installed
-
------> Installing gem searchlogic from http://rubygems.org
-       Successfully installed searchlogic-2.4.19
-       Successfully installed activesupport-2.3.8
-       2 gems installed
-
------> Installing gem formtastic from http://rubygems.org
-       
-         ========================================================================
-         Thanks for installing Formtastic!
-         ------------------------------------------------------------------------
-         You can now (optionally) run the generator to copy some stylesheets and
-         a config initializer into your application:
-           ./script/generate formtastic
-       
-         To generate some semantic form markup for your existing models, just run:
-           ./script/generate form MODEL_NAME
-       
-         Find out more and get involved:
-           http://github.com/justinfrench/formtastic
-           http://groups.google.com.au/group/formtastic
-         ========================================================================
-         
-       Successfully installed formtastic-0.9.10
-       Successfully installed rack-1.1.0
-       2 gems installed
-
------> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
-       Compiled slug size is 8.2MB
------> Launching........ done
-       http://radio.heroku.com deployed to Heroku
-
-To git@heroku.com:radio.git
-   38ce21d..0c923d4  master -> master
-okouam@nikita:/opt/Rails/apps/radio$ gem dependency formtastic
-Gem formtastic-0.9.8
-  actionpack (>= 2.3.0, runtime)
-  activesupport (>= 2.3.0, runtime)
-  rspec-rails (>= 1.2.6, development)
-  rspec_tag_matchers (>= 1.0.0, development)
-
-Gem formtastic-0.9.10
-  actionpack (>= 2.3.0, runtime)
-  activesupport (>= 2.3.0, runtime)
-  rspec-rails (>= 1.2.6, development)
-  rspec_tag_matchers (>= 1.0.0, development)
-
-okouam@nikita:/opt/Rails/apps/radio$ gem depency hobofields
-ERROR:  While executing gem ... (RuntimeError)
-    Unknown command depency
-okouam@nikita:/opt/Rails/apps/radio$ gem depency hobofields[K[K[K[K[K[K[K[K[K[K[K[K[Kdency searchlogic
-Gem searchlogic-2.4.19
-  activerecord (>= 2.0.0, runtime)
-
-okouam@nikita:/opt/Rails/apps/radio$ gem dependency searchlogic[4Pcy hobofieldsdency formtastic[10Pit push herokucommit -m "All"[10Padd .
-okouam@nikita:/opt/Rails/apps/radio$ git add .em dependency searchlogic[4Pcy hobofieldsdency formtastic[10Pit push herokucommit -m "All"
-[master d9a4282] All
- 3 files changed, 37 insertions(+), 400 deletions(-)
-okouam@nikita:/opt/Rails/apps/radio$ git commit -m "All"[10Padd .em dependency searchlogic[4Pcy hobofieldsdency formtastic[10Pit push heroku
-Counting objects: 11, done.
-Delta compression using up to 4 threads.
-Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
-Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 1.06 KiB, done.
-Total 6 (delta 4), reused 0 (delta 0)
-
------> Heroku receiving push
------> Rails app detected
-
------> Installing gem authlogic from http://rubygems.org
-       Successfully installed authlogic-2.1.5
-       1 gem installed
-
------> Installing gem haml >= 2.2.17 from http://rubygems.org
-       Successfully installed haml-3.0.13
-       1 gem installed
-
------> Installing gem will_paginate >= 2.3.12 from http://gemcutter.org, http://rubygems.org
-       Successfully installed will_paginate-2.3.14
-       1 gem installed
-
------> Installing gem formtastic >= 0.9.7 from http://gemcutter.org, http://rubygems.org
-       
-         ========================================================================
-         Thanks for installing Formtastic!
-         ------------------------------------------------------------------------
-         You can now (optionally) run the generator to copy some stylesheets and
-         a config initializer into your application:
-           ./script/generate formtastic
-       
-         To generate some semantic form markup for your existing models, just run:
-           ./script/generate form MODEL_NAME
-       
-         Find out more and get involved:
-           http://github.com/justinfrench/formtastic
-           http://groups.google.com.au/group/formtastic
-         ========================================================================
-         
-       Successfully installed formtastic-0.9.10
-       Successfully installed rack-1.1.0
-       2 gems installed
-
------> Installing gem fastercsv from http://rubygems.org
-       Successfully installed fastercsv-1.5.3
-       1 gem installed
-
------> Installing gem searchlogic from http://rubygems.org
-       Successfully installed searchlogic-2.4.19
-       Successfully installed activesupport-2.3.8
-       2 gems installed
-
------> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
-       Compiled slug size is 9.2MB
------> Launching..................... done
-       http://radio.heroku.com deployed to Heroku
-
-To git@heroku.com:radio.git
-   0c923d4..d9a4282  master -> master
-okouam@nikita:/opt/Rails/apps/radio$ git push herokucommit -m "All"[10Padd .
-okouam@nikita:/opt/Rails/apps/radio$ git add .push herokucommit -m "All"
-[master e8ab2b3] All
- 3 files changed, 90 insertions(+), 14 deletions(-)
-okouam@nikita:/opt/Rails/apps/radio$ git commit -m "All"[10Padd .push heroku
-Counting objects: 13, done.
-Delta compression using up to 4 threads.
-Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
-Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.72 KiB, done.
-Total 7 (delta 6), reused 0 (delta 0)
-
------> Heroku receiving push
------> Rails app detected
------> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
-       Compiled slug size is 9.2MB
------> Launching............ done
-       http://radio.heroku.com deployed to Heroku
-
-To git@heroku.com:radio.git
-   d9a4282..e8ab2b3  master -> master
-okouam@nikita:/opt/Rails/apps/radio$ git push herokucommit -m "All"[10Padd .
-okouam@nikita:/opt/Rails/apps/radio$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	[32mmodified:   .gems[m
-#	[32mmodified:   .idea/radio.iml[m
-#	[32mmodified:   .idea/workspace.xml[m
-#	[32mmodified:   config/environment.rb[m
-#	[32mmodified:   generate[m
-#
-okouam@nikita:/opt/Rails/apps/radio$ git status[1Padd .push herokucommit -m "All"
-[master 4ebe306] All
- 5 files changed, 92 insertions(+), 13 deletions(-)
-okouam@nikita:/opt/Rails/apps/radio$ git commit -m "All"[9Pstatus[1Padd .push heroku
-Counting objects: 17, done.
-Delta compression using up to 4 threads.
-Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
-Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 1.57 KiB, done.
-Total 9 (delta 8), reused 0 (delta 0)
-
------> Heroku receiving push
------> Rails app detected
-
------> Installing gem authlogic from http://rubygems.org
-       Successfully installed authlogic-2.1.5
-       1 gem installed
-
------> Installing gem haml >= 2.2.17 from http://rubygems.org
-       Successfully installed haml-3.0.13
-       1 gem installed
-
------> Installing gem will_paginate >= 2.3.12 from http://gemcutter.org, http://rubygems.org
-       Successfully installed will_paginate-2.3.14
-       1 gem installed
-
------> Installing gem formtastic >= 0.9.7 from http://gemcutter.org, http://rubygems.org and ignoring dependencies
-       
-         ========================================================================
-         Thanks for installing Formtastic!
-         ------------------------------------------------------------------------
-         You can now (optionally) run the generator to copy some stylesheets and
-         a config initializer into your application:
-           ./script/generate formtastic
-       
-         To generate some semantic form markup for your existing models, just run:
-           ./script/generate form MODEL_NAME
-       
-         Find out more and get involved:
-           http://github.com/justinfrench/formtastic
-           http://groups.google.com.au/group/formtastic
-         ========================================================================
-         
-       Successfully installed formtastic-0.9.10
-       1 gem installed
-
------> Installing gem fastercsv from http://rubygems.org
-       Successfully installed fastercsv-1.5.3
-       1 gem installed
-
------> Installing gem searchlogic from http://rubygems.org
-       Successfully installed searchlogic-2.4.19
-       Successfully installed activesupport-2.3.8
-       2 gems installed
-
------> Installing quick_sendgrid plugin from git://github.com/pedro/quick_sendgrid.git... done.
-       Compiled slug size is 9.0MB
------> Launching.......... done
-       http://radio.heroku.com deployed to Heroku
-
-To git@heroku.com:radio.git
-   e8ab2b3..4ebe306  master -> master
-okouam@nikita:/opt/Rails/apps/radio$ git push herokucommit -m "All"[9Pstatus[1Padd .
-okouam@nikita:/opt/Rails/apps

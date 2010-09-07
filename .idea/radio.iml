@@ -30,12 +30,6 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="pg" version="0" bound="GREATER_OR_EQUAL" git="false" />
-      </requirement>
-      <source from="config/database.yml" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/boot.rb" />
@@ -51,6 +45,12 @@
         <dependency name="searchlogic" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="config/database.yml" />
     </requirement>
     <requirement>
       <requirement>

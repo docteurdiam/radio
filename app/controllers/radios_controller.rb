@@ -62,16 +62,15 @@ class RadiosController < ApplicationController
     results = []
     case type
       when "alphabetical"
-        radios = Radio.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
-        networks = Network.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
-        totals = Total.find(:all, :conditions => ['name ILIKE ?', query + "%"], :order => "name")
-        results += totals.map {|total| total.to_hash}
-        results += radios.map {|radio| radio.to_hash}
-        results += networks.map {|network| network.to_hash}
+        radios = Radio.name_begins_with(query).ascend_by_name
+        networks = Network.name_begins_with(query).ascend_by_name
+        totals = Total.name_begins_with(query).ascend_by_name
+        results += totals.map {|total| total.to_hash} + radios.map {|radio| radio.to_hash} + networks.map {|network| network.to_hash}
       when "name"
-        radios = Radio.find(:all, :conditions => ['name ILIKE ?', "%" + query + "%"], :order => "name")
-        networks = Network.find(:all, :conditions => ['name ILIKE ?', "%" + query + "%"], :order => "name")
-        totals = Total.find(:all, :conditions => ['name ILIKE ?', "%" + query + "%"], :order => "name")
+        query = query.split(/ /).join("%")
+        radios = Radio.name_like(query).ascend_by_name
+        networks = Network.name_like(query).ascend_by_name
+        totals = Total.name_like(query).ascend_by_name
         results += totals.map {|total| total.to_hash}
         results +=  radios.map {|radio| radio.to_hash}
         results +=  networks.map {|network| network.to_hash}
