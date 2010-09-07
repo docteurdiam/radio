@@ -7,6 +7,7 @@ class FeeCalculator
     puts "** There are #{network_stations ? network_stations.size : 0} network stations"
     network_stations.each {|station| puts station.name}
     puts "** There are #{independents ? independents.size : 0} independent stations"
+    @bondage_candidates = independents
     independents.each {|station| puts station.name}
     process_networks(network_stations) +  sum(independents)
   end
@@ -15,19 +16,9 @@ class FeeCalculator
     messages = []
     @stations = identifiers.map {|identifier| Radio.find(identifier)}
     network_stations, independents = split_stations(@stations)
+    @bondage_candidates = independents
     messages = messages + analyse_networks(network_stations)
     messages = messages + analyze_stations(independents)
-  end
-
-  def analyze_stations(stations)
-    partnerships = []
-    stations.inject([]) do |result, station|
-      if station.partnership && is_partner_present(station.partnership) && !partnerships.include?(station.partnership)
-        result << "Both #{station.name} and #{find_partner(station).name} are packaged together at a rate of £#{station.partnership.fee}"
-        partnerships << station.partnership
-      end
-      result
-    end
   end
 
   def find_partner(original)
@@ -42,10 +33,13 @@ class FeeCalculator
     if sum(networks["ILR FM"]) > 1000 && sum(networks["ILR AM"]) > 1000
       ["The total rate for stations in both ILR FM and ILR AM has exceeded £2000 so they are packaged at a rate of £1500"]
     elsif sum(networks["ILR FM"]) > 1000
-       ["The total rate for stations in ILR FM has exceeded £1000 so they are packaged at a rate of £1000"] + analyze_stations(networks["ILR AM"])
+      @bondage_candidates = @bondage_candidates + networks["ILR AM"]
+      ["The total rate for stations in ILR FM has exceeded £1000 so they are packaged at a rate of £1000"] + analyze_stations(networks["ILR AM"])
     elsif  sum(networks["ILR AM"]) > 1000
-       ["The total rate for stations in ILR AM has exceeded £1000 so they are packaged at a rate of £1000"]  + analyze_stations(networks["ILR FM"])
+      @bondage_candidates = @bondage_candidates + networks["ILR FM"]
+      ["The total rate for stations in ILR AM has exceeded £1000 so they are packaged at a rate of £1000"]  + analyze_stations(networks["ILR FM"])
     else
+      @bondage_candidates = @bondage_candidates + networks["ILR FM"] + networks["ILR AM"] 
       analyze_stations(networks["ILR AM"]) + analyze_stations(networks["ILR FM"])
     end
   end
@@ -56,7 +50,7 @@ class FeeCalculator
   end
 
   def is_partner_present(partnership)
-    found = @stations.find_all {|station| station.partnership == partnership}
+    found = @bondage_candidates.find_all {|station| station.partnership == partnership}
     found.size > 1
   end
 
@@ -70,12 +64,15 @@ class FeeCalculator
       puts "Capping FM and AM at £1500"
       1500
     elsif sum(networks["ILR FM"]) > 1000
+      @bondage_candidates = @bondage_candidates + networks["ILR AM"]
       puts "Capping FM at £1000"
       1000 + sum(networks["ILR AM"])
     elsif sum_network_stations(networks["ILR AM"]) > 1000
+      @bondage_candidates = @bondage_candidates + networks["ILR FM"]
       puts "Capping AM at £1000"
       1000 + sum(networks["ILR FM"])
     else
+      @bondage_candidates = @bondage_candidates + networks["ILR FM"] + networks["ILR AM"] 
       sum(networks["ILR AM"]) + sum(networks["ILR FM"])
     end  
   end
@@ -97,6 +94,17 @@ class FeeCalculator
       total = total + additional_fee
     end
     total
+  end
+
+  def analyze_stations(stations)
+    partnerships = []
+    @bondage_candidates.inject([]) do |result, station|
+      if station.partnership && is_partner_present(station.partnership) && !partnerships.include?(station.partnership)
+        result << "Both #{station.name} and #{find_partner(station).name} are packaged together at a rate of £#{station.partnership.fee}"
+        partnerships << station.partnership
+      end
+      result
+    end
   end
 
 end
