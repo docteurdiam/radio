@@ -9,4 +9,12 @@ class Total < ActiveRecord::Base
     {:name => name, :id => id, :type => 'total', :note => note}
   end
 
+  def basic_fee
+    radios.inject(0) {|sum, x| sum + x.fee }
+  end
+
+  def effective_fee
+    fee ? fee : basic_fee
+  end
+
 end

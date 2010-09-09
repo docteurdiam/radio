@@ -54,8 +54,8 @@ class RadiosController < ApplicationController
 
   def calculate
     stations = parse(params[:identifiers])
-    total = FeeCalculator.new.calculate(stations)
-    render :text => total
+    worksheet = FeeCalculator.new.calculate(stations)
+    render :text => worksheet.total
   end
     
   def execute_search(type, query)

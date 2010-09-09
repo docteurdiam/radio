@@ -7,18 +7,15 @@ class Radio < ActiveRecord::Base
   cattr_reader :per_page
   @@per_page = 20
 
-  def calculate_fee(stations)
-    if partnership
-      partners = partnership.radios
-      all_partners_present =  partners.all? {|partner| stations.include? partner.id }
-      all_partners_present ? partnership.fee / partnership.radios.size  : fee
-    else
-      fee
-    end
-  end
-
   def to_hash
     {:fee => fee, :name => name, :id => id, :type => 'station', :note => note}
+  end
+
+  def partner_with(station, bundle_fee)
+    partnership = Partnership.create!(:fee => bundle_fee)
+    partnership.radios << self
+    partnership.radios << station
+    partnership.save!
   end
 
 end

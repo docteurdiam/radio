@@ -38,10 +38,10 @@ class ApplicationController < ActionController::Base
     stations = []
     items.each do |item|
       if item[:type] == "station"
-        stations << item[:id]
+        stations << item[:id].to_i
       else
         network = Network.find(item[:id])
-        stations = stations + network.radios.map {|radio| radio.id}
+        stations = stations + network.radios.map {|radio| radio.id.to_i}
       end
     end
     stations

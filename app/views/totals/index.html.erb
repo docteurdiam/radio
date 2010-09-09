@@ -8,7 +8,8 @@
   <tr>
     <th>Name</th>
     <th>Station Count</th>
-    <th>Total Fee</th>
+    <th>Basic Fee</th>
+    <th>Effective Fee</th>
     <th style="width: 50px"></th><th style="width: 50px"></th>
   </tr>
 
@@ -16,8 +17,9 @@
   <tr class="<%= cycle("even", "odd") %>">
     <td><%=h total.name %></td>
     <td><%=h total.radios.count %></td>
-    <td><%=h total.radios.inject(0) {|sum, total| sum + total.fee } %></td>
-    <td><%= link_to 'Edit', edit_total_path(total) %></td>
+    <td><%=h total.basic_fee %></td>
+    <td><%=h total.effective_fee %></td>
+    <td><%= link_to 'Edit', edit_total_url(total) %></td>
     <td><%= link_to 'Delete', total, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

@@ -9,9 +9,9 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .left {width: 640px; float: left}
 
 #header {background-image: url(/images/bgnds_03.png); height: 201px; width: 900px}
-#header .contents {width: 620px; float: right; padding-top: 25px}
-#header .contents .normal {font-size: 14px; line-height: 18px}
-#header .contents .small {font-size: 10px; line-height: 11px}
+#header .contents {width: 610px; float: right; padding-top: 25px; padding-right: 20px}
+#header .contents .normal {font-size: 13px; line-height: 17px}
+#header .contents .small {font-size: 10px; line-height: 12px}
 
 .panel {margin-left: 20px; margin-top: 25px}
 

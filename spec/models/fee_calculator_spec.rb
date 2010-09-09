@@ -1,6 +1,6 @@
 describe FeeCalculator do
 
-  describe "when calculating or analyzing a fee" do
+  describe "when calculating a fee" do
 
     before(:each) do
       radio1 = Radio.create(:name => "Radio 1", :fee => 70, :category => "Local & Regional", :note => "")
@@ -10,7 +10,7 @@ describe FeeCalculator do
     end
 
     it "sums up the fee for all the radios" do
-      FeeCalculator.new.calculate(@identifiers).should eql(110)
+      FeeCalculator.new.calculate(@identifiers).total.should eql(110)
     end
 
     describe "when the station fees in any network add up to over £1000"  do
@@ -27,7 +27,7 @@ describe FeeCalculator do
       end
 
       it "caps their price at £1000" do
-        FeeCalculator.new.calculate(@identifiers).should eql(1110)
+        FeeCalculator.new.calculate(@identifiers).total.should eql(1110)
       end
 
       it "adds a message indicating the cap has been reached" do
