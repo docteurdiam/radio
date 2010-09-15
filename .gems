@@ -4,3 +4,4 @@ will_paginate --version '>= 2.3.12' --source http://gemcutter.org
 formtastic --version '>= 0.9.7' --source http://gemcutter.org --ignore-dependencies
 fastercsv
 searchlogic
+paperclip

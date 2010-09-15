@@ -21,6 +21,6 @@ config.action_mailer.smtp_settings = {
   :port => 587,
   :domain => "gmail.com",
   :authentication => :login,
-  :user_name => "olivier.kouame@gmail.com",
-  :password => "younggiftedandblack" 
+  :user_name => "info@radiousage.co.uk",
+  :password => "com9924110" 
 }

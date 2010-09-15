@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100909212829) do
+ActiveRecord::Schema.define(:version => 20100915200536) do
+
+  create_table "adverts", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "networks", :force => true do |t|
     t.string  "name"

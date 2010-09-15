@@ -42,6 +42,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :totals, :member => {:stations => :get, :remove_station => :post}
   map.resources :networks
   map.resources :users
+  map.resources :adverts, :collection => {:active => :get}
   map.resources :partnerships
   map.resource :user_session
   map.connect 'reminders', :controller => 'reminders', :action => 'show'

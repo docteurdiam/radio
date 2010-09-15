@@ -1,0 +1,19 @@
+<div class="actions" style="margin-top: -17px">
+  <% semantic_form_for :s, :url => new_advert_path do |form| %>
+    <input class="button" style="float: right; width: 160px; margin-top: 15px" type="submit" value="Add New Advert" />
+  <% end %>
+</div>
+
+
+<table>
+  <tr>
+    <th>Ad</th>
+   <th style="width: 50px"></th>
+  </tr>
+<% @adverts.each do |advert| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%= image_tag advert.image(:normal) %></td>
+    <td style="width: 50px"><%= link_to 'Delete', advert, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

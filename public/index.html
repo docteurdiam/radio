@@ -11,23 +11,27 @@
   </head>
   <body>
   <div id="page">
+    <div id="advertising" style="background-color: #ccc; display: none; min-height: 100px; margin-bottom: 5px">
+      <img src="" alt="advert"/>
+    </div>
     <div id="header">
       <div class="contents" style="margin-top: -15px">
       <p class="normal">When a voice artist features on a radio commercial they are due a fee for the use of their voice.<br/>
-        This is called Radio Usage.</p>                                         
-      <p class="normal">Usage fees are per artist, per script, per radio station, per three
-        months on air.</p>
+        This is called Radio Usage. Fees are per artist, per script, per radio station, per three months on air.</p>
 
       <p class="small">This guide lets performers, their representatives and employers quickly calculate the
         appropriate use fee for voiceover artists in radio commercials. These rates are the minimum rates recommended
-        appropriate use fee for voiceover artists in radio commercials. These rates are the minimum rates recommended
         by Equity, they are widely accepted within the industry. Performers and employers are free to agree their own
-        rates. With Tags (the same script with regional changes) the first script is calculated at full fee, then extra tags are
+        rates.</p> 
+
+         <p class="small">With Tags (the same script with regional changes) the first script is calculated at full fee, then extra tags are
       calculated at 50% of that fee. Please contact your voice agent to discuss further as the content of a script change
       will determine whether it should be charged at 100% or 50%.</p>     
 
       <p class="small">While we have endeavoured to provide accurate and up to date information, we cannot be held
-        responsible for any errors or any loss incurred through the calculators use. Please contact
+        responsible for any errors or any loss incurred through the calculators use.</p>
+      <p class="small">  
+      Please contact
         <a href="mailto:mclarke@equity.org.uk"  style="text-decoration: none; color: #434343">mclarke@equity.org.uk</a> if you have any questions or wish to report name changes or other updates.</p>
         <a href="/Guidelines.pdf" style="position: relative; top: 5px; color: #434343; text-decoration: none">Download Guidelines for Radio Commercials</a>
       </div>
@@ -101,6 +105,14 @@
     $(".search .name").name_search_controller();
     $(".search .alphabetical").alphabetical_search_controller();
     $(".search .type").type_search_controller();
+    $(document).ready(function() {
+      $.get("/adverts/active", {}, function(result) {
+        if (result != "") {
+          $("#advertising img").attr("src", result);
+          $("#advertising").show();
+        }
+      })
+    })
   </script>
 
 
