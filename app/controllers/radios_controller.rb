@@ -4,6 +4,11 @@ class RadiosController < ApplicationController
 
   def index
     @radios = @books = Radio.search(params[:s]).all.paginate(:page => params[:page], :per_page => 15, :order => "name")
+    @all_categories = ["Local & Regional", "National and News", "Irish and ROI", "DAB Only", "Internet Only"]
+  end
+
+  new_action.before do
+    @all_categories = ["Local & Regional", "National and News", "Irish and ROI", "DAB Only", "Internet Only"]
   end
 
   def change_search
@@ -24,6 +29,7 @@ class RadiosController < ApplicationController
         format.html { redirect_to(radios_path) }
         format.xml  { render :xml => @radio, :status => :created, :location => @radio }
       else
+        @all_categories = ["Local & Regional", "National and News", "Irish and ROI", "DAB Only", "Internet Only"]
         format.html { render :action => "new" }
         format.xml  { render :xml => @radio.errors, :status => :unprocessable_entity }
       end
@@ -77,8 +83,8 @@ class RadiosController < ApplicationController
       when "type"
         case query
           when "Digital / Internet"
+            results +=  Radio.find_all_by_category("Internet Only", :order => "name").map {|radio| radio.to_hash}
             results +=  Radio.find_all_by_category("DAB Only", :order => "name").map {|radio| radio.to_hash}
-            results +=  Radio.find_all_by_category("DAB", :order => "name").map {|radio| radio.to_hash}
           when "Totals"
           results +=  Total.find(:all).map {|total| total.to_hash}
           when "Networks"

@@ -1,11 +1,12 @@
 <h1>New station</h1>
 
-<% form_for(@radio) do |f| %>
+<% semantic_form_for @radio do |f| %>
   <%= f.error_messages %>
-  <p><%= f.label :fee %><br /><%= f.text_field :fee %></p>
-  <p><%= f.label :name %><br /><%= f.text_field :name %></p>
-  <p><%= f.label :note %><br /><%= f.text_area :note %></p>
-  <p><%= f.label :category %><br /><%= f.text_field :category %></p>
-  <p class="actions"><%= f.submit 'Create' %><%= link_to 'Back', radios_path %></p>
+  <%= f.input :fee %>
+  <%= f.input :name %>
+  <%= f.input :note %>
+  <%= f.input :category, :as => :select, :collection => @all_categories %>
+  <br/>
+  <p class="actions"><%= f.submit 'Create' %>&nbsp;&nbsp;&nbsp;<%= link_to 'Back', radios_path %></p>
 <% end %>
 

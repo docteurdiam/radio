@@ -9,7 +9,7 @@
       <hr/>
       <%= form.input :fee_eq, :label => "Fee", :required => false %>
       <%= form.input :name_like, :required => false, :label => "Name" %>
-      <%= form.input :category_id_eq, :as => :select, :collection => @all_categories, :required => false, :label => "Category" %>
+      <%= form.input :category_eq, :as => :select, :collection => @all_categories, :required => false, :label => "Category" %>
       <input class="button" style="width: 100px; margin-right: 6px; margin-top: 15px; float: right" type="submit" value="Search" />
       <div style="clear: both"></div>
     </div>
