@@ -2,11 +2,13 @@ class FeeCalculator
 
   def calculate(station_identifiers)
 
-    return 0 if station_identifiers.nil? or station_identifiers.size == 0
+    if station_identifiers.nil? or station_identifiers.size == 0
+      return Worksheet.new []
+    else
+      worksheet = Worksheet.new(Radio.find station_identifiers.uniq, :include => :network)
+    end
 
-    ids = station_identifiers.map {|id| id}.uniq
-
-    worksheet = Worksheet.new Radio.find ids, :include => :network
+    worksheet.total_without_discounts = Price.sum(worksheet.remaining)
 
     Price.split_frequency(worksheet)
           

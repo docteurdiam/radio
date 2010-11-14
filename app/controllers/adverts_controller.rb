@@ -1,8 +1,10 @@
+require 'resource_controller'
+
 class AdvertsController < ApplicationController
   resource_controller
 
   def active
-    ad = Advert.find(:first)
+    ad = Advert.first
     render :text => ad ? ad.image.url(:normal) : ""
   end
 

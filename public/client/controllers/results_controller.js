@@ -22,16 +22,29 @@ $.Controller.extend('ResultsController',
         $('<li class="prefix">' + display + '</li>').appendTo(this.element.find("ul"));
       }
       var view = i % 2 == 0 ? "normal" : "striped";
-      var note = radio.note ? "<a href='#' class='note'>*</a><em>" + radio.note + "</em>" : "";
+      var note = radio.note ? "<a href='#' class='note'>INFO</a><em class='note'>" + radio.note + "</em>" : "";
+      var bonded = radio.bonded ? "<a href='#' class='bonded'>BONDED</a><em class='bonded'>" + radio.bonded + "</em>" : "";
       var label = radio.name;
       if (radio.fee) label = radio.name + " - £" + radio.fee;
-      $('<li class="' + view + '"><input type="checkbox" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /><label>' + label  +  '</label>' + note + '<br/></li>').appendTo(container);
+      $('<li class="' + view + '"><input type="checkbox" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /><label>'
+              + label  +  '</label>' + note + bonded + '<br/></li>').appendTo(container);
 
       container.find("a.note").hover(function() {
         container.find("em").hide();
-        $(this).next("em").stop(true, true).animate({opacity: "show"}, "slow");
+        var pos =  parseInt($(this).offset().left);
+        $(this).next("em.note").stop(true, true).animate({opacity: "show", left: pos + 50}, "slow");
       }, function() {
-        $(this).next("em").animate({opacity: "hide"}, "fast");
+        var pos =  parseInt($(this).offset().left);
+        $(this).next("em.note").animate({opacity: "hide", left: pos}, "fast");
+      });
+
+      container.find("a.bonded").hover(function() {
+        container.find("em").hide();
+        var pos =  parseInt($(this).offset().left);
+        $(this).next("em.bonded").stop(true, true).animate({opacity: "show", left: pos + 50}, "slow");
+      }, function() {
+        var pos = parseInt($(this).offset().left);
+        $(this).next("em.bonded").animate({opacity: "hide", left: pos}, "fast");
       });
     }
   },

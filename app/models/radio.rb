@@ -8,7 +8,9 @@ class Radio < ActiveRecord::Base
   @@per_page = 20
 
   def to_hash
-    {:fee => fee, :name => name, :id => id, :type => 'station', :note => note}
+    base = {:fee => fee, :name => name, :id => id, :type => 'station', :note => note}
+    base[:bonded] = self.partnership.other(self).name if self.partnership
+    base
   end
 
   def partner_with(station, bundle_fee)

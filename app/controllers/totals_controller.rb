@@ -49,7 +49,7 @@ class TotalsController < ApplicationController
 
   def edit
     @total = Total.find(params[:id])
-    @radios = Radio.find(:all, :order => "name")
+    @radios = Radio.all.order_by("name")
   end
 
 end

@@ -17,7 +17,7 @@ class RadiosController < ApplicationController
 
   def edit
     @radio = Radio.find(params[:id])
-    @potential_partners = Radio.find(:all, :order => "name") - [@radio]
+    @potential_partners = Radio.all.order_by("name") - [@radio]
   end
 
   def create
@@ -61,22 +61,23 @@ class RadiosController < ApplicationController
   def calculate
     stations = parse(params[:identifiers])
     worksheet = FeeCalculator.new.calculate(stations)
-    render :text => worksheet.total
+    render :text => {:total => worksheet.total, :messages => worksheet.messages,
+                     :total_without_discounts => worksheet.total_without_discounts}.to_json
   end
     
   def execute_search(type, query)
     results = []
     case type
       when "alphabetical"
-        radios = Radio.name_begins_with(query).ascend_by_name
-        networks = Network.name_begins_with(query).ascend_by_name
-        totals = Total.name_begins_with(query).ascend_by_name
+        radios = Radio.where("name like ? ", "#{query}%").order("name")
+        networks = Network.where("name like ? ", "#{query}%").order("name")
+        totals = Total.where("name like ? ", "#{query}%").order("name")
         results += totals.map {|total| total.to_hash} + radios.map {|radio| radio.to_hash} + networks.map {|network| network.to_hash}
       when "name"
         query = query.split(/ /).join("%")
-        radios = Radio.name_like(query).ascend_by_name
-        networks = Network.name_like(query).ascend_by_name
-        totals = Total.name_like(query).ascend_by_name
+        radios = Radio.where("name like ? ", "%#{query}%").order("name")
+        networks = Network.where("name like ? ", "%#{query}%").order("name")
+        totals = Total.where("name like ? ", "%#{query}%").order("name")
         results += totals.map {|total| total.to_hash}
         results +=  radios.map {|radio| radio.to_hash}
         results +=  networks.map {|network| network.to_hash}
@@ -86,9 +87,9 @@ class RadiosController < ApplicationController
             results +=  Radio.find_all_by_category("Internet Only", :order => "name").map {|radio| radio.to_hash}
             results +=  Radio.find_all_by_category("DAB Only", :order => "name").map {|radio| radio.to_hash}
           when "Totals"
-          results +=  Total.find(:all).map {|total| total.to_hash}
+          results +=  Total.all.map {|total| total.to_hash}
           when "Networks"
-          results +=  Network.find(:all, :order => "name").map{|network| network.to_hash}
+          results +=  Network.all.order("name").map{|network| network.to_hash}
         else
           results +=  Radio.find_all_by_category(query, :order => "name").map {|radio| radio.to_hash}
         end

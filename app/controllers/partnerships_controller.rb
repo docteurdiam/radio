@@ -7,7 +7,7 @@ class PartnershipsController < ApplicationController
 
   def new
     @partnership = Partnership.new
-    @radios = Radio.find(:all, :order => "name")
+    @radios = Radio.all.order_by("name")
   end
 
   def create
@@ -15,7 +15,7 @@ class PartnershipsController < ApplicationController
     partner_id = params[:relationship][:radio2]
     fee = params[:relationship][:fee]
     if station_id.blank? or partner_id.blank? or fee.blank?
-      @radios = Radio.find(:all, :order => "name")
+      @radios = Radio.all.order_by("name")
       render :action => "new"
     else
       @partnership = Partnership.create(:fee => fee)
@@ -25,7 +25,7 @@ class PartnershipsController < ApplicationController
         flash[:notice] = 'Partnership was successfully created.'
         redirect_to(partnerships_path)
       else
-        @radios = Radio.find(:all, :order => "name")
+        @radios = Radio.all.order_by("name")
         render :action => "new"
       end
     end

@@ -1,11 +1,9 @@
-require 'fastercsv'
-
 class Parser
 
   def parse(upload)
     header = true
     items = []
-    FasterCSV.foreach(upload) do |row|
+    CSV.foreach(upload) do |row|
       if header then
         header = false
         next
