@@ -26,7 +26,7 @@ $.Controller.extend('ResultsController',
       var bonded = radio.bonded ? "<a href='#' class='bonded'>BONDED</a><em class='bonded'>" + radio.bonded + "</em>" : "";
       var label = radio.name;
       if (radio.fee) label = radio.name + " - £" + radio.fee;
-      $('<li class="' + view + '"><input type="checkbox" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /><label>'
+      $('<li class="' + view + '"><a href="#"><img style="position: relative; top: 3px" src="/images/add-icon.png" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /></a><label>'
               + label  +  '</label>' + note + bonded + '<br/></li>').appendTo(container);
 
       container.find("a.note").hover(function() {

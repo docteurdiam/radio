@@ -48,7 +48,6 @@ GEM
       activemodel (= 3.0.1)
       activesupport (= 3.0.1)
     activesupport (3.0.1)
-    archive-tar-minitar (0.5.2)
     arel (1.0.1)
       activesupport (~> 3.0.0)
     builder (2.1.2)
@@ -103,8 +102,7 @@ GEM
     json (1.4.6)
     json_pure (1.4.6)
     kgio (1.3.1)
-    linecache19 (0.5.11)
-      ruby_core_source (>= 0.1.4)
+    linecache (0.43)
     mail (2.2.9)
       activesupport (>= 2.3.6)
       i18n (~> 0.4.1)
@@ -123,6 +121,8 @@ GEM
       activerecord
       activesupport
     polyglot (0.3.1)
+    rack-bug (0.3.0)
+      rack (>= 1.0)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
     rack-test (0.5.6)
@@ -152,16 +152,11 @@ GEM
     rspec-mocks (2.1.0)
     rspec-rails (2.1.0)
       rspec (~> 2.1.0)
-    ruby-debug-base19 (0.11.24)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby_core_source (>= 0.1.4)
-    ruby-debug19 (0.11.6)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby-debug-base19 (>= 0.11.19)
-    ruby_core_source (0.1.4)
-      archive-tar-minitar (>= 0.5.2)
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
     rubyzip (0.9.4)
     selenium-webdriver (0.1.0)
       childprocess (= 0.1.4)
@@ -199,11 +194,12 @@ DEPENDENCIES
   formtastic
   paperclip
   rack!
+  rack-bug
   rails
   rake
   rd_resource_controller
-  rspec-rails
-  ruby-debug19
+  rspec-rails (~> 2.1.0)
+  ruby-debug
   sqlite3-ruby
   unicorn
   will_paginate (~> 3.0.pre2)

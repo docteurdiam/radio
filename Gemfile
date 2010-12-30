@@ -7,7 +7,6 @@ gem "will_paginate", "~> 3.0.pre2"
 gem 'capistrano'
 gem 'formtastic'
 gem 'paperclip'
-gem "ruby-debug19"
 gem "wirble"
 gem "unicorn"
 gem 'rack', :git => 'git://github.com/rack/rack.git'
@@ -26,5 +25,8 @@ group :test do
 end
 
 group :test, :development do
-  gem "rspec-rails"
+  gem "ruby-debug"
+  gem "rack-bug"
+  gem 'database_cleaner'
+  gem "rspec-rails", "~> 2.1.0"
 end

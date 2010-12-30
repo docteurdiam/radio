@@ -6,7 +6,7 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 #page {margin: 20px auto auto; width: 900px}
 
 #main {background-image: url(/images/bgnds_05.png); width: 900px; height: 820px; margin-bottom: 20px}
-.left {width: 640px; float: left}
+.left {width: 525px; float: left}
 
 #header {background-image: url(/images/bgnds_03.png); height: 201px; width: 900px}
 #header .contents {width: 610px; float: right; padding-top: 25px; padding-right: 20px}
@@ -21,9 +21,9 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .alphabetical a.selected {color: #a6c631}
 .alphabetical a {text-shadow: 0 1px 0 #000000}
 
-.results {width: 595px; min-height: 300px}
+.results {width: 480px; min-height: 300px}
 .results .button { height: 24px; float: right; margin-right: 10px; margin-top: 15px}
-.results-items {background: white; height: 320px; margin-left: 1px; width: 593px}
+.results-items {background: white; height: 320px; margin-left: 1px; width: 479px}
 .results-items ul {height: 298px;  overflow: scroll; overflow-x: hidden}
 .results-items ul li {line-height: 180%; padding-left: 30px}
 .results-items ul {height: 298px;  overflow: scroll; overflow-x: hidden}
@@ -38,7 +38,7 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .results-header h2 {color: #434343; margin-bottom: 0; padding: 15px; margin-left: 10px}
 
 .name {margin-top: 15px; margin-left: 22px}
-.name input {font-size: 20px; font-weight: bold; width: 471px; color: #434343; padding: 8px}
+.name input {font-size: 20px; font-weight: bold; width: 353px; color: #434343; padding: 8px}
 .name .submit {width: 105px; height: 45px; position: relative; top: 2px}
 
 .type {margin-left: -13px}
@@ -61,8 +61,8 @@ a.sprite.search-types.selected {background-position: -1px -94px}
 .selection a.email:hover {background-position: -230px -58px}
 .selection ul li {line-height: 180%; padding-left: 5px}
 .selection ul label {font-size: 80%}
-.selection ul {overflow: scroll; overflow-x: hidden; height: 495px; width: 223px; background-color: white}
-.selection h2 {color: #434343; margin-bottom: 0; width: 203px; background-color: white; height: 25px; padding: 5px 10px 10px;}
+.selection ul {overflow: scroll; overflow-x: hidden; height: 495px; width: 355px; background-color: white}
+.selection h2 {color: #434343; margin-bottom: 0; width: 335px; background-color: white; height: 25px; padding: 5px 10px 10px;}
 .selection {margin-left: 5px}
 .selection .select-all {width: 103px; position: relative; left: 16px}
 
