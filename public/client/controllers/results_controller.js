@@ -26,7 +26,7 @@ $.Controller.extend('ResultsController',
       var bonded = radio.bonded ? "<a href='#' class='bonded'>BONDED</a><em class='bonded'>" + radio.bonded + "</em>" : "";
       var label = radio.name;
       if (radio.fee) label = radio.name + " - £" + radio.fee;
-      $('<li class="' + view + '"><a href="#"><img style="position: relative; top: 3px" src="/images/add-icon.png" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /></a><label>'
+      $('<li class="' + view + '"><a href="javascript:void(0)" class="selector"><img style="position: relative; top: 2px; left: 5px" src="/images/add-icon.png" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /></a><label>'
               + label  +  '</label>' + note + bonded + '<br/></li>').appendTo(container);
 
       container.find("a.note").hover(function() {
@@ -49,23 +49,13 @@ $.Controller.extend('ResultsController',
     }
   },
 
-  "selection-cleared subscribe": function(called, params) {
-      this.element.find("input").attr("checked", false);
-      return false;
-   },
-
   ".select-all click": function(el, ev) {
-    this.element.find("input").attr("checked", true);
-    this.selectStations(this.element.find("input:checked"), function(stations) {this.publish("station-selected", stations)}.bind(this));
+		console.debug(this.element.find("a.selector img"));
+    this.selectStations(this.element.find("a.selector"), function(stations) {this.publish("station-selected", stations)}.bind(this));
     return false;
   },
 
-  ".clear-all click": function(el, ev) {
-    this.element.find("input").attr("checked", false);
-    return false;
-  },
-
-  "input:checked click": function(el, ev) {
+  "a.selector click": function(el, ev) {
     this.selectStations(el, function(stations) {this.publish("station-selected", stations)}.bind(this));
     return false;
   },
@@ -73,7 +63,7 @@ $.Controller.extend('ResultsController',
   selectStations: function(items, callback) {
     var stations = [];
     items.each(function(index, el) {
-      var rowId = $(el).attr("id");
+      var rowId = $(el).find("img").attr("id");
       var info = parseIdentifier(rowId);
       var id = info["id"];
       var type = info["type"];
@@ -93,6 +83,7 @@ $.Controller.extend('ResultsController',
       }
     })
     callback(stations);
+		return false;
   },
 
   isNumeric: function(val) {

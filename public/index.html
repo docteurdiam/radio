@@ -65,41 +65,51 @@
           </div>
           <div class="results-items">
             <div class="results-box-top"></div><ul></ul><div class="results-box-bottom"></div>
-
           </div>
-
-          <div style="background: url(/images/box_bottom_results_main.png); height: 55px">
-              <a class="button sprite clear-all" ></a><a class="select-all sprite button"></a>
-
+          <div style="background: url(/images/box_bottom_results_main.png); height: 44px">
+              <a class="select-all sprite button"></a>
           </div>
         </div>
       </div>
-      <div class="right" style="width: 365px; float: left">
+      <div class="right">
         <div id="right-wrapper">
-        <img src="/images/bgnd_secondary_results_box_03.png" alt="" style="margin-bottom: 0" /><div style="background-color: #565B5F; margin-bottom: 0">
+        <img src="/images/bgnd_secondary_results_box_03.png" style="margin-bottom: 0" /><div style="background-color: #565B5F; margin-bottom: 0">
           <div class="estimate">
-          <h2>Your Estimate:</h2>
-          <input style="font-size: 20px; font-weight: bold; width: 210px; height: 33px; margin-bottom: 5px; color: #434343; background-image: url(/images/bgnd_total.png)" class="result" value="£0" type="text" />
+		        <h2>Your Estimate:</h2>
+						<label>With Discounts <a href="#lblDiscountsApplied" rel="facebox">(details)</a></label>
+						<label style="margin-left: 105px">Without Discounts</label>
+						<br/>
+		        <input style="margin-left: 20px; background-image: url(/images/bgnd_total.png)" class="result result-with-discounts" value="£0" type="text" />
+		        <input style="float: left; background-image: url(/images/bgnd_total.png)" class="result result-without-discounts" value="£0" type="text" />
           </div>
-        <div style="padding-top: 5px; margin: auto">
-          <div class="selection">
-            <img src="/images/box_top_selected_stations_NEW_03.png" alt="visuals" /><h2>Selected Stations:</h2>
-            <ul></ul>
-            <div style="text-align: right; width: 210px; margin-right: 13px">
-              <a class="button sprite clear-all" style="float: left" ></a><a class="select-all button sprite" ></a>
-              <a  class="email sprite button"></a>
-              <div class="clear"></div>
-            </div></div></div></div><img style="margin-top: 0; padding-top: 0;" src="/images/bgnd_secondary_results_box_06.png" alt="visuals" /></div>
+        	<div style="padding-top: 5px; margin: auto">
+          	<div class="selection">
+		          <img src="/images/box_top_selected_stations_NEW_03.png" alt="visuals" /><h2>Selected Stations:</h2>
+		          <ul></ul>
+		          <div style="text-align: right; margin-right: 13px; height: 31px">
+		            <a class="button sprite clear-all" style="position: relative; top: 2px; float: left" ></a>
+		            <a class="email sprite button" style="margin-left: 6px; position: relative; top: 2px"></a>
+		            <div class="clear"></div>
+            	</div>
+						</div>
+					</div>
+				</div>
+			<img style="margin-top: 0; padding-top: 0;" src="/images/bgnd_secondary_results_box_06.png" alt="visuals" />
+		</div>
          <div class="clear"></div>
       </div>
     </div>
-
     </div>
-    <h1>Total Without Discounts</h1>
-    <p id="lblTotalWithoutDiscounts"></p>
-    <a href="#lblDiscountsApplied" rel="facebox">Explain Discounts</a>
     <div id="lblDiscountsApplied" style="display: none"></div>
   </body>
+
+	<style type="text/css">
+		.right {width: 440px; float: left}
+		.result {font-size: 20px; font-weight: bold; width: 192px; height: 33px; margin-bottom: 5px; color: #434343}	
+		.estimate label {font-size: 10px; color: white; position: relative; top: -5px}
+		.estimate label a {color: white; font-style: italic}
+		.selected-radio {position: relative; top: 3px; margin-right: 5px}
+	</style>
 
   <script type="text/javascript">
     $(".selection").selection_controller();
@@ -116,7 +126,6 @@
             }
         });
         $('a[rel*=facebox]').facebox();
-        console.debug( $.getQueryString('mode') == "development");
         var isDevMode = $.getQueryString('mode') == "development";
         if (!$.cookie("first-visit") || isDevMode){
             jQuery.facebox({ajax: "instructions.html"});

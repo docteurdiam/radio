@@ -10,6 +10,8 @@ class FeeCalculator
 
     worksheet.total_without_discounts = Price.sum(worksheet.remaining)
 
+		puts worksheet.total_without_discounts
+
     Price.split_frequency(worksheet)
           
     Price.totals(worksheet)

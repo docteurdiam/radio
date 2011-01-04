@@ -57,6 +57,12 @@ describe Price do
 
       describe "and both stations in the partnership have been selected" do
 
+				it "calculates the non-discounted price of the partnership" do
+          worksheet = Worksheet.new([@smooth_fm, @kiss, @capital_fm])
+          Price.partnerships(worksheet)
+          worksheet.total.should == 30
+				end
+
         it "applies the discounted partnership price to the running total" do
           worksheet = Worksheet.new([@smooth_fm, @kiss, @capital_fm])
           Price.partnerships(worksheet)

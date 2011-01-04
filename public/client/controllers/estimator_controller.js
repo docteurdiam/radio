@@ -14,10 +14,8 @@ $.Controller.extend('EstimatorController',
     } else {
       $.post("/radios/calculate", {"identifiers[]": identifiers}, function(data) {
         var worksheet = eval("(" + data + ")");
-        this.element.find(".result").val("£" + worksheet["total"]);
-        console.debug($("lblTotalWithoutDiscounts"));
-        $("#lblTotalWithoutDiscounts").html(worksheet["total_without_discounts"]);
-        console.debug(worksheet["messages"]);
+        this.element.find(".result-without-discounts").val("£" +  parseInt(worksheet["total"]).toFixed(2));
+				this.element.find(".result-with-discounts").val("£" + parseInt(worksheet["total_without_discounts"]).toFixed(2));        
         if (worksheet["messages"]) {
             $("#lblDiscountsApplied").empty();
             $("#lblDiscountsApplied").append("<h2 style='color: black'>Discounts</h2>");

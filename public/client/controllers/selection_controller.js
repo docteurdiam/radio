@@ -12,19 +12,13 @@ $.Controller.extend('SelectionController',
     return false;
   },
 
-  ".select-all click": function() {
-    this.list.find("input").attr("checked", "true");
-    this.raiseSelectionChange();
-    return false;
-  },
-
   "station-selected subscribe": function(called, params) {
     var newStationAdded = false;
     for(var i = 0; i < params.length; i++) {
       var text = params[i][0];
       var id = params[i][1];
       if(this.list.find("#" + id).length < 1) {
-        $('<li><input class="selected-radio" id="' + id + '" type="checkbox" checked="true" /><label>' + text + '</label><br/></li>').appendTo(this.list);
+        $('<li><a href="#"><img id="' + id + '" class="selected-radio" src="/images/minus_small_circle.png"/></a><label>' + text + '</label><br/></li>').appendTo(this.list);
         newStationAdded = true;
       }
     }
@@ -59,7 +53,7 @@ $.Controller.extend('SelectionController',
 
   findSelectedStations: function() {
     var radios = [];
-    this.list.find(".selected-radio:checked").each(function(index) {
+    this.list.find(".selected-radio").each(function(index) {
       radios.push($(this).attr("id").substring(6));
     });
     return radios;

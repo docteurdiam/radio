@@ -25,7 +25,7 @@ group :test do
 end
 
 group :test, :development do
-  gem "ruby-debug"
+  gem "ruby-debug19"
   gem "rack-bug"
   gem 'database_cleaner'
   gem "rspec-rails", "~> 2.1.0"
