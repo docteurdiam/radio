@@ -4,7 +4,6 @@ gem "rails"
 gem "arel"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "will_paginate", "~> 3.0.pre2"
-gem 'capistrano'
 gem 'formtastic'
 gem 'paperclip'
 gem "wirble"
@@ -25,7 +24,7 @@ group :test do
 end
 
 group :test, :development do
-  gem "ruby-debug19"
+  gem "ruby-debug"
   gem "rack-bug"
   gem 'database_cleaner'
   gem "rspec-rails", "~> 2.1.0"
