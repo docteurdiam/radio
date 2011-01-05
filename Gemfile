@@ -9,7 +9,6 @@ gem 'formtastic'
 gem 'paperclip'
 gem "wirble"
 gem "unicorn"
-gem 'rack', :git => 'git://github.com/rack/rack.git'
 gem "rake"
 gem 'dynamic_form', :git => "git://codaset.com/joelmoss/dynamic-form.git"
 gem 'sqlite3-ruby'
