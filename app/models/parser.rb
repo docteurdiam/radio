@@ -10,7 +10,6 @@ class Parser
       end
       items << row
     end
-    Rails.logger.debug "#{items.size} rows were parsed"
     items
   end
 
