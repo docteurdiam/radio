@@ -16,7 +16,6 @@ $.Controller.extend('SelectionController',
   
   "station-selected subscribe": function(called, params) {
     var newStationAdded = false;
-    var html = "";
     for(var i = 0; i < params.length; i++) {
       var name = params[i][0];
       var identifier = params[i][1];
@@ -24,7 +23,7 @@ $.Controller.extend('SelectionController',
       var type = params[i][3];
       var fee = params[i][4];
       if(this.table.find("#" + identifier).length < 1) {
-        html = html + '<tr>' 
+       $('<tr>' 
         +   '<td class="icon">' 
         +     '<a href="javascript:void(0)" class="remove-station">' 
         +       '<img id="' + identifier + '" class="selected-radio" src="/images/minus_small_circle.png"/>' 
@@ -37,13 +36,21 @@ $.Controller.extend('SelectionController',
         +   '<td class="fee">£' 
         +     fee
         +   '</td>'
-        + '</tr>';
+        + '</tr>').appendTo(this.table);
         newStationAdded = true;
       }
     }
     if (newStationAdded) {
-      $(html).appendTo(this.table);
       this.raiseSelectionChange();
+      if (!this.tablesorter_active) {
+        this.table.parent().tablesorter({sortList: [[2,0]]});  
+        this.tablesorter_active = true;
+      }
+      else
+      {
+        this.table.parent().trigger("update"); 
+        this.table.parent().trigger("sorton",[[[2,0]]]); 
+      }
     }
   },
 
@@ -73,15 +80,6 @@ $.Controller.extend('SelectionController',
 
   raiseSelectionChange: function() {
     this.publish("selection-change", this.findSelectedStations());
-    if (!this.tablesorter_active) {
-      this.table.parent().tablesorter({sortList: [[2,0]]});  
-      this.tablesorter_active = true;
-    }
-    else
-    {
-      this.table.parent().trigger("update"); 
-      this.table.parent().trigger("sorton",[[[2,0]]]); 
-    }
   },
 
   findSelectedStations: function() {
