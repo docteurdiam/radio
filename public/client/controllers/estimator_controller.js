@@ -16,7 +16,7 @@ $.Controller.extend('EstimatorController',
         var worksheet = eval("(" + data + ")");
         this.element.find(".result-without-discounts").val("£" +  parseInt(worksheet["total"]).toFixed(2));
 				this.element.find(".result-with-discounts").val("£" + parseInt(worksheet["total_without_discounts"]).toFixed(2));        
-        if (worksheet["messages"]) {
+        if (worksheet["messages"] && worksheet["messages"].length > 0) {
             $("#lblDiscountsApplied").empty();
             $("#lblDiscountsApplied").append("<h2 style='color: black'>Discounts</h2>");
             for(var i = 0; i < worksheet["messages"].length; i++) {

@@ -11,22 +11,24 @@ $.Controller.extend('SelectionController',
     this.publish("selection-cleared");
     return false;
   },
-
+  
   "station-selected subscribe": function(called, params) {
     var newStationAdded = false;
     for(var i = 0; i < params.length; i++) {
       var text = params[i][0];
       var id = params[i][1];
       if(this.list.find("#" + id).length < 1) {
-        $('<li><a href="#"><img id="' + id + '" class="selected-radio" src="/images/minus_small_circle.png"/></a><label>' + text + '</label><br/></li>').appendTo(this.list);
+        $('<li>' + '<a href="javascript:void(0)" class="remove-station">' + '<img id="' + id + '" class="selected-radio" src="/images/minus_small_circle.png"/>' + '</a>' +           '<label>' + text + '</label>' +       '<br/>' + '</li>').appendTo(this.list);
         newStationAdded = true;
       }
     }
     if (newStationAdded) this.raiseSelectionChange();
   },
 
-  ".selected-radio click": function(el, ev) {
+  "ul a.remove-station click": function(el, ev) {
+    $(el).parent().remove();
     this.raiseSelectionChange();
+    return false;
   },
 
   ".email click": function(el, ev) {
@@ -48,7 +50,7 @@ $.Controller.extend('SelectionController',
   },
 
   raiseSelectionChange: function() {
-    this.publish("selection-change", this.findSelectedStations())
+    this.publish("selection-change", this.findSelectedStations());
   },
 
   findSelectedStations: function() {
