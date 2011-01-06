@@ -2,11 +2,13 @@ $.Controller.extend('SelectionController',
 {
   init: function(el) {
     this._super(el);
+    this.tablesorter_active = false;
     this.list = this.element.find("ul");
+    this.table = this.element.find("table tbody");
   },
 
   ".clear-all click": function() {
-    this.list.empty();
+    this.table.empty();
     this.raiseSelectionChange();
     this.publish("selection-cleared");
     return false;
@@ -14,19 +16,39 @@ $.Controller.extend('SelectionController',
   
   "station-selected subscribe": function(called, params) {
     var newStationAdded = false;
+    var html = "";
     for(var i = 0; i < params.length; i++) {
-      var text = params[i][0];
-      var id = params[i][1];
-      if(this.list.find("#" + id).length < 1) {
-        $('<li>' + '<a href="javascript:void(0)" class="remove-station">' + '<img id="' + id + '" class="selected-radio" src="/images/minus_small_circle.png"/>' + '</a>' +           '<label>' + text + '</label>' +       '<br/>' + '</li>').appendTo(this.list);
+      var name = params[i][0];
+      var identifier = params[i][1];
+      var id = params[i][2];
+      var type = params[i][3];
+      var fee = params[i][4];
+      if(this.table.find("#" + identifier).length < 1) {
+        html = html + '<tr>' 
+        +   '<td class="icon">' 
+        +     '<a href="javascript:void(0)" class="remove-station">' 
+        +       '<img id="' + identifier + '" class="selected-radio" src="/images/minus_small_circle.png"/>' 
+        +     '</a>'
+        +   '</td>'
+        +   '<td>' 
+        +     '<label>' + name + '</label>' 
+        +     '<br/>' 
+        +   '</td>' 
+        +   '<td class="fee">£' 
+        +     fee
+        +   '</td>'
+        + '</tr>';
         newStationAdded = true;
       }
     }
-    if (newStationAdded) this.raiseSelectionChange();
+    if (newStationAdded) {
+      $(html).appendTo(this.table);
+      this.raiseSelectionChange();
+    }
   },
 
-  "ul a.remove-station click": function(el, ev) {
-    $(el).parent().remove();
+  "table a.remove-station click": function(el, ev) {
+    $(el).parent().parent().remove();
     this.raiseSelectionChange();
     return false;
   },
@@ -51,11 +73,20 @@ $.Controller.extend('SelectionController',
 
   raiseSelectionChange: function() {
     this.publish("selection-change", this.findSelectedStations());
+    if (!this.tablesorter_active) {
+      this.table.parent().tablesorter({sortList: [[2,0]]});  
+      this.tablesorter_active = true;
+    }
+    else
+    {
+      this.table.parent().trigger("update"); 
+      this.table.parent().trigger("sorton",[[[2,0]]]); 
+    }
   },
 
   findSelectedStations: function() {
     var radios = [];
-    this.list.find(".selected-radio").each(function(index) {
+    this.table.find(".selected-radio").each(function(index) {
       radios.push($(this).attr("id").substring(6));
     });
     return radios;

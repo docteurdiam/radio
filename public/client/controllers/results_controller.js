@@ -26,8 +26,19 @@ $.Controller.extend('ResultsController',
       var bonded = radio.bonded ? "<a href='#' class='bonded'>BONDED</a><em class='bonded'>" + radio.bonded + "</em>" : "";
       var label = radio.name;
       if (radio.fee) label = radio.name + " - £" + radio.fee;
-      $('<li class="' + view + '"><a href="javascript:void(0)" class="selector"><img style="position: relative; top: 2px; left: 5px" src="/images/add-icon.png" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" /></a><label>'
-              + label  +  '</label>' + note + bonded + '<br/></li>').appendTo(container);
+      $('<li class="' + view + '">' 
+      +   '<a href="javascript:void(0)" class="selector">' 
+      +     '<img src="/images/add-icon.png" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" />' 
+      +   '</a>' 
+      +   '<label>'
+      +     label  
+      +  '</label>' 
+      +  '<input type="hidden" class="type" value="' + radio.type + '">'
+      +  '<input type="hidden" class="name" value="' + radio.name + '">'
+      +  '<input type="hidden" class="fee" value="' + radio.fee + '">'
+      +  '<input type="hidden" class="id" value="' + radio.id + '">'
+      +   note + bonded 
+      +  '<br/></li>').appendTo(container);
 
       container.find("a.note").hover(function() {
         container.find("em").hide();
@@ -64,22 +75,23 @@ $.Controller.extend('ResultsController',
     var stations = [];
     items.each(function(index, el) {
       var rowId = $(el).find("img").attr("id");
-      var info = parseIdentifier(rowId);
-      var id = info["id"];
-      var type = info["type"];
+      var id = $(el).parent().find("input.id").val();
+      var type = $(el).parent().find("input.type").val();
+      var name = $(el).parent().find("input.name").val();
+      var fee = $(el).parent().find("input.fee").val();
       if (type == "total") {
         $.getJSON("/totals/" + id + "/stations", function(data){
           for (var i = 0; i < data.length; i++) {
             var name = data[i].name;
             var identifier = "radio-" + data[i].id + "-" + data[i].type;
-            stations.push([name, identifier]);
+            stations.push([name, identifier, data[i].id, data[i].type, data[i].fee]);
           }
           callback(stations);
         });
       }
       else
       {
-        stations.push([$(el).siblings("label").text(), rowId]);
+        stations.push([name, rowId, id, type, fee]);
       }
     })
     callback(stations);

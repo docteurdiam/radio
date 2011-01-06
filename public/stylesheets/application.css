@@ -59,9 +59,10 @@ a.sprite.search-types.selected {background-position: -1px -94px}
 .selection a.button { height: 24px; float: left; margin-top: 7px}
 .selection a.email {background-position: -1px -57px; width: 224px; float: left}
 .selection a.email:hover {background-position: -230px -58px}
-.selection ul li {line-height: 180%; padding-left: 5px}
-.selection ul label {font-size: 80%}
-.selection ul {overflow: scroll; overflow-x: hidden; height: 548px; width: 430px; background-color: white}
+.selection table tr {line-height: 180%; padding-left: 5px}
+.selection table td {font-size: 80%}
+.selection table {width: 400px}
+.selection .table-wrapper {overflow: scroll; overflow-x: hidden; height: 548px; width: 430px; background-color: white}
 .selection h2 {color: #434343; margin-bottom: 0; width: 409px; background-color: white; height: 25px; padding: 5px 10px 10px;}
 .selection {margin-left: 5px}
 .selection .select-all {width: 103px; position: relative; left: 16px}
