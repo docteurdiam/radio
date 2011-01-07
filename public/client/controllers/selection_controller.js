@@ -30,7 +30,9 @@ $.Controller.extend('SelectionController',
         +     '</a>'
         +   '</td>'
         +   '<td>' 
+        +     '<a href="javascript:void(0)" class="remove-station">' 
         +     '<label>' + name + '</label>' 
+        +     '</a>'
         +     '<br/>' 
         +   '</td>' 
         +   '<td class="fee">£' 
@@ -43,13 +45,13 @@ $.Controller.extend('SelectionController',
     if (newStationAdded) {
       this.raiseSelectionChange();
       if (!this.tablesorter_active) {
-        this.table.parent().tablesorter({sortList: [[2,0]]});  
+        this.table.parent().tablesorter({sortList: [[2,1]]});  
         this.tablesorter_active = true;
       }
       else
       {
-        this.table.parent().trigger("update"); 
-        this.table.parent().trigger("sorton",[[[2,0]]]); 
+        this.table.parent().trigger("update");         
+        this.table.parent().trigger("sorton",[[[2,1]]]); 
       }
     }
   },

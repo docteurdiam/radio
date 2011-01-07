@@ -89,7 +89,7 @@ class RadiosController < ApplicationController
           when "Totals"
           results +=  Total.all.map {|total| total.to_hash}
           when "Networks"
-          results +=  Network.all.order("name").map{|network| network.to_hash}
+          results +=  Network.order("name").map{|network| network.to_hash}
         else
           results +=  Radio.find_all_by_category(query, :order => "name").map {|radio| radio.to_hash}
         end

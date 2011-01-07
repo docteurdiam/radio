@@ -18,9 +18,10 @@ $.Controller.extend('NameSearchController',
   },
 
   "input keyup": function(el, ev) {
-    val = el.val();
+    var val = el.val();
     if (val.length > 0) {
-      $.getJSON("/radios/search", {type: "name", query: el.val()}, function(data, textStatus) {
+      this.publish("search-started");
+      $.getJSON("/radios/search", {type: "name", query: val}, function(data, textStatus) {
         this.publish("search-complete", data);
       }.bind(this))
     }

@@ -2,15 +2,21 @@ $.Controller.extend('ResultsController',
 {
   init: function(el) {
     this._super(el);
+    this.container = this.element.find("ul")
   },
 
   "search-initiated subscribe": function(called, params) {
-    this.element.find("ul").empty();
+    this.container.empty(); 
+  },
+  
+  "search-started subscribe": function(called, params) {
+    this.container.empty();
+    $("<li style='text-align: center'><img style='margin-top: 100px' src='/images/ajax-loader.gif' /></li>").appendTo(this.container);
   },
 
   "search-complete subscribe": function(called, params) {
     var radios = params;
-    var container = this.element.find("ul");
+    var container = this.container;
     container.empty();
     var prefix = "";
     for(var i = 0; i < radios.length; i++) {
@@ -29,10 +35,10 @@ $.Controller.extend('ResultsController',
       $('<li class="' + view + '">' 
       +   '<a href="javascript:void(0)" class="selector">' 
       +     '<img src="/images/add-icon.png" id="radio-' + radio.id + '-' + radio.type + '" value="' + radio.fee + '" />' 
-      +   '</a>' 
       +   '<label>'
       +     label  
-      +  '</label>' 
+      +  '</label>'
+      +   '</a>'  
       +  '<input type="hidden" class="type" value="' + radio.type + '">'
       +  '<input type="hidden" class="name" value="' + radio.name + '">'
       +  '<input type="hidden" class="fee" value="' + radio.fee + '">'
@@ -61,7 +67,6 @@ $.Controller.extend('ResultsController',
   },
 
   ".select-all click": function(el, ev) {
-		console.debug(this.element.find("a.selector img"));
     this.selectStations(this.element.find("a.selector"), function(stations) {this.publish("station-selected", stations)}.bind(this));
     return false;
   },
@@ -74,11 +79,14 @@ $.Controller.extend('ResultsController',
   selectStations: function(items, callback) {
     var stations = [];
     items.each(function(index, el) {
-      var rowId = $(el).find("img").attr("id");
-      var id = $(el).parent().find("input.id").val();
-      var type = $(el).parent().find("input.type").val();
-      var name = $(el).parent().find("input.name").val();
-      var fee = $(el).parent().find("input.fee").val();
+      var a = $(el);
+      var li = a.parent();
+      li.find("label").css({color: "#878787"});
+      var rowId = a.find("img").attr("id");
+      var id = li.find("input.id").val();
+      var type = li.find("input.type").val();
+      var name = li.find("input.name").val();
+      var fee = li.find("input.fee").val();
       if (type == "total") {
         $.getJSON("/totals/" + id + "/stations", function(data){
           for (var i = 0; i < data.length; i++) {

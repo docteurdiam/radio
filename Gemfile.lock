@@ -113,6 +113,7 @@ GEM
     paperclip (2.3.8)
       activerecord
       activesupport
+    pg (0.10.0)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -185,6 +186,7 @@ DEPENDENCIES
   faker
   formtastic
   paperclip
+  pg
   rails
   rake
   rd_resource_controller
