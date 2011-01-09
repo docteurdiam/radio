@@ -69,15 +69,15 @@ class RadiosController < ApplicationController
     results = []
     case type
       when "alphabetical"
-        radios = Radio.where("name like ? ", "#{query}%").order("name")
-        networks = Network.where("name like ? ", "#{query}%").order("name")
-        totals = Total.where("name like ? ", "#{query}%").order("name")
+        radios = Radio.where("name ilike ? ", "#{query}%").order("name")
+        networks = Network.where("name ilike ? ", "#{query}%").order("name")
+        totals = Total.where("name ilike ? ", "#{query}%").order("name")
         results += totals.map {|total| total.to_hash} + radios.map {|radio| radio.to_hash} + networks.map {|network| network.to_hash}
       when "name"
         query = query.split(/ /).join("%")
-        radios = Radio.where("name like ? ", "%#{query}%").order("name")
-        networks = Network.where("name like ? ", "%#{query}%").order("name")
-        totals = Total.where("name like ? ", "%#{query}%").order("name")
+        radios = Radio.where("name ilike ? ", "%#{query}%").order("name")
+        networks = Network.where("name ilike ? ", "%#{query}%").order("name")
+        totals = Total.where("name ilike ? ", "%#{query}%").order("name")
         results += totals.map {|total| total.to_hash}
         results +=  radios.map {|radio| radio.to_hash}
         results +=  networks.map {|network| network.to_hash}
