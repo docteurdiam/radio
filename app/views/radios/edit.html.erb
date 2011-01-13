@@ -12,6 +12,9 @@
   <h3>Name</h3>
   <%= f.text_field :name %>
 
+  <h3>Region</h3>
+  <%= f.text_field :region %>
+
   <h3>Category</h3>
   <%= select_tag "radio[category]", options_for_select(
             ["Local & Regional", "National and News", "Irish and ROI", "DAB Only", "Internet Only"], @radio.category) %>

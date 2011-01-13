@@ -9,6 +9,7 @@
       <hr/>
       <%= form.input :fee_eq, :label => "Fee", :required => false %>
       <%= form.input :name_like, :required => false, :label => "Name" %>
+      <%= form.input :region, :required => false, :label => "Region" %>      
       <%= form.input :category_eq, :as => :select, :collection => @all_categories, :required => false, :label => "Category" %>
       <input class="button" style="width: 100px; margin-right: 6px; margin-top: 15px; float: right" type="submit" value="Search" />
       <div style="clear: both"></div>
@@ -29,6 +30,7 @@
     <tr>
       <th style="width: 50px">Fee</th>
       <th>Name</th>
+      <th>Region</th>
       <th style="width: 150px">Category</th>
       <th style="width: 40px"></th>
       <th style="width: 50px"></th>
@@ -37,6 +39,7 @@
       <tr class="<%= cycle("even", "odd") %>">
         <td><%=h radio.fee %></td>
         <td><%=h radio.name %></td>
+        <td><%=h radio.region %></td>        
         <td><%=h radio.category %></td>
         <td><%= link_to 'Edit', edit_radio_path(radio) %></td>
         <td><%= link_to 'Delete', radio, :confirm => 'Are you sure?', :method => :delete %></td>

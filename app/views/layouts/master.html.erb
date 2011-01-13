@@ -1,5 +1,4 @@
 <!doctype html public "_//w3_c//dtd xhtml 1.0 strict//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1_strict.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http_equiv="x_ua_compatible" content="ie=emulate_ie7" />
@@ -7,10 +6,12 @@
   <meta http_equiv="content_style_type" content="text/css" />
   <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/javascripts/rails.js"></script>
   <%= stylesheet_link_tag 'scaffold' %>
   <%= stylesheet_link_tag 'application' %>
   <%= stylesheet_link_tag 'formtastic' %>
   <%= stylesheet_link_tag 'admin' %>
+  <%= csrf_meta_tag %>
 
 </head>
 <body class="admin">

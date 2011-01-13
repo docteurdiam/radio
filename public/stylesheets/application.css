@@ -3,6 +3,7 @@ li {list-style-type: none}
 .clear {clear: both}
 h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 
+
 #page {margin: 20px auto auto; width: 900px}
 
 #main {background-image: url(/images/bgnds_05.png); width: 900px; height: 820px; margin-bottom: 20px}
@@ -62,7 +63,7 @@ a.sprite.search-types.selected {background-position: -1px -94px}
 .selection table tr {line-height: 180%; padding-left: 5px}
 .selection table td {font-size: 80%}
 .selection table {width: 400px}
-.selection .table-wrapper {overflow: scroll; overflow-x: hidden; height: 548px; width: 430px; background-color: white}
+.selection .table-wrapper {overflow: scroll; overflow-x: hidden; height: 548px; width: 429px; background-color: white}
 .selection h2 {color: #434343; margin-bottom: 0; width: 409px; background-color: white; height: 25px; padding: 5px 10px 10px;}
 .selection {margin-left: 5px}
 .selection .select-all {width: 103px; position: relative; left: 16px}

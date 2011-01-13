@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100915200536) do
+ActiveRecord::Schema.define(:version => 20110112232055) do
 
   create_table "adverts", :force => true do |t|
     t.string   "image_file_name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20100915200536) do
     t.integer "network_id"
     t.text    "note"
     t.integer "partnership_id"
+    t.string  "region"
   end
 
   add_index "radios", ["category"], :name => "index_radios_on_category"

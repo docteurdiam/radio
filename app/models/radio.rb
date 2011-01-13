@@ -13,6 +13,16 @@ class Radio < ActiveRecord::Base
     base
   end
 
+  def self.search(criteria)
+    query = Radio
+    return query unless criteria
+    query = query.where("fee = ?", criteria[:fee_eq]) unless criteria[:fee_eq].blank?
+    query = query.where("name ilike ?", '%' + criteria[:name_like] + '%') unless criteria[:name_like].blank?
+    query = query.where("category = ?", criteria[:category_eq]) unless criteria[:category_eq].blank?
+    query = query.where("region ilike ?", '%' + criteria[:region] + '%') unless criteria[:region].blank?  
+    return query
+  end
+
   def partner_with(station, bundle_fee)
     partnership = Partnership.create!(:fee => bundle_fee)
     partnership.radios << self

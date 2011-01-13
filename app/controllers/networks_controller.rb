@@ -31,7 +31,7 @@ class NetworksController < ApplicationController
 
   def edit
     @network = Network.find(params[:id])
-    @radios = Radio.all.order_by("name")
+    @radios = Radio.order("name")
   end
 
 
