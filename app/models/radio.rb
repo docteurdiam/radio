@@ -10,6 +10,7 @@ class Radio < ActiveRecord::Base
   def to_hash
     base = {:fee => fee, :name => name, :id => id, :type => 'station', :note => note}
     base[:bonded] = self.partnership.other(self).name if self.partnership
+    base[:bonded_fee] = self.partnership.other(self).fee if self.partnership
     base
   end
 

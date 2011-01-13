@@ -28,8 +28,8 @@ h2 {color: white; font-size: 20px; margin-bottom: 20px; font-weight: bold}
 .results-items ul {height: 298px;  overflow: scroll; overflow-x: hidden}
 .results-items ul li {line-height: 180%; padding-left: 30px}
 .results-items ul {height: 368px;  overflow: scroll; overflow-x: hidden}
-.results-items ul li a.note {font-size: 10px; color: black; text-decoration: none; position: relative; top: -4px; margin-left: 10px}
-.results-items ul li a.bonded {font-size: 10px; color: black; text-decoration: none; position: relative; top: -4px; margin-left: 10px}
+.results-items ul li a.note {font-size: 10px; color: blue; position: relative; top: -4px; margin-left: 10px}
+.results-items ul li a.bonded {font-size: 10px; color: blue; position: relative; top: -4px; margin-left: 10px}
 .results-items ul li.prefix {font-weight: bold; font-size: 120%; padding-left: 47px}
 .results-items ul li.striped {background-color: #eeeeee}
 .results-items ul label {font-size: 80%; display: inline ! important; margin-left: 10px}

@@ -21,7 +21,7 @@ $.Controller.extend('SelectionController',
       var identifier = params[i][1];
       var id = params[i][2];
       var type = params[i][3];
-      var fee = params[i][4];
+      var fee = parseInt(params[i][4]).toFixed(2);
       if(this.table.find("#" + identifier).length < 1) {
        $('<tr>' 
         +   '<td class="icon">' 
