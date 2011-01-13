@@ -8,8 +8,7 @@ namespace :radio do
         region = $1
         next if region.match(/prev/i) 
         station.region = region
-        puts region
-#        station.save!
+        station.save!
       end    
     end 
   end
