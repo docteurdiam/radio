@@ -3,7 +3,7 @@ class Network < ActiveRecord::Base
   has_many :radios
 
   def to_hash
-    {:fee => fee, :name => name, :id => id, :type => 'network', :note => note}
+    {:fee => 1000, :name => name, :id => id, :type => 'network', :note => note}
   end
 
 end
