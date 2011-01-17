@@ -273,6 +273,16 @@
     <orderEntry type="library" name="[gem] rspec-mocks (v2.4.0, null)" level="application" />
     <orderEntry type="library" name="[gem] rspec-core (v2.4.0, null)" level="application" />
     <orderEntry type="library" name="[gem] rspec (v2.4.0, null)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] factory_girl_rails (v1.0.1, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/factory_girl_rails-1.0.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-debug (v0.10.4, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/ruby-debug-0.10.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] aws-s3 (v0.6.2, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/aws-s3-0.6.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] mongrel (v1.1.5, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/mongrel-1.1.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] formtastic (v1.2.2, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/formtastic-1.2.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] fastthread (v1.0.7, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/fastthread-1.0.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] xml-simple (v1.0.12, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/xml-simple-1.0.12)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] cgi_multipart_eof_fix (v2.5.0, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/cgi_multipart_eof_fix-2.5.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-debug-base (v0.10.4, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/ruby-debug-base-0.10.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] linecache (v0.43, /home/okouam/.rvm/gems/ruby-1.8.7-p330/gems/linecache-0.43)" level="application" />
   </component>
 </module>
 

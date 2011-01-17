@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def require_user
     unless current_user
       redirect_to "/user_session/new"
-      return false
+      false
     end
   end
 
