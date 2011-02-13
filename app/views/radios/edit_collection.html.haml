@@ -1,0 +1,34 @@
+%h1 Editing Stations
+
+%p
+  Changes fee for all selected stations:
+  %input#shared-fee{:type=>"textbox"}
+  %input#change-fee{:type=>"button", :name => "change-fee", :value =>"Change"}
+%br
+= semantic_form_for :updates, :url => "/radios/update_collection" do |f|
+  %table
+    %tr
+      %th
+        Station Name
+      %th
+        Station Fee
+    - @stations.each_with_index do |radio, index|
+      %tr
+        %td
+          %input{:type=>"hidden", :name=>"station[#{index}][id]", :value => radio.id}
+          %input{:value=>radio.name, :name=> "station[#{index}][name]", :style => "width: 700px; border: 1px solid #ccc; margin-bottom: 0px"}
+        %td
+          %input{:value=>radio.fee, :class => "fees", :name=> "station[#{index}][fee]", :style => "width: 100px; border: 1px solid #ccc; margin-bottom: 0px"}
+  %br
+  %p{:style=>"text-align: right"}
+    %input{:type=>"submit", :value=>"Update"}
+
+:javascript
+  $(document).ready(function() {
+    $("#change-fee").click(function() {
+      var new_fee = $("#shared-fee").val();
+      new_fee = jQuery.trim(new_fee)
+      $(".fees").val(new_fee);
+      alert("The fees for the stations have been changed. Press the 'Update' button to confirm changes.")
+    })
+  })

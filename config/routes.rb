@@ -3,6 +3,8 @@ RadioFeeCalculator::Application.routes.draw do
     collection do
       post :calculate
       get :search
+      post :edit_collection
+      post :update_collection
     end
   end
 

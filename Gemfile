@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem "rails"
 gem "arel"
+gem "haml"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "will_paginate", "~> 3.0.pre2"
 gem 'capistrano'
@@ -14,7 +15,7 @@ gem "aws-s3"
 gem "rake"
 gem 'dynamic_form', :git => "git://codaset.com/joelmoss/dynamic-form.git"
 gem 'sqlite3-ruby'
-gem 'rd_resource_controller'
+gem "resource_controller", :git => "git://github.com/BDQ/resource_controller.git"
 
 group :test do
   gem "faker"

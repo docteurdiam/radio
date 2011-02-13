@@ -1,55 +1,82 @@
 <br/>
 
-<div style="float: left; width: 200px; margin-top: 25px">
-
-  <% semantic_form_for :s, :url => "/radios/change_search" do |form| %>
-
+<div style="float: left; width: 260px; margin-top: 25px">
     <div id="search-parameters" style="background: white; border: 1px solid #aaa; padding: 10px">
       <h2 style="color: #434343; margin-bottom: 10px">Search Criteria</h2>
       <hr/>
+  <% semantic_form_for :s, :url => "/radios/change_search" do |form| %>
+
+
       <%= form.input :fee_eq, :label => "Fee", :required => false %>
       <%= form.input :name_like, :required => false, :label => "Name" %>
       <%= form.input :region, :required => false, :label => "Region" %>      
       <%= form.input :category_eq, :as => :select, :collection => @all_categories, :required => false, :label => "Category" %>
       <input class="button" style="width: 100px; margin-right: 6px; margin-top: 15px; float: right" type="submit" value="Search" />
+          <% end %>
       <div style="clear: both"></div>
     </div>
-  <% end %>
-
 </div>
 
-<div style="margin-left: 270px; margin-top: -20px">
-
-  <div class="actions" style="text-align: right; margin-top: 0px">
+<div style="margin-top: -20px; width: 900px; float: left">
+ <div class="actions" style="text-align: right; margin-top: 0px">
     <% semantic_form_for :s, :url => "/radios/new" do |form| %>
-      <input class="button" style="width: 140px" type="submit" value="Add New Radio" />
+      <input class="button" id="edit-stations" style="width: 170px; margin-right: 10px" type="submit" value="Edit Selected Stations" />
+      <input type="hidden" id="selected-stations" name="selected-stations" value="" />
+      <input class="button" style="width: 140px" type="submit" value="Add New Station" />
     <% end %>
   </div>
 
   <table>
     <tr>
+      <th><input type="checkbox" /></th>
       <th style="width: 50px">Fee</th>
       <th>Name</th>
       <th>Region</th>
       <th style="width: 150px">Category</th>
-      <th style="width: 40px"></th>
       <th style="width: 50px"></th>
     </tr>
     <% @radios.each do |radio| %>
       <tr class="<%= cycle("even", "odd") %>">
+        <td><input value="<%= radio.id %>" type="checkbox" /></td>
         <td><%=h radio.fee %></td>
         <td><%=h radio.name %></td>
-        <td><%=h radio.region %></td>        
+        <td><%=h radio.region %></td>
         <td><%=h radio.category %></td>
-        <td><%= link_to 'Edit', edit_radio_path(radio) %></td>
         <td><%= link_to 'Delete', radio, :confirm => 'Are you sure?', :method => :delete %></td>
       </tr>
     <% end %>
   </table>
   <%= will_paginate @radios %>
+   <br/>
+  <% unless @radios.nil? || @radios.empty? %>
+    <%= select_tag "pages", options_for_select([ "10", "25", "50", "100", "1000"], @per_page), :style => "width: 70px; padding: 3px; margin-top: -3px" %>
+  <% end %>
+    <br/> <br/> <br/> <br/> <br/> <br/> <br/>
   <br />
 </div>
 
-<style type="text/css">
+<script type="text/javascript" src="/javascripts/jquery.ba-bbq.min.js"></script>
 
-</style>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $("#pages").change(function() {
+        window.location = $.param.querystring(window.location.href, {per_page: $(this).val(), page: 1});
+      });
+      $("#edit-stations").click(function() {
+        $("form").attr("action", "/radios/edit_collection");
+        var selected = "";
+        $("td input[type='checkbox']:checked").each(function() {
+          if (selected == "") selected = $(this).val();
+          else selected = selected + "," + $(this).val();
+        });
+        $("#selected-stations").attr("value", selected);
+      });
+      $("th input[type=checkbox]").click(function() {
+        var master = $(this);
+        var isChecked = master.attr("checked");
+        $("td input[type=checkbox]").attr("checked", isChecked);
+      });
+    });
+
+</script>
+

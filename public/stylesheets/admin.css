@@ -4,10 +4,10 @@ h3 {font-weight: bold; margin-bottom: 5px; margin-top: 10px; color: #434343; fon
 .actions a {margin-right: 10px; font-weight: bold}
 
 tr.odd {background-color: white}
-tr.even {background-color: #DCF9FF}
-td {padding: 8px 7px; font-size: 14px}
+tr.even {background-color: rgb(251, 251, 251)}
+td {padding: 8px 7px; font-size: 12px; border-bottom: 1px solid #DDDDDD;}
 table {border: 1px solid #cccccc}
-th {background-color: #888; padding: 8px 7px; color: white; font-size: 14px}
+th {background-color: #888; padding: 5px 7px; color: white; font-size: 12px}
 #search-parameters {width: 210px}
 .button {margin-top: 10px}
 .button:hover {cursor: pointer}
@@ -24,6 +24,15 @@ th {background-color: #888; padding: 8px 7px; color: white; font-size: 14px}
   padding:7px;
   vertical-align:middle;
 }
-.pagination a {font-size: 14px}
+
 #search-parameters select {width: 205px}
 
+.admin .pagination a, .admin .pagination .current, .admin .pagination .disabled  {
+    -moz-border-radius: 3px 3px 3px 3px;
+    border: 1px solid #CCCCCC;
+    margin: 0 1px;
+    padding: 3px 6px;
+}
+.admin .pagination a:hover {
+    background: none repeat scroll 0 0 #EC8526   
+}

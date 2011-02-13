@@ -71,13 +71,26 @@ a.sprite.search-types.selected {background-position: -1px -94px}
 .estimate {margin-left: 10px}
 .estimate h2 {margin-bottom: 10px}
 
-.menu a {font-weight: bold; margin-left: 20px; color: white; text-decoration: none; background-color: transparent}
-.menu a:hover {color: #a6c631}
+.menu a {font-weight: bold; margin-left: 15px; color: white; text-decoration: none; background-color: transparent}
+.menu a:hover {color: #EC8526}
 .menu {padding-top: 20px}
+.admin table td a {
+    color: #008EE8;
+    outline: medium none;
+    text-decoration: none;
+}
+.admin table td a:hover {
+    color: #EC8526;
+    background-color: transparent;
+    outline: medium none;
+    text-decoration: none;
+}
+
+.admin .page {font-size: 12px}
 .admin .page {padding: 20px}
 .admin table th {font-weight: bold}
-.admin .page .pagination {margin-top: 20px; font-size: 12px}
-.admin .page .pagination .current {font-weight: bold; color: black; font-size: 14px}
+.admin .page .pagination {margin-top: 20px; font-size: 12px; float: right}
+.admin .page .pagination em {font-weight: bold; color: black; font-size: 14px; margin-right: 10px}
 .admin .page .pagination a, .admin .page .pagination .current, .admin .page .pagination .gap {margin-right: 10px; text-decoration: none; color: #434343}
 .admin .page h1 {font-weight: bold; font-size: 16px; margin-bottom: 20px}
 .admin table {width: 100%}

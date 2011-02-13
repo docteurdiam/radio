@@ -3,7 +3,8 @@ class RadiosController < ApplicationController
   before_filter :require_user, :except => [:search, :calculate]
 
   def index
-    @radios = @books = Radio.search(params[:s]).paginate(:page => params[:page], :per_page => 15, :order => "name")
+    @per_page = params[:per_page] || 15
+    @radios = @books = Radio.search(params[:s]).paginate(:page => params[:page], :per_page => @per_page, :order => "name")
     @all_categories = ["Local & Regional", "National and News", "Irish and ROI", "DAB Only", "Internet Only"]
   end
 
@@ -95,6 +96,23 @@ class RadiosController < ApplicationController
         end
     end
     results.sort_by {|result| result[:name]}
+  end
+
+  def update_collection
+    params[:station].each_value do |station|
+      name = station["name"]
+      id = station["id"]
+      fee = station["fee"]
+      radio = Radio.find(id)
+      radio.name = name
+      radio.fee = fee
+      radio.save!
+    end
+    redirect_to "/radios"
+  end
+
+  def edit_collection
+    @stations = Radio.find(params["selected-stations"].split(",").map {|x| x.to_i})
   end
 
 end
