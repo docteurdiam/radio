@@ -34,6 +34,7 @@
       <th>Region</th>
       <th style="width: 150px">Category</th>
       <th style="width: 50px"></th>
+      <th style="width: 50px"></th>
     </tr>
     <% @radios.each do |radio| %>
       <tr class="<%= cycle("even", "odd") %>">
@@ -42,6 +43,7 @@
         <td><%=h radio.name %></td>
         <td><%=h radio.region %></td>
         <td><%=h radio.category %></td>
+         <td><%= link_to 'Edit', edit_radio_path(radio) %></td
         <td><%= link_to 'Delete', radio, :confirm => 'Are you sure?', :method => :delete %></td>
       </tr>
     <% end %>
