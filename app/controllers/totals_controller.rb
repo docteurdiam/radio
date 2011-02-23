@@ -13,7 +13,7 @@ class TotalsController < ApplicationController
     @total = Total.new(params[:total])
     if @total.save
       flash[:notice] = 'Total was successfully created.'
-      redirect_to(@total)
+      redirect_to edit_total_path(@total)
     else
       render :action => "new"
     end
